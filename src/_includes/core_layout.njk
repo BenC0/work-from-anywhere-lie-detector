@@ -2,7 +2,8 @@
 <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
 <section id="{{ item_id | slug }}" page="{{ item_num }}">
     <article>
-        {% block content %} {% endblock %}
+        {% block content %}
+        {% endblock %}
     </article>
     <figure>
         <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jqtrvhhf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
