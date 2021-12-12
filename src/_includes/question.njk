@@ -5,6 +5,6 @@
 {% block content %}
     <p class="statement">{{ question.content.statement | safe }}</p>
     <h2 class="question">{{ question.content.question | safe }}</h2>
-    <label for="question-{{ item_id }}-correct" class="hero_cta">True</label>
-    <label for="question-{{ item_id }}-incorrect" class="hero_cta">False</label>
+    <label for="question-{{ item_num }}-correct" class="hero_cta">True</label>
+    <label for="question-{{ item_num }}-incorrect" class="hero_cta">False</label>
 {% endblock %}

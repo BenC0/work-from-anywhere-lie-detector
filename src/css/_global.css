@@ -1,0 +1,30 @@
+:root {
+    --lightblue: rgba(148, 179, 239, 0.28);
+    --blue: #3C64B1;
+    --ff: "Source Sans Pro", sans-serif;
+    --fs: 16px;
+    --header-height: 18.5vh;
+    --outer-padding: 5.9vw;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: var(--fs);
+    font-family: var(--ff);
+}
+
+header {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: var(--header-height);
+
+    display: flex;
+    padding: 0 var(--outer-padding);
+    align-items: center;
+    justify-content: space-between;
+}

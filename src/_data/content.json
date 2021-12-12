@@ -22,6 +22,19 @@
                 "header": "False!",
                 "copy": "According to the annual Cost of Data Breach report, it takes an astonishing 228 days (or 7.6 months), on average, for a network security breach to be identified. And identifying that you have a breach is, obviously, only half the battle: it will still take a further 80 days, on average, for that breach to be fully contained."
             }
+        },
+        {
+            "num": "2",
+            "id": "question 2",
+            "layout": "start_page.njk",
+            "content": {
+                "statement": "21222222True or false?",
+                "question": "It can take up to a month for a network security breach to be identified."
+            },
+            "answer": {
+                "header": "False!",
+                "copy": "According to the annual Cost of Data Breach report, it takes an astonishing 228 days (or 7.6 months), on average, for a network security breach to be identified. And identifying that you have a breach is, obviously, only half the battle: it will still take a further 80 days, on average, for that breach to be fully contained."
+            }
         }
     ]
 }

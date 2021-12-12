@@ -1,0 +1,27 @@
+[name="question-0"] {
+    & ~ [id^="question-"]:not(#question-0) {
+        display: none;
+    }
+    &:checked ~ #question-0 {
+        display: none;
+    }
+    &:checked ~ #question-1 {
+        display: flex;
+    }
+}
+
+[name="question-1"] {
+    & ~ [id^="question-"]:not(#question-1) {
+        display: none;
+    }
+    &:checked ~ #question-1 {
+        display: none;
+    }
+    &:checked ~ #question-2 {
+        display: flex;
+    }
+}
+
+.input-answer {
+    display: none;
+}

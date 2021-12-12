@@ -1,0 +1,25 @@
+section[page] {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+
+    & article,
+    & figure {
+        margin: 0;
+        width: 50vw;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    & article {
+        padding-top: var(--header-height);
+        padding-left: var(--outer-padding);
+        padding-right: 39px;
+    }
+
+    & figure {
+        align-items: center;
+        background:  rgba(60, 100, 177, .2);
+    }
+}
