@@ -1,1 +1,7 @@
-<li>{{ question.id }}</li>
+{% extends "core_layout.njk" %}
+{% set item_num = "{{ question.id }}" %}
+{% set item_id = "Start Page" %}
+
+{% block content %}
+    <li>{{ question.id }}</li>
+{% endblock %}
