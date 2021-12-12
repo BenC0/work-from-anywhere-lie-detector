@@ -15,17 +15,12 @@
             "id": "question 1",
             "layout": "start_page.njk",
             "content": {
-                "hero_title": "The TRUTH About IT Right Now",
-                "hero_subheading": "Take the quiz, bust the myths! ",
-                "hero_body": "What's really stressing IT teams out at the moment? What misconceptions and outright fibs are being bandied around the industry? Take a look at the following 10 statements and see if you can separate the objective truths from the snake-oil falsehoods...",
-                "hero_CTA": "Start"
+                "statement": "True or false?",
+                "question": "It can take up to a month for a network security breach to be identified."
             },
             "answer": {
-                "hero_title": "The TRUTH About IT Right Now",
-                "hero_subheading": "Take the quiz, bust the myths! ",
-                "hero_body": "What's really stressing IT teams out at the moment? What misconceptions and outright fibs are being bandied around the industry? Take a look at the following 10 statements and see if you can separate the objective truths from the snake-oil falsehoods...",
-                "hero_CTA": "Start"
-
+                "header": "False!",
+                "copy": "According to the annual Cost of Data Breach report, it takes an astonishing 228 days (or 7.6 months), on average, for a network security breach to be identified. And identifying that you have a breach is, obviously, only half the battle: it will still take a further 80 days, on average, for that breach to be fully contained."
             }
         }
     ]

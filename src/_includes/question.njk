@@ -3,8 +3,8 @@
 {% set item_num = question.num %}
 
 {% block content %}
-    <h1 class="hero_title">{{ question.content.hero_title | safe }}</h1>
-    <h2 class="hero_subheading">{{ question.content.hero_subheading | safe }}</h2>
-    <p class="hero_body">{{ question.content.hero_body | safe }}</p>
-    <label for="question-0-correct" class="hero_cta">{{ question.content.hero_CTA | safe }}</label>
+    <p class="statement">{{ question.content.statement | safe }}</p>
+    <h2 class="question">{{ question.content.question | safe }}</h2>
+    <label for="question-{{ item_id }}-correct" class="hero_cta">True</label>
+    <label for="question-{{ item_id }}-incorrect" class="hero_cta">False</label>
 {% endblock %}
