@@ -1,7 +1,10 @@
 {% extends "core_layout.njk" %}
-{% set item_num = "{{ question.id }}" %}
-{% set item_id = "Start Page" %}
+{% set item_id = question.id %}
+{% set item_num = question.num %}
 
 {% block content %}
-    <li>{{ question.id }}</li>
+    <h1 class="hero_title">{{ question.content.hero_title | safe }}</h1>
+    <h2 class="hero_subheading">{{ question.content.hero_subheading | safe }}</h2>
+    <p class="hero_body">{{ question.content.hero_body | safe }}</p>
+    <label for="question-0-correct" class="hero_cta">{{ question.content.hero_CTA | safe }}</label>
 {% endblock %}
