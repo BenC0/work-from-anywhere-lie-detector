@@ -1,8 +1,12 @@
----
-layout: "boilerplate.njk"
----
-<section>
+<input type="radio" name="question-0" id="question-0-correct" class="counter_ignore correct-answer answer" />
+<section id="{{ content.startPage.id | slug }}" page="0">
+    <article>
+        <h1 class="hero_title">{{ content.startPage.content.hero_title | safe }}</h1>
+        <h2 class="hero_subheading">{{ content.startPage.content.hero_subheading | safe }}</h2>
+        <p class="hero_body">{{ content.startPage.content.hero_body | safe }}</p>
+        <label for="question-0-correct" class="hero_cta">{{ content.startPage.content.hero_CTA | safe }}</label>
+    </article>
     <figure>
-        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jqtrvhhf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop controls autoplay></lottie-player>
+        <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jqtrvhhf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay>
     </figure>
 </section>
