@@ -6,5 +6,7 @@
     <h1 class="hero_title">{{ content.startPage.content.hero_title | safe }}</h1>
     <h2 class="hero_subheading">{{ content.startPage.content.hero_subheading | safe }}</h2>
     <p class="hero_body">{{ content.startPage.content.hero_body | safe }}</p>
-    <label for="question-0-correct" class="hero_cta">{{ content.startPage.content.hero_CTA | safe }}</label>
+    <div class="cta_container">
+        <label for="question-0-correct" class="cta">{{ content.startPage.content.hero_CTA | safe }}</label>
+    </div>
 {% endblock %}

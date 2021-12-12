@@ -10,7 +10,7 @@ title: The TRUTH About IT Right Now - Take the Quiz | Teneo
     <meta name="description" content="What are the secret stressors and misconceptions affecting IT teams? Take our interactive quiz and separate the IT truths from the IT falsehoods.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap" rel="stylesheet"> 
     <title>{{ title }}</title>
     {% set css %}
       {% include "../css/index.css" %}
@@ -23,16 +23,16 @@ title: The TRUTH About IT Right Now - Take the Quiz | Teneo
   <body>
     <main>
       {{ content | safe }}
+      <header>
+          <span id="logo">LOGO</span>
+          <nav>
+            <a href="#1">Nav 1</a>
+            <a href="#2">Nav 2</a>
+            <a href="#3">Nav 3</a>
+            <a href="#4">Nav 4</a>
+            <a href="#4" class="cta">Contact us</a>
+          </nav>
+      </header>
     </main>
-    <header>
-        <span id="logo">LOGO</span>
-        <nav>
-          <a href="#1">Nav 1</a>
-          <a href="#2">Nav 2</a>
-          <a href="#3">Nav 3</a>
-          <a href="#4">Nav 4</a>
-          <a href="#4" class="cta">Contact us</a>
-        </nav>
-    </header>
   </body>
 </html>

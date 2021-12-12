@@ -24,6 +24,10 @@
     "postcss-nested": "^5.0.6"
   },
   "devDependencies": {
+    "cssnano": "^5.0.12",
+    "cssnano-preset-lite": "^2.0.1",
+    "postcss-extend": "^1.0.5",
+    "postcss-extend-rule": "^3.0.0",
     "postcss-import": "^14.0.2"
   }
 }

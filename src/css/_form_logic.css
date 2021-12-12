@@ -1,27 +1,67 @@
-[name="question-0"] {
-    & ~ [id^="question-"]:not(#question-0) {
-        display: none;
-    }
-    &:checked ~ #question-0 {
-        display: none;
-    }
-    &:checked ~ #question-1 {
-        display: flex;
-    }
+[name="question-0"]:not(:checked) ~ [page="0"],
+[name="question-0"]:checked ~ [page="1"],
+[name="question-1"]:checked ~ [page="2"],
+[name="question-2"]:checked ~ [page="3"],
+[name="question-3"]:checked ~ [page="4"],
+[name="question-4"]:checked ~ [page="5"],
+[name="question-5"]:checked ~ [page="6"],
+[name="question-6"]:checked ~ [page="7"],
+[name="question-7"]:checked ~ [page="8"],
+[name="question-8"]:checked ~ [page="9"],
+[name="question-9"]:checked ~ [page="10"],
+[name="question-10"]:checked ~ [page="11"],
+[name="question-10"]:checked ~ header nav {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-[name="question-1"] {
-    & ~ [id^="question-"]:not(#question-1) {
-        display: none;
-    }
-    &:checked ~ #question-1 {
-        display: none;
-    }
-    &:checked ~ #question-2 {
-        display: flex;
-    }
+section[page],
+[name="question-0"]:checked ~ [page="0"],
+[name="question-1"]:checked ~ [page="1"],
+[name="question-2"]:checked ~ [page="2"],
+[name="question-3"]:checked ~ [page="3"],
+[name="question-4"]:checked ~ [page="4"],
+[name="question-5"]:checked ~ [page="5"],
+[name="question-6"]:checked ~ [page="6"],
+[name="question-7"]:checked ~ [page="7"],
+[name="question-8"]:checked ~ [page="8"],
+[name="question-9"]:checked ~ [page="9"],
+[name="question-10"]:checked ~ [page="10"],
+[name="question-10"]:not(:checked) ~ header nav {
+    opacity: 0;
+    pointer-events: none;
 }
 
 .input-answer {
     display: none;
+}
+
+.progress_bar {
+    display: flex;
+    padding: 0;
+    margin: 0 0 10.54vh;
+
+    & .indicator {
+        width: 29px;
+        height: 10px;
+        margin-right: 7px;
+        border-radius: 6px;
+
+        font-size: 0;
+        color: transparent;
+        background: var(--blue);
+    }
+
+    &[current="1"] .indicator-1 ~ .indicator,
+    &[current="2"] .indicator-2 ~ .indicator,
+    &[current="3"] .indicator-3 ~ .indicator,
+    &[current="4"] .indicator-4 ~ .indicator,
+    &[current="5"] .indicator-5 ~ .indicator,
+    &[current="6"] .indicator-6 ~ .indicator,
+    &[current="7"] .indicator-7 ~ .indicator,
+    &[current="8"] .indicator-8 ~ .indicator,
+    &[current="9"] .indicator-9 ~ .indicator,
+    &[current="10"] .indicator-10 ~ .indicator {
+        background: var(--lightblue);
+    }
 }

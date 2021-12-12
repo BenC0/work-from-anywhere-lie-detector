@@ -1,4 +1,10 @@
 section[page] {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -8,18 +14,18 @@ section[page] {
         margin: 0;
         width: 50vw;
         display: flex;
-        justify-content: center;
         flex-direction: column;
-    }
-
-    & article {
-        padding-top: var(--header-height);
-        padding-left: var(--outer-padding);
-        padding-right: 39px;
     }
 
     & figure {
         align-items: center;
-        background:  rgba(60, 100, 177, .2);
+        justify-content: center;
+    }
+
+    & article {
+        padding-right: 39px;
+        padding-bottom: 65px;
+        padding-top: var(--header-height);
+        padding-left: var(--outer-padding);
     }
 }

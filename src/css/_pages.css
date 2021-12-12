@@ -1,0 +1,31 @@
+section[page] {
+    transition: all .35s ease-in;
+
+    & figure {
+        background:  rgba(60, 100, 177, .05);
+    }
+
+    & article {
+        & .hero_title {
+            margin: 0;
+            font-size: 4rem;
+            font-weight: 900;
+        }
+        
+        & .question,
+        & .hero_subheading {
+            margin: .5em 0;
+            font-weight: 700;
+            font-size: 2.75rem;
+        }
+
+        & .hero_body {
+            font-size: 1.125rem;
+        }
+
+        & .statement {
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+    }
+}

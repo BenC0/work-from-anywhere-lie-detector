@@ -1,5 +1,8 @@
 const postCss = require("postcss");
-const atImport = require("postcss-import")
+const postcssExtendRule = require('postcss-extend-rule');
+const cssnano = require('cssnano');
+const litePreset = require('cssnano-preset-lite');
+const preset = litePreset({ discardComments: true });
 
 module.exports = function(eleventyConfig) {
     // Return your Object options:
@@ -7,6 +10,13 @@ module.exports = function(eleventyConfig) {
       postCss([
         require('postcss-nested'),
         require('postcss-import'),
+        postcssExtendRule({
+          name: "extend",
+          onFunctionalSelector: 'remove'
+        }),
+        cssnano({
+          preset
+        }),
       ])
       .process(cssCode)
       .then(
