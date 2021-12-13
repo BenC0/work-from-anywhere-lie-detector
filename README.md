@@ -31,10 +31,9 @@ While form progression could normally be handled through dynamically hiding/show
 
 ## TODO
 
-1. Content needs updating
-2. Animation needs updating - _Asset pending_
-3. Results Page needs building
-4. Form needs building & integrating with Hubspot - _Ask Kess for clarification on how far I should go with this, I might be limited by sandbox vs real enviroment_
-5. Mobile design - _need to send notes to Kess_
-6. Page transition needs to mirror design
-7. CSS Counter needs implementing
+1. Animation needs updating - _Asset pending_
+2. Results Page needs building
+3. Form needs building & integrating with Hubspot - _Ask Kess for clarification on how far I should go with this, I might be limited by sandbox vs real enviroment_
+4. Mobile design - _need to send notes to Kess_
+5. Page transition needs to mirror design
+6. CSS Counter needs implementing
