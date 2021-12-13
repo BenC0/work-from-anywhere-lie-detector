@@ -10,14 +10,14 @@ section[page] {
     width: 100vw;
 
     & article,
-    & figure {
+    & picture {
         margin: 0;
         width: 50vw;
         display: flex;
         flex-direction: column;
     }
 
-    & figure {
+    & picture {
         align-items: center;
         justify-content: center;
     }

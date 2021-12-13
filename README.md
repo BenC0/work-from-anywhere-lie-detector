@@ -35,5 +35,4 @@ While form progression could normally be handled through dynamically hiding/show
 2. Results Page needs building
 3. Form needs building & integrating with Hubspot - _Ask Kess for clarification on how far I should go with this, I might be limited by sandbox vs real enviroment_
 4. Mobile design - _need to send notes to Kess_
-5. Page transition needs to mirror design
-6. CSS Counter needs implementing
+5. CSS Counter needs implementing

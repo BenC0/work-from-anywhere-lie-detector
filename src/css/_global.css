@@ -97,4 +97,12 @@ header {
     margin-right: 40px;
     height: var(--cta-height);
     line-height: var(--cta-height);
+    transition: all .1s ease-in;
+
+    &:active,
+    &:focus,
+    &:hover {
+        background: var(--blue);
+        color: white;
+    }
 }
