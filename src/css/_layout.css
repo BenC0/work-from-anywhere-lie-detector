@@ -5,9 +5,9 @@ section[page] {
     bottom: 0;
     position: fixed;
 
+    width: 100vw;
     display: flex;
     min-height: 100vh;
-    width: 100vw;
 
     & article,
     & picture {
@@ -34,6 +34,43 @@ section[page] {
         
         & article {
             width: 100vw;
+        }
+    }
+
+    &#results {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        padding-top: var(--header-height);
+
+        & .villian,
+        & .hero {
+            width: 100%;
+            display: flex;
+            place-items: center;
+            flex-direction: column;
+
+            padding-left: 12.65%;
+            padding-right: 12.65%;
+        }
+
+        & .hero {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        & .villian {
+            padding-top: 88px;
+            padding-bottom: 140px;
+        }
+
+        & .blog_post {
+            width: 100%;
+            display: flex;
+
+            & article {
+                padding: 34px 23px 56px 56px;
+            }
         }
     }
 }

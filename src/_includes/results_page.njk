@@ -1,0 +1,28 @@
+<section id="results" page="results">
+<input type="checkbox" id="toggle_form" name="toggle_form" />
+    <div class="hero">
+        <h2 class="heading">{{ content.resultsPage.hero | safe }}</h2>
+        <h3 class="subheading">{{ content.resultsPage.subheading | safe }}</h3>
+    </div>
+    <div class="blog_post">
+        <article>
+            <p class="leading_copy">{{ content.resultsPage.component_two_leading_copy | safe }}</p>
+            <h3 class="heading">{{ content.resultsPage.component_two_heading | safe }}</h3>
+            <h4 class="subheading">{{ content.resultsPage.component_two_subheading | safe }}</h4>
+            <p class="body">{{ content.resultsPage.component_two_body | safe }}</p>
+            <div class="cta_container">
+                <a href="#" class="cta">{{ content.resultsPage.component_two_cta_one | safe }}</a>
+                <label for="toggle_form">{{ content.resultsPage.component_two_cta_two | safe }}</label>
+            </div>
+        </article>
+        <picture>
+            {# <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jqtrvhhf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay> #}
+            <img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/placeholder_image.png" class="placeholder" />
+        </picture>
+    </div>
+    <div class="villian">
+        <h2 class="heading">{{ content.resultsPage.component_three_heading | safe }}</h2>
+        <p class="body">{{ content.resultsPage.component_three_body | safe }}</p>
+        <a href="#" class="cta">{{ content.resultsPage.component_three_cta_one | safe }}</a>
+    </div>
+</section>

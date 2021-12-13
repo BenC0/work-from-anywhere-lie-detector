@@ -6,7 +6,7 @@ body {
     counter-increment: inputs;
 }
 
-#result::before {
+.resultNum::before {
 	content: counter(inputs);
 }
 
@@ -21,7 +21,7 @@ body {
 [name="answer-7"]:checked ~ [page="q8"],
 [name="answer-8"]:checked ~ [page="q9"],
 [name="answer-9"]:checked ~ [page="q10"],
-[name="answer-10"]:checked ~ [page="q11"],
+[name="answer-10"]:checked ~ [page="results"],
 [name="question-1"]:checked ~ [page="a1"],
 [name="question-2"]:checked ~ [page="a2"],
 [name="question-3"]:checked ~ [page="a3"],
@@ -32,7 +32,6 @@ body {
 [name="question-8"]:checked ~ [page="a8"],
 [name="question-9"]:checked ~ [page="a9"],
 [name="question-10"]:checked ~ [page="a10"],
-[name="question-11"]:checked ~ [page="a11"],
 [name="answer-10"]:checked ~ header nav {
     opacity: 1;
     pointer-events: auto;
@@ -64,6 +63,23 @@ section[page],
 [name="answer-10"]:not(:checked) ~ header nav {
     opacity: 0;
     pointer-events: none;
+}
+
+.input-answer,
+#toggle_form {
+    width: 0;
+    margin: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    font-size: 0;
+    appearance: none;
+    pointer-events: none;
+    display: inline-block;
+}
+
+[name="answer-10"]:checked ~ header {
+    background:  rgba(60, 100, 177, .2);
 }
 
 [name="answer-0"]:not(:checked) ~ [page="q0"],
@@ -105,10 +121,6 @@ section[page],
 [page="q1"] article,
 [page^="a"] {
     transform: translate(100%, 0);
-}
-
-.input-answer {
-    display: none;
 }
 
 .progress_bar {

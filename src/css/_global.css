@@ -23,6 +23,7 @@ body {
     font-weight: 400;
     font-size: var(--fs);
     font-family: var(--ff);
+    overflow-x: hidden;
 }
 
 p {
@@ -37,7 +38,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    position: fixed;
+    position: absolute;
     height: var(--header-height);
 
     display: flex;
@@ -88,6 +89,7 @@ header {
     font-size: 1.5rem;
     text-align: center;
     display: inline-block;
+    text-decoration: none;
     
     color: var(--blue);
     border-radius: 10px;

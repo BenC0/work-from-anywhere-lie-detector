@@ -46,4 +46,90 @@ section[page] {
             font-size: 1.125rem;
         }
     }
+
+    &#results {
+        & .cta {
+            color: white;
+            background: var(--blue);
+            &:hover {
+                color: var(--blue);
+                background: var(--lightblue);
+            }
+        }
+        & .hero {
+            & .heading,
+            & .subheading {
+                max-width: 633px;
+                text-align: center;
+                margin: 0 auto 30px;
+                line-height: 3.4375rem;
+            }
+
+            & .heading {
+                font-weight: 700;
+                font-size: 2.75rem;
+            }
+            
+            & .subheading {
+                font-weight: 600;
+                font-size: 2.25rem;
+            }
+        }
+        & article {
+            background: rgba(148, 179, 239, 0.28);
+
+            & .leading_copy,
+            & .heading,
+            & .subheading,
+            & .body {
+                text-align: left;
+            }
+
+            & .leading_copy {
+                margin: 34px 0;
+                foint-weight: 600;
+                font-size: 1.125rem;
+            }
+
+            & .heading {
+                margin: 0 0 30px;
+                font-weight: 700;
+                font-size: 2.75rem;
+                line-height: 3.4375rem;
+            }
+
+            & .subheading {
+                margin: 0 0 43px;
+                font-weight: 600;
+                font-size: 2.25rem;
+                line-height: 2.8125rem;
+            }
+
+            & .body {
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+            }
+        }
+
+        & .villian {
+            & .heading,
+            & .body {
+                text-align: center;
+                margin: 0 auto 60px;
+            }
+
+            & .heading {
+                max-width: 633px;
+                font-weight: 700;
+                font-size: 2.75rem;
+                line-height: 3.4375rem;
+            }
+            
+            & .body {
+                max-width: 956px;
+                font-size: 1.125rem;
+                line-height: 1.875rem;
+            }
+        }
+    }
 }
