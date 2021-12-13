@@ -14,6 +14,7 @@
             "num": "1",
             "id": "question 1",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
                 "question": "It can take up to a month for a network security breach to be identified."
@@ -27,19 +28,21 @@
             "num": "2",
             "id": "question 2",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
-                "question": "Deploying cloud services is likely to increase an IT team’s visibility gaps."
+                "question": "Deploying cloud services is likely to increase an IT team's visibility gaps."
             },
             "answer": {
                 "header": "False!",
-                "copy": "In a survey undertaken by Digital Enterprise Journal, 66% of organizations reported that their visibility of IT performance actually declined after they deployed cloud services. Mis-sold, misaligned cloud solutions can decrease clarity and increase complexity – precisely the opposite of what was promised they’d deliver."
+                "copy": "In a survey undertaken by Digital Enterprise Journal, 66% of organizations reported that their visibility of IT performance actually declined after they deployed cloud services. Mis-sold, misaligned cloud solutions can decrease clarity and increase complexity – precisely the opposite of what was promised they'd deliver."
             }
         },
         {
             "num": "3",
             "id": "question 3",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
                 "question": "When remote working leads to a data breach, the average repair cost is $1.07 million higher than it would be otherwise."
@@ -53,104 +56,111 @@
             "num": "4",
             "id": "question 4",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
-                "question": "SASE isn’t a magic bullet for every security issue. "
+                "question": "SASE isn't a magic bullet for every security issue. "
             },
             "answer": {
                 "header": "False!",
-                "copy": "SASE is an incredibly powerful security technology, and one that’s rapidly establishing itself as the new global gold standard for the IT industry. As weightily robust as it is, however, it’s not about to put an entire generation of security professionals out of a job. It does not offer, for example, endpoint protection – vital in the fight against ransomware – and organizations will still need expert personnel on hand to tackle security emergencies, before or after they take hold. "
+                "copy": "SASE is an incredibly powerful security technology, and one that's rapidly establishing itself as the new global gold standard for the IT industry. As weightily robust as it is, however, it's not about to put an entire generation of security professionals out of a job. It does not offer, for example, endpoint protection – vital in the fight against ransomware – and organizations will still need expert personnel on hand to tackle security emergencies, before or after they take hold. "
             }
         },
         {
             "num": "5",
             "id": "question 5",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
                 "question": "A digital transformation project should never be tied up with business metrics."
             },
             "answer": {
                 "header": "False!",
-                "copy": "Some business leaders demand digital transformation simply because everyone else is doing it, and they don’t want to be ‘left behind’. For them, digital transformation is an end in and of itself. Forward-thinking IT teams, however, will closely align digital transformation to key business metrics – revenue, cost, customer engagement, and so on. Because, with no real-world benefits to point to, digital transformation for its own sake is fairly pointless."
+                "copy": "Some business leaders demand digital transformation simply because everyone else is doing it, and they don't want to be 'left behind'. For them, digital transformation is an end in and of itself. Forward-thinking IT teams, however, will closely align digital transformation to key business metrics – revenue, cost, customer engagement, and so on. Because, with no real-world benefits to point to, digital transformation for its own sake is fairly pointless."
             }
         },
         {
             "num": "6",
             "id": "question 6",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
                 "question": "It takes 12 positive end-user experiences to make up for just one unresolved negative experience."
             },
             "answer": {
                 "header": "False!",
-                "copy": "A disgruntled customer takes a lot of wooing back. Research by a US consultancy firm found that 90% of surveyed users had permanently stopped using an app because of poor performance. But it’s not only your customers you need to consider. Proactively monitoring your internal team’s user experience with the systems they engage with on a daily basis is also vital. In doing so, you can resolve issues before they have a detrimental effect on productivity, morale and – ultimately – your bottom line."
+                "copy": "A disgruntled customer takes a lot of wooing back. Research by a US consultancy firm found that 90% of surveyed users had permanently stopped using an app because of poor performance. But it's not only your customers you need to consider. Proactively monitoring your internal team's user experience with the systems they engage with on a daily basis is also vital. In doing so, you can resolve issues before they have a detrimental effect on productivity, morale and – ultimately – your bottom line."
             }
         },
         {
             "num": "7",
             "id": "question 7",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
                 "question": "Digitization and digital transformation are essentially the same thing."
             },
             "answer": {
                 "header": "False!",
-                "copy": "A very common misconception, particularly outside of IT – but an understandable one. When you’re asked to explain the distinction between the two, here’s a helpfully pithy summation: Digitization is about taking an existing process within a business and making it cheaper and more efficient using digital tools and technology. Enacting digitization does not make a business a digital one, however. That requires digital transformation, which has the grander goal of harnessing technology and data to enhance the business model, energize workplace culture, and, most importantly, create new value for customers."
+                "copy": "A very common misconception, particularly outside of IT – but an understandable one. When you're asked to explain the distinction between the two, here's a helpfully pithy summation: Digitization is about taking an existing process within a business and making it cheaper and more efficient using digital tools and technology. Enacting digitization does not make a business a digital one, however. That requires digital transformation, which has the grander goal of harnessing technology and data to enhance the business model, energize workplace culture, and, most importantly, create new value for customers."
             }
         },
         {
             "num": "8",
             "id": "question 8",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
-                "question": "A zero-trust product should be top of any IT team’s shopping list right now."
+                "question": "A zero-trust product should be top of any IT team's shopping list right now."
             },
             "answer": {
                 "header": "False!",
-                "copy": "Zero trust isn’t a product, it’s a concept – a security model that, over time, systematically removes implicit trust from a network. It’s a journey you need to take, and not something you can simply buy, readymade, and slot into place. Despite that, some unscrupulous vendors will try to sell you zero trust as a product – ironic, given how little trust you should place in such an offer. Having said that: Zero Trust Network Access is a valid product category, and the ideal place to start introducing zero trust as a concept to your business."
+                "copy": "Zero trust isn't a product, it's a concept – a security model that, over time, systematically removes implicit trust from a network. It's a journey you need to take, and not something you can simply buy, readymade, and slot into place. Despite that, some unscrupulous vendors will try to sell you zero trust as a product – ironic, given how little trust you should place in such an offer. Having said that: Zero Trust Network Access is a valid product category, and the ideal place to start introducing zero trust as a concept to your business."
             }
         },
         {
             "num": "9",
             "id": "question 9",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
-                "question": "Monitoring technology components won’t necessarily tell you anything about end-user experience."
+                "question": "Monitoring technology components won't necessarily tell you anything about end-user experience."
             },
             "answer": {
                 "header": "False!",
-                "copy": "Keeping a close eye on individual elements of your infrastructure is obviously vital, but it provides little insight into the experience – good or bad – of your end users. To gain that, these standalone subsystems must be viewed holistically, working in conjunction with each other. Because while they may all be individually ticking over nicely from the IT team’s perspective, at the customer-facing end of the equation the story may be dramatically different."
+                "copy": "Keeping a close eye on individual elements of your infrastructure is obviously vital, but it provides little insight into the experience – good or bad – of your end users. To gain that, these standalone subsystems must be viewed holistically, working in conjunction with each other. Because while they may all be individually ticking over nicely from the IT team's perspective, at the customer-facing end of the equation the story may be dramatically different."
             }
         },
         {
             "num": "10",
             "id": "question 10",
             "layout": "start_page.njk",
+            "ca": "False",
             "content": {
                 "statement": "True or false?",
-                "question": "If you’ve got time to take this quiz, you’re not working hard enough."
+                "question": "If you've got time to take this quiz, you're not working hard enough."
             },
             "answer": {
                 "header": "False!",
-                "copy": "IT teams are, on the whole, pretty swamped at work. A survey of 600 IT professionals found that 54% worked more than 40 hours a week, 17% worked more than 50 hours, and 18% worked more than 60 hours. The average workweek came in at 52 hours – far above that of most other professions. With all that non-stop sprinting just to keep up with day-to-day issues, enacting transformational change can feel like it’s constantly just out of reach. But that’s where Teneo comes in."
+                "copy": "IT teams are, on the whole, pretty swamped at work. A survey of 600 IT professionals found that 54% worked more than 40 hours a week, 17% worked more than 50 hours, and 18% worked more than 60 hours. The average workweek came in at 52 hours – far above that of most other professions. With all that non-stop sprinting just to keep up with day-to-day issues, enacting transformational change can feel like it's constantly just out of reach. But that's where Teneo comes in."
             }
         }
     ],
     "resultsPage": {
-        "hero": "Thanks for taking the quiz! You scored [X] out of 10. We’ve got a few more unspoken IT truths you may be interested in. ",
+        "hero": "Thanks for taking the quiz! You scored [X] out of 10. We've got a few more unspoken IT truths you may be interested in. ",
         "component_two_leading_copy": "Continue reading...",
         "component_two_heading": "The 8 Biggest Challenges Facing Your IT Team Right Now",
         "component_two_subheading": "Read our exclusive insights – free",
-        "component_two_body": "We’ve spoken with hundreds of IT professionals to identify the key stressors currently affecting their teams. During our research, these eight specific challenges arose again and again.<br/><br/>How many of them ring true for you and your team?",
+        "component_two_body": "We've spoken with hundreds of IT professionals to identify the key stressors currently affecting their teams. During our research, these eight specific challenges arose again and again.<br/><br/>How many of them ring true for you and your team?",
         "component_two_cta_one": "Read now",
         "component_two_cta_two": "Read later – send link to email",
-        "component_three_heading": "Embrace Transformation and ‘Work From Anywhere’",
-        "component_three_body": "Post-pandemic, IT teams worldwide are struggling with productivity blockers within their businesses. Issues range from incompatible devices to unreliable connectivity; from unsecure environments, to overreliance on VPNs.<br/><br/>The daily firefighting of these issues gobbles up time and resources. The result? It’s near impossible to plan the transformational change needed to deal with these issues permanently. It’s a frustrating, catch-22 situation.<br/><br/>If you’re looking to transform your organization’s infrastructure to allow for a true ‘work from anywhere’ approach, Teneo can help. Let’s break that endless cycle of firefighting and make real change happen – together.",
+        "component_three_heading": "Embrace Transformation and 'Work From Anywhere'",
+        "component_three_body": "Post-pandemic, IT teams worldwide are struggling with productivity blockers within their businesses. Issues range from incompatible devices to unreliable connectivity; from unsecure environments, to overreliance on VPNs.<br/><br/>The daily firefighting of these issues gobbles up time and resources. The result? It's near impossible to plan the transformational change needed to deal with these issues permanently. It's a frustrating, catch-22 situation.<br/><br/>If you're looking to transform your organization's infrastructure to allow for a true 'work from anywhere' approach, Teneo can help. Let's break that endless cycle of firefighting and make real change happen – together.",
         "component_three_cta_one": "Learn more",
         "form_heading": "Get intsant access to our insider content"
     },

@@ -6,8 +6,13 @@
     <p class="statement">{{ question.content.statement | safe }}</p>
     <h2 class="question">{{ question.content.question | safe }}</h2>
     <div class="cta_container">
-        <label for="question-{{ item_num }}-correct" class="cta">True</label>
-        <label for="question-{{ item_num }}-incorrect" class="cta">False</label>
+        {% if question.ca == "False" %}
+            <label for="question-{{ item_num }}-incorrect" class="cta">True</label>
+            <label for="question-{{ item_num }}-correct" class="cta">False</label>
+        {% else %}
+            <label for="question-{{ item_num }}-correct" class="cta">True</label>
+            <label for="question-{{ item_num }}-incorrect" class="cta">False</label>
+        {% endif %}
     </div>
     <ul class="progress_bar" current="{{ item_num }}">
         <li class="indicator indicator-1">1</li>

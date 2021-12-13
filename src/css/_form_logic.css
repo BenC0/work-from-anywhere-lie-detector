@@ -1,3 +1,15 @@
+body {
+    counter-reset: inputs;
+}
+
+.correct-answer:checked {
+    counter-increment: inputs;
+}
+
+#result::before {
+	content: counter(inputs);
+}
+
 [name="answer-0"]:not(:checked) ~ [page="q0"],
 [name="answer-0"]:checked ~ [page="q1"],
 [name="answer-1"]:checked ~ [page="q2"],
