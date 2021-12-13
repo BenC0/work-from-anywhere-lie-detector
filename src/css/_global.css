@@ -55,6 +55,21 @@ header {
         height: var(--logo-height);
         line-height: var(--logo-height);
     }
+
+    & nav {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-items: space-between;
+        
+        font-weight: 600;
+        line-height: 2rem;
+        font-size: 1.25rem;
+
+        & a:not(:hover) {
+            text-decoration: none;
+        }
+    }
 }
 
 .cta_container {
