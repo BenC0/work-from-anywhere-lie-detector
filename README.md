@@ -19,7 +19,7 @@ While form progression could normally be handled through dynamically hiding/show
 #### JS
 * Use Babel to ensure compatibility where necessary
 * JS required for project is not complex so this may not be needed
-* Lottie required for animation - _Asset pending_
+* Lottie required for animation
 * Lie detected animation should play when user answers incorrectly
 * Truth detected animation should play when user answers correctly
 #### CSS
@@ -28,3 +28,14 @@ While form progression could normally be handled through dynamically hiding/show
 #### Hubspot
 * Needs to function perfectly within Hubspot
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
+
+## TODO
+
+1. Answers need to be built out
+2. Content needs updating
+3. Animation needs updating - _Asset pending_
+4. Results Page needs building
+5. Form needs building & integrating with Hubspot - _Ask Kess for clarification on how far I should go with this, I might be limited by sandbox vs real enviroment_
+6. Mobile design - _need to send notes to Kess_
+7. Page transition needs to mirror design
+8. CSS Counter needs implementing
