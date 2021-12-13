@@ -1,8 +1,9 @@
 section[page] {
     transition: all .35s ease-in;
 
+    &[id^="answer-"] article,
     & figure {
-        background:  rgba(60, 100, 177, .05);
+        background:  rgba(60, 100, 177, .2);
     }
 
     & article {
@@ -12,11 +13,22 @@ section[page] {
             font-weight: 900;
         }
         
+        & .answer,
         & .question,
+        & .explanation,
         & .hero_subheading {
             margin: .5em 0;
             font-weight: 700;
             font-size: 2.75rem;
+            line-height: 3.4375rem;
+        }
+        
+        & .answer {
+            margin: 0;
+        }
+        
+        & .explanation {
+            font-weight: 400;
         }
 
         & .hero_body {

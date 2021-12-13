@@ -28,4 +28,12 @@ section[page] {
         padding-top: var(--header-height);
         padding-left: var(--outer-padding);
     }
+
+    &[id^="answer-"] {
+        z-index: 1;
+        
+        & article {
+            width: 100vw;
+        }
+    }
 }

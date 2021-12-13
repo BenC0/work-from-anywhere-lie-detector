@@ -67,6 +67,20 @@ header {
     &:not(:last-child) {
         margin: 40px 0;
     }
+
+    & > a[target="_blank"] {
+        color: black;
+        font-weight: 400;
+        font-size: 1.125rem;
+        height: var(--cta-height);
+        line-height: var(--cta-height);
+        display: flex;
+        place-items: center;
+
+        & span {
+            margin-right: 1ch;
+        }
+    }
 }
 
 .cta {
