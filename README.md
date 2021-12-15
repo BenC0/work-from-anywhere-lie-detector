@@ -36,3 +36,4 @@ While form progression could normally be handled through dynamically hiding/show
 3. Form needs building & integrating with Hubspot
 4. Mobile design
 5. Page tranisiton needs improving to more closely mirror design
+6. Update copy and links
