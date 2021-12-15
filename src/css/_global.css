@@ -57,17 +57,31 @@ header {
     }
 
     & nav {
+        flex-grow: 1;
         display: flex;
         text-align: center;
         align-items: center;
         justify-items: space-between;
         
+        font-size: 1rem;
         font-weight: 600;
-        line-height: 2rem;
-        font-size: 1.25rem;
+        line-height: 1.2rem;
+        
+        & a {
+            padding: 0 1ch;
+            &:not(:hover) {
+                text-decoration: none;
+            }
+        }
 
-        & a:not(:hover) {
-            text-decoration: none;
+        & .cta {
+            color: white;
+            margin-right: 0;
+            background: var(--blue);
+            &:hover {
+                color: var(--blue);
+                background: var(--lightblue);
+            }
         }
     }
 }

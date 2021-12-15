@@ -31,7 +31,8 @@ While form progression could normally be handled through dynamically hiding/show
 
 ## TODO
 
-1. Animation needs updating - _Asset pending_
-2. Form needs building & integrating with Hubspot - _Ask Kess for clarification on how far I should go with this, I might be limited by sandbox vs real enviroment_
-3. Mobile design - _need to send notes to Kess_
-4. Page tranisiton needs improving to more closely mirror design
+1. Update page to mirror new designs
+2. Animation needs updating
+3. Form needs building & integrating with Hubspot
+4. Mobile design
+5. Page tranisiton needs improving to more closely mirror design
