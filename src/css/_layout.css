@@ -15,6 +15,17 @@ section[page] {
         width: 50vw;
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: 768px) {
+            width: 100vw;
+        }
+        
+        &:only-child {
+            width: 100vw;
+            
+            @media screen and (min-width: 768px) {
+                width: 52vw;
+            }
+        }
     }
 
     & picture {
@@ -27,6 +38,10 @@ section[page] {
         padding-bottom: 65px;
         padding-top: var(--header-height);
         padding-left: var(--outer-padding);
+            
+        @media screen and (max-width: 768px) {
+            padding: var(--header-height) var(--outer-padding) 0;
+        }
     }
 
     &[id^="answer-"] {

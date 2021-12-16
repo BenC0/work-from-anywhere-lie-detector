@@ -1,35 +1,24 @@
 <input type="radio" name="answer-{{ item_num }}" id="input-answer-{{ item_num }}" class="counter_ignore input-answer" />
+{% if item_num != "0" %}
 <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-correct" class="correct-answer input-answer" />
 <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
-<section id="question-{{ item_num }}" page="q{{ item_num }}">
-    <article>
-        {% block content %}
-        {% endblock %}
-    </article>
-    <picture>
-        {# <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jqtrvhhf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay> #}
-        <img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/placeholder_image.png" class="placeholder" />
-    </picture>
+{% endif %}
+<section id="question-{{ item_num }}" page="q{{ item_num }}" {% if question.answer %} class="question" {% endif %} >
+    {% block content %}
+    {% endblock %}
 </section>
 {% if question.answer %}
-<section id="answer-{{ item_num }}" page="a{{ item_num }}">
+<section id="answer-{{ item_num }}" page="a{{ item_num }}" ca="{{ question.ca }}">
     <article>
         <h3 class="answer">{{ question.answer.header | safe }}</h3>
         <p class="explanation">{{ question.answer.copy | safe }}</p>
         <div class="cta_container">
-            <label for="input-answer-{{ item_num }}" class="cta">Next</label>
-            <a href="#" target="_blank">
-                <span>Learn more</span>
-                <svg width="31" height="39" viewBox="0 0 31 39" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                    <rect width="31" height="39" fill="url(#pattern0)"/>
-                    <defs>
-                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_92_6" transform="translate(-0.129032) scale(0.00629032 0.005)"/>
-                    </pattern>
-                    <image id="image0_92_6" width="200" height="200" xlink:href="data:image/png;base64,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"/>
-                    </defs>
-                    </svg>
-
+            <label for="input-answer-{{ item_num }}" class="cta primary"><span class="text">Next</span></label>
+            <a href="#" target="_blank" class="cta tertiary">
+                <span class="text">Learn more</span>
+                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.550253 1.05021H10.4497M10.4497 1.05021V10.9497M10.4497 1.05021L0.550253 10.9497" stroke="white"/>
+                </svg>
             </a>
         </div>
     </article>

@@ -34,8 +34,28 @@ body {
 [name="question-10"]:checked ~ [page="a10"],
 [name="answer-10"]:checked ~ header nav {
     opacity: 1;
+    overflow: auto;
     pointer-events: auto;
 }
+
+[name="question-1"]:checked ~ [page="a1"],
+[name="question-2"]:checked ~ [page="a2"],
+[name="question-3"]:checked ~ [page="a3"],
+[name="question-4"]:checked ~ [page="a4"],
+[name="question-5"]:checked ~ [page="a5"],
+[name="question-6"]:checked ~ [page="a6"],
+[name="question-7"]:checked ~ [page="a7"],
+[name="question-8"]:checked ~ [page="a8"],
+[name="question-9"]:checked ~ [page="a9"],
+[name="question-10"]:checked ~ [page="a10"],
+[name="answer-0"]:not(:checked) {
+    & ~ header #logo svg path {
+        @media screen and (min-width: 768px) {
+            fill: white;
+        }
+    }
+}
+
 
 section[page],
 [name="question-0"]:checked ~ [page="q0"],
@@ -62,6 +82,7 @@ section[page],
 [name="answer-10"]:checked ~ [page="a10"],
 [name="answer-10"]:not(:checked) ~ header nav {
     opacity: 0;
+    overflow: hidden;
     pointer-events: none;
 }
 
@@ -82,61 +103,32 @@ section[page],
     background:  rgba(60, 100, 177, .2);
 }
 
-[name="answer-0"]:not(:checked) ~ [page="q0"],
-[name="answer-0"]:checked ~ [page="q1"],
-[name="answer-1"]:checked ~ [page="q2"],
-[name="answer-2"]:checked ~ [page="q3"],
-[name="answer-3"]:checked ~ [page="q4"],
-[name="answer-4"]:checked ~ [page="q5"],
-[name="answer-5"]:checked ~ [page="q6"],
-[name="answer-6"]:checked ~ [page="q7"],
-[name="answer-7"]:checked ~ [page="q8"],
-[name="answer-8"]:checked ~ [page="q9"],
-[name="answer-9"]:checked ~ [page="q10"],
-[name="answer-10"]:checked ~ [page="q11"] {
-    & article {
-        transform: translate(0, 0);
-    }
-}
-
-[name="question-1"]:checked ~ [page="a1"],
-[name="question-2"]:checked ~ [page="a2"],
-[name="question-3"]:checked ~ [page="a3"],
-[name="question-4"]:checked ~ [page="a4"],
-[name="question-5"]:checked ~ [page="a5"],
-[name="question-6"]:checked ~ [page="a6"],
-[name="question-7"]:checked ~ [page="a7"],
-[name="question-8"]:checked ~ [page="a8"],
-[name="question-9"]:checked ~ [page="a9"],
-[name="question-10"]:checked ~ [page="a10"],
-[name="question-11"]:checked ~ [page="a11"] {
-    transform: translate(0, 0);
-}
-
-[page^="q"] article {
-    transition: all .3s ease-in;
-    transform: translate(0, -100%);
-}
-
-[page="q1"] article,
-[page^="a"] {
-    transform: translate(100%, 0);
-}
-
 .progress_bar {
     display: flex;
     padding: 0;
-    margin: 0 0 10.54vh;
+    margin: 5.18vh 0 6.94vh;
 
     & .indicator {
-        width: 29px;
-        height: 10px;
-        margin-right: 7px;
+        width: 8px;
+        height: 8px;
         border-radius: 6px;
-
+        
         font-size: 0;
         color: transparent;
         background: var(--blue);
+        border: 1px solid var(--blue);
+
+        &:not(:last-child) {
+            margin-right: 4.8px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        right: 20px;
+        position: fixed;
+        transform: translateY(-50%);
+        top: calc(var(--header-height) / 2);
     }
 
     &[current="1"] .indicator-1 ~ .indicator,
@@ -149,6 +141,6 @@ section[page],
     &[current="8"] .indicator-8 ~ .indicator,
     &[current="9"] .indicator-9 ~ .indicator,
     &[current="10"] .indicator-10 ~ .indicator {
-        background: var(--lightblue);
+        background: white;
     }
 }

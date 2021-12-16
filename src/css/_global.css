@@ -1,43 +1,67 @@
 :root {
     --lightblue: rgba(148, 179, 239, 0.28);
-    --blue: #3C64B1;
-    
-    --ff: "Source Sans Pro", sans-serif;
+    --blue: #002858;
+    --orange: rgba(246, 158, 15, 1);
+    --mango-gradient: linear-gradient(to right, #F69E0F, #E9CB53);
+    --blue-gradient: linear-gradient(to right, #002858, #5CA39A);
+
     --fs: 16px;
     --fc: rgba(55, 63, 65, 1);
+    --ff-1: sofia-pro, sans-serif;
+    --ff-2: neue-haas-grotesk-display, sans-serif;
     
-    --header-height: 18.5vh;
+    --header-height: 18.75vh;
+    @media screen and (max-width: 767px) {
+        --header-height: 11.61vh;
+    }
+
     --outer-padding: 5.9vw;
     
-    --cta-height: 55px;
-
-    --logo-height: 55px;
+    --cta-height: 38px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-body {
-    color: var(--fc);
+h1, h2, h3, h4, h5, h6, p, body {
+    color: inherit;
     font-weight: 400;
+    font-style: normal;
+    line-height: 1.625;
     font-size: var(--fs);
-    font-family: var(--ff);
-    overflow-x: hidden;
+    letter-spacing: 0.02ch;
+    font-family: var(--ff-1);
 }
 
-p {
-    line-height: 1.667;
+p, body {
+    font-weight: 300;
+}
+    
+body {
+    color: var(--fc);
 }
 
 label {
     cursor: pointer;
 }
 
+@media screen and (min-width: 768px) {
+    .mobile {
+        display: none;
+    }   
+}
+@media screen and (max-width: 767px) {
+    .desktop {
+        display: none;
+    }   
+}
+
 header {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
     position: absolute;
     height: var(--header-height);
 
@@ -46,14 +70,11 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    & #logo {
+    & #logo svg {
         width: 130px;
-        color: white;
-        text-align: center;
-
-        background: var(--blue);
-        height: var(--logo-height);
-        line-height: var(--logo-height);
+        @media screen and (max-width: 767px) {
+            width: 106px;
+        }
     }
 
     & nav {
@@ -97,43 +118,79 @@ header {
     &:not(:last-child) {
         margin: 40px 0;
     }
-
-    & > a[target="_blank"] {
-        color: black;
-        font-weight: 400;
-        font-size: 1.125rem;
-        height: var(--cta-height);
-        line-height: var(--cta-height);
-        display: flex;
-        place-items: center;
-
-        & span {
-            margin-right: 1ch;
-        }
-    }
 }
 
 .cta {
-    font-weight: 600;
-    font-size: 1.5rem;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
+    & .text {
+        font-size: 1rem;
+        font-weight: 500;
+        font-family: var(--ff-1);
+        text-align: center;
+    }
     
     color: var(--blue);
-    border-radius: 10px;
-    background: var(--lightblue);
+    position: relative;
+    border-radius: 20px;
+    text-decoration: none;
+    background: var(--orange);
     
-    width: 164px;
+    width: 163px;
     margin-right: 40px;
     height: var(--cta-height);
     line-height: var(--cta-height);
     transition: all .1s ease-in;
 
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+
+    &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        z-index: 1;
+        content: "";
+        position: absolute;
+        border-radius: 20px;
+        transition: opacity .1s ease-in;
+        background: var(--mango-gradient);
+    }
+
     &:active,
     &:focus,
     &:hover {
+        border: none;
+        &::before {
+            opacity: 1;
+        }
+    }
+
+    & .text {
+        z-index: 2;
+        position: relative;
+    }
+
+    &.secondary {
         background: var(--blue);
+
+        &::before {
+            background: var(--blue-gradient);
+        }
+    }
+
+    &.tertiary {
         color: white;
+        border: 1px solid white;
+        background: transparent;
+    
+        &::before {
+            background: transparent;
+        }
+
+        & .text {
+            margin-right: 1ch;
+        }
     }
 }

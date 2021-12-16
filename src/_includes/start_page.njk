@@ -3,10 +3,12 @@
 {% set item_id = "Start Page" %}
 
 {% block content %}
-    <h1 class="hero_title">{{ content.startPage.content.hero_title | safe }}</h1>
-    <h2 class="hero_subheading">{{ content.startPage.content.hero_subheading | safe }}</h2>
-    <p class="hero_body">{{ content.startPage.content.hero_body | safe }}</p>
-    <div class="cta_container">
-        <label for="input-answer-0" class="cta">{{ content.startPage.content.hero_CTA | safe }}</label>
-    </div>
+    <article>
+        <h1 class="hero_title">{{ content.startPage.content.hero_title | safe }}</h1>
+        <h2 class="hero_subheading">{{ content.startPage.content.hero_subheading | safe }}</h2>
+        <p class="hero_body">{{ content.startPage.content.hero_body | safe }}</p>
+        <div class="cta_container">
+            <label for="input-answer-0" class="cta primary"><span class="text">{{ content.startPage.content.hero_CTA | safe }}</span></label>
+        </div>
+    </article>
 {% endblock %}
