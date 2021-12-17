@@ -73,6 +73,7 @@
 
     /* Alternate color pallete for secondary CTA */
     &.secondary {
+        color: white;
         background: var(--blue);
         
         &::before {
@@ -92,6 +93,75 @@
 
         & .text {
             margin-right: 1ch;
+        }
+    }
+}
+
+[answer],
+[question] {
+    @media screen and (max-width: 768px) {
+        & .cta_container {
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            
+            & .cta {
+                margin: 0;
+                width: 50vw;
+                height: 50px;
+
+                &, &::before {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Question specific cta styling */
+[question] .cta_container .cta {
+    line-height: var(--size);
+
+    background: white;
+    border-radius: 100%;
+    border: 1.5px solid var(--orange);
+    
+    &::before {
+        border-radius: 100%;
+    }
+
+    &.secondary {
+        color: var(--blue);
+        border-color: var(--blue);
+    }
+
+    &:hover,
+    &.secondary:hover {
+        color: white;
+        border-color: transparent;
+    }
+    
+    @media screen and (min-width: 769px) {
+        --size: 84px;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    /* CTA design */
+    @media screen and (max-width: 768px) {
+        border: 0;
+        border-radius: 0;
+        background: var(--orange);
+        
+        &.tertiary,
+        &.secondary {
+            color: white;
+            background: var(--blue);
+        }
+        
+        &::before {
+            border-radius: 0;
         }
     }
 }

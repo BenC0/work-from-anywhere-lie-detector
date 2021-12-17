@@ -82,180 +82,72 @@ main {
         grid-row: 1;
         grid-column: 1 / span 2;
     }
-
-    & .answers {
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1;
-        position: absolute;
-    }
 }
 
-
-section[card] {
-    /* positioning and dimensions */
+/* answer specific dimensions/z-index */
+[answer] {
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    position: fixed;
+    z-index: 1;
+    position: absolute;
+    padding-top: var(--header-height);
 
-    width: 100vw;
-    display: flex;
-    min-height: 100vh;
-
-    /* positioning and dimensions for child elements */
-    & article,
-    & picture {
-        margin: 0;
-        width: 50vw;
-        display: flex;
-        flex-direction: column;
-        @media screen and (max-width: 768px) {
-            width: 100vw;
-        }
-        
-        &:only-child {
-            width: 100vw;
-            
-            @media screen and (min-width: 768px) {
-                width: 52vw;
-            }
-        }
+    /* background image placement */
+    &::before {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        position: absolute;
     }
 
-    /* alignment for children of picture elements */
-    & picture {
+    /* answer decorative line placement */
+    & .answer {
         position: relative;
-        align-items: center;
-        justify-content: center;
 
-        & .placeholder {
-            width: 100%;
-        }
-    }
-
-    
-    &.question, 
-    &[id^="answer-"] {
-        @media screen and (max-width: 768px) {
-            & .cta_container {
-                left: 0;
-                right: 0;
-                bottom: 0;
-                position: fixed;
-                
-                & .cta {
-                    margin: 0;
-                    width: 50vw;
-                    height: 50px;
-                }
-            }
-        }
-    }
-
-    /* Question grid styling */
-    &.question {
-        @media screen and (max-width: 768px) {
-            display: grid;
-            grid-template-rows: auto;
-            align-content: flex-start;
-            grid-template-columns: 1fr;
-        }
-        
-        /* Image positioning */
-        & picture {
-            @media screen and (max-width: 768px) {
-                grid-row: 1;
-                width: 100vw;
-                height: 160px;
-                overflow: hidden;
-                position: relative;
-                margin-top: var(--header-height);
-
-                & img {
-                    top: 50%;
-                    left: 50%;
-                    width: 100vw;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-        /* CTA size & placement */
-        & .cta_container .cta {
-            @media screen and (min-width: 769px) {
-                --size: 84px;
-                width: var(--size);
-                height: var(--size);
-            }
-        }
-
-        /* Content positioning */
-        & article {
-            @media screen and (max-width: 768px) {
-                grid-row: 2;
-                padding-top: 0;
-            }
-        }
-    }
-
-    /* answer specific dimensions/z-index */
-    &[id^="answer-"] {
-        z-index: 1;
-        /* background image placement */
         &::before {
-            top: 0;
-            left: 0;
-            right: 0;
             bottom: 0;
             z-index: -1;
+            content: "";
+            right: calc(100% + 8px);
+            width: 72px;
             position: absolute;
         }
+    }
 
-        /* answer decorative line placement */
+    &[ca="True"] {
         & .answer {
-            position: relative;
-
             &::before {
-                bottom: 0;
-                z-index: -1;
-                content: "";
-                right: calc(100% + 8px);
-                width: 72px;
-                position: absolute;
-            }
-        }
-
-        &[ca="True"] {
-            & .answer {
-                &::before {
-                    bottom: 7px;
-                    height: 7.23px;
-                }
-            }
-        }
-        
-        &[ca="False"] {
-            & .answer {
-                &::before {
-                    height: 35.17px;
-                }
-            }
-        }
-        
-        & article {
-            width: 64vw;
-            /* content spacing */
-            @media screen and (max-width: 768px) {
-                width: 100vw;
-                & .explanation {
-                    padding-bottom: 60px;
-                }
+                bottom: 7px;
+                height: 7.23px;
             }
         }
     }
+    
+    &[ca="False"] {
+        & .answer {
+            &::before {
+                height: 35.17px;
+            }
+        }
+    }
+    
+    & article {
+        width: 64vw;
+        /* content spacing */
+        @media screen and (max-width: 768px) {
+            width: 100vw;
+            & .explanation {
+                padding-bottom: 60px;
+            }
+        }
+    }
+}
+
+section[card] {
     /* Start page placement/positioning */
     &.start {
         /* content placement/positioning */
@@ -280,43 +172,6 @@ section[card] {
                 @media screen and (max-width: 768px) {
                     margin-top: 33px;
                 }
-            }
-        }
-    }
-    /* Results specific styling, on hold pending sign off, will change so not commenting now. */
-    &#results {
-        display: flex;
-        position: absolute;
-        flex-direction: column;
-        padding-top: var(--header-height);
-
-        & .villian,
-        & .hero {
-            width: 100%;
-            display: flex;
-            place-items: center;
-            flex-direction: column;
-
-            padding-left: 12.65%;
-            padding-right: 12.65%;
-        }
-
-        & .hero {
-            padding-top: 60px;
-            padding-bottom: 60px;
-        }
-
-        & .villian {
-            padding-top: 88px;
-            padding-bottom: 140px;
-        }
-
-        & .blog_post {
-            width: 100%;
-            display: flex;
-
-            & article {
-                padding: 34px 23px 56px 56px;
             }
         }
     }

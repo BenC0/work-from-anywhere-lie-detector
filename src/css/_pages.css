@@ -15,7 +15,7 @@
         background-position: bottom center;
         background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/stv.png");
     }
-    
+
     & article {
         /* content font styling */
         color: white;
@@ -54,10 +54,8 @@
     }
 }
 
-section[card] {
-    &.start {
-    }
-
+.answers,
+.questions {
     /* General content font styling */
     & article {
         & .answer,
@@ -112,224 +110,80 @@ section[card] {
             }
         }
     }
+}
 
-    &.question {
-        /* Lie detector background */
-        & picture {
-            background: #002858;
-        }
-
-        /* Question specific cta styling */
-        & .cta_container {
-            & .cta {
-                line-height: var(--size);
-
-                background: white;
-                border-radius: 100%;
-                border: 1.5px solid var(--orange);
-                
-                &::before {
-                    border-radius: 100%;
-                }
-
-                &.secondary {
-                    border-color: var(--blue);
-                }
-
-                &:hover,
-                &.secondary:hover {
-                    color: white;
-                    border-color: transparent;
-                }
-            }
-        }
+/* Answer styles */
+[answer] {
+    /* background image as psuedo element */
+    &::before {
+        content: "";
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center right;
     }
 
-    /* Question & Answer styles */
-    &[id^="answer-"],
-    &.question {
-        /* CTA design */
-        @media screen and (max-width: 768px) {
-            & .cta_container {
-                & .cta {
-                    border: 0;
-                    border-radius: 0;
-                    background: var(--orange);
-                    
-                    &.tertiary,
-                    &.secondary {
-                        color: white;
-                        background: var(--blue);
-                    }
-                    
-                    &::before {
-                        border-radius: 0;
-                    }
-                }
+    /* Alternate designs for True/False answer */
+    &[ca="True"] {
+        color: var(--blue);
+        background-color: var(--orange);
+
+        & .primary.cta {
+            color: white;
+            background: var(--blue);
+        
+            &::before {
+                background: var(--blue-gradient);
             }
         }
-    }
 
-    /* Answer styles */
-    &[id^="answer-"] {
-        /* background image as psuedo element */
+        & .tertiary.cta {
+            color: var(--blue);
+            border-color: var(--blue);
+
+            /* Learn more CTA icon color */
+            svg path {
+                stroke: var(--blue);
+            }
+        }
+
         &::before {
-            content: "";
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center right;
+            /* Card background */
+            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbg.png");
         }
 
         & .answer {
-            position: relative;
-
-            /* answer decorative line styling */
             &::before {
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center right;
-            }
-        }
-
-        /* Alternate designs for True/False answer */
-        &[ca="True"] {
-            color: var(--blue);
-            background-color: var(--orange);
-
-            & .primary.cta {
-                color: white;
-                background: var(--blue);
-            
-                &::before {
-                    background: var(--blue-gradient);
-                }
-            }
-
-            & .tertiary.cta {
-                color: var(--blue);
-                border-color: var(--blue);
-
-                /* Learn more CTA icon color */
-                svg path {
-                    stroke: var(--blue);
-                }
-            }
-
-            &::before {
-                /* Card background */
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbg.png");
-            }
-
-            & .answer {
-                &::before {
-                    /* Answer decorative line  */
-                    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbeat.png");
-                }
-            }
-        }
-
-        &[ca="False"] {
-            color: white;
-            background-color: var(--blue);
-
-            &::before {
-                /* Card background */
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbg.png");
-            }
-
-            & .answer {
-                &::before {
-                    /* Answer decorative line  */
-                    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbeat.png");
-                }
+                /* Answer decorative line  */
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbeat.png");
             }
         }
     }
 
-    /* Results page specific styling, due for renewal post design sign off */
-    &#results {
-        & .cta {
-            color: white;
-            background: var(--blue);
-            &:hover {
-                color: var(--blue);
-                background: var(--lightblue);
-            }
-        }
-        & .hero {
-            & .heading,
-            & .subheading {
-                max-width: 633px;
-                text-align: center;
-                margin: 0 auto 30px;
-                line-height: 3.4375rem;
-            }
+    &[ca="False"] {
+        color: white;
+        background-color: var(--blue);
 
-            & .heading {
-                font-weight: 700;
-                font-size: 2.75rem;
-            }
-            
-            & .subheading {
-                font-weight: 600;
-                font-size: 2.25rem;
-            }
-        }
-        & article {
-            background: rgba(148, 179, 239, 0.28);
-
-            & .leading_copy,
-            & .heading,
-            & .subheading,
-            & .body {
-                text-align: left;
-            }
-
-            & .leading_copy {
-                margin: 34px 0;
-                foint-weight: 600;
-                font-size: 1.125rem;
-            }
-
-            & .heading {
-                margin: 0 0 30px;
-                font-weight: 700;
-                font-size: 2.75rem;
-                line-height: 3.4375rem;
-            }
-
-            & .subheading {
-                margin: 0 0 43px;
-                font-weight: 600;
-                font-size: 2.25rem;
-                line-height: 2.8125rem;
-            }
-
-            & .body {
-                font-size: 1.125rem;
-                line-height: 1.875rem;
-            }
+        &::before {
+            /* Card background */
+            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbg.png");
         }
 
-        & .villian {
-            & .heading,
-            & .body {
-                text-align: center;
-                margin: 0 auto 60px;
+        & .answer {
+            &::before {
+                /* Answer decorative line  */
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbeat.png");
             }
+        }
+    }
 
-            & .heading {
-                max-width: 633px;
-                font-weight: 700;
-                font-size: 2.75rem;
-                line-height: 3.4375rem;
-            }
-            
-            & .body {
-                max-width: 956px;
-                font-size: 1.125rem;
-                line-height: 1.875rem;
-            }
+    & .answer {
+        position: relative;
+
+        /* answer decorative line styling */
+        &::before {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center right;
         }
     }
 }

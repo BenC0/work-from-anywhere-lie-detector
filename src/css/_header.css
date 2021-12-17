@@ -1,6 +1,8 @@
 header {
     /* positioning & size */
     padding: 0 var(--outer-padding);
+    z-index: 2;
+    position: relative;
     
     /* Flex styles */
     display: flex;
@@ -44,8 +46,6 @@ header {
 }
 
 [name="answer-0"]:not(:checked) ~ header {
-    z-index: 2;
-    position: relative;
 }
 /* This handles the logo fill color on mobile to ensure it's correct on
     the answer pages */
