@@ -1,3 +1,7 @@
+/*
+    CTA container styles:
+    - The flex styling ensures the CTAs are pushed to the bottom of the card.
+*/
 .cta_container {
     display: flex;
     flex-grow: 1;
@@ -13,28 +17,37 @@
 
 .cta {
     & .text {
+        /* Positioning */
+        z-index: 2;
+        position: relative;
+        
+        /* Font styling */
         font-size: 1rem;
         font-weight: 500;
-        font-family: var(--ff-1);
         text-align: center;
+        font-family: var(--ff-1);
     }
     
+    /* General styling */
     color: var(--blue);
-    position: relative;
     border-radius: 20px;
     text-decoration: none;
     background: var(--orange);
+    transition: all .1s ease-in;
     
+    /* dimesension properties */
     width: 163px;
     margin-right: 40px;
     height: var(--cta-height);
     line-height: var(--cta-height);
-    transition: all .1s ease-in;
-
+    
+    /* positioning properties */
+    position: relative;
     align-items: center;
     display: inline-flex;
     justify-content: center;
 
+    /* background gradiant styles */
     &::before {
         top: 0;
         left: 0;
@@ -58,19 +71,16 @@
         }
     }
 
-    & .text {
-        z-index: 2;
-        position: relative;
-    }
-
+    /* Alternate color pallete for secondary CTA */
     &.secondary {
         background: var(--blue);
-
+        
         &::before {
             background: var(--blue-gradient);
         }
     }
-
+    
+    /* Alternate color pallete for tertiary CTA */
     &.tertiary {
         color: white;
         border: 1px solid white;
