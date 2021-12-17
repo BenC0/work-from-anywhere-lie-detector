@@ -1,13 +1,19 @@
 {% extends "card.njk" %}
+{#
+    Set the item_id and item_num to the question details.
+    This ensures the cards/pages are shown/hidden in the correct order.
+#}
 {% set item_num = "0" %}
 {% set item_id = "Start Page" %}
 
 {% block content %}
     <article>
+        {# Misc. content #}
         <h1 class="hero_title">{{ content.startPage.content.hero_title | safe }}</h1>
         <h2 class="hero_subheading">{{ content.startPage.content.hero_subheading | safe }}</h2>
         <p class="hero_body">{{ content.startPage.content.hero_body | safe }}</p>
         <div class="cta_container">
+            {# This checks the Answer radio input (created in "card.njk") and ensures the user can progress to the next page. #}
             <label for="input-answer-0" class="cta primary"><span class="text">{{ content.startPage.content.hero_CTA | safe }}</span></label>
         </div>
     </article>
