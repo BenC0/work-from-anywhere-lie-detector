@@ -1,9 +1,8 @@
 {% extends "card.njk" %}
 {#
-    Set the item_id and item_num to the question details.
+    Set the item_num to the question details.
     This ensures the cards/pages are shown/hidden in the correct order.
 #}
-{% set item_id = question.id %}
 {% set item_num = question.num %}
 
 {% block content %}

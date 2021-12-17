@@ -30,7 +30,6 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-
 1. Document content.json within README
 2. CSS Hygiene
 3. Templates Hygiene - Decouple start page from question templates
@@ -38,3 +37,61 @@ While form progression could normally be handled through dynamically hiding/show
 5. Investigate possibility of removing duplicate lie detector images
 6. Fix desktop question card logo visibility
 7. Implement lie detector
+
+## Content.json
+The `src/_data/content.json` file contains all the content for the website.
+The structure is summarised below.
+```json
+    // Start page content
+    // Content is used in the "src/_includes/start_page.njk" template
+    "startPage": {
+        "content": {
+            "hero_title": "Example Title",
+            "hero_subheading": "Example Subheading",
+            "hero_body": "Example body content",
+            "hero_CTA": "Example"
+        }
+    },
+    // Questions array of objects containing content for each question
+    // Content is used in the "src/_includes/question.njk" template
+    "questions": [
+        {
+            // num is used for identifying the order of the questions
+            "num": "1",
+            // ca is the `correct answer`
+            // True or False
+            // This is used for styling the answer card
+            "ca": "False",
+            // content for the question.
+            "content": {
+                "statement": "True or false?",
+                "question": "Example question"
+            },
+             // content for the answer
+            "answer": {
+                "header": "False!",
+                "copy": "Example body copy"
+            }
+        },
+        // This format is repeated for each of the 10 questions
+        // ....
+    ],
+    "resultsPage": {
+        // Hero content
+        "hero": "Example hero content",
+        "subheading": "Example hero subheading",
+        // Component two content
+        "component_two_leading_copy": "Continue reading...",
+        "component_two_heading": "Example heading",
+        "component_two_subheading": "Example subheading",
+        "component_two_body": "Example body content",
+        "component_two_cta_one": "Read now",
+        "component_two_cta_two": "Read later – send link to email",
+        // Component three content
+        "component_three_heading": "Example heading",
+        "component_three_body": "Example body content",
+        "component_three_cta_one": "Learn more",
+        // Form content
+        "form_heading": "Get instant access to our insider content"
+    },
+```

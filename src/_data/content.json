@@ -1,7 +1,5 @@
 {
     "startPage": {
-        "id": "start page",
-        "layout": "start_page.njk",
         "content": {
             "hero_title": "The IT Reality Check",
             "hero_subheading": "Take the quiz, bust the myths! ",
@@ -12,8 +10,6 @@
     "questions": [
         {
             "num": "1",
-            "id": "question 1",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -26,8 +22,6 @@
         },
         {
             "num": "2",
-            "id": "question 2",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -40,8 +34,6 @@
         },
         {
             "num": "3",
-            "id": "question 3",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -54,8 +46,6 @@
         },
         {
             "num": "4",
-            "id": "question 4",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -68,8 +58,6 @@
         },
         {
             "num": "5",
-            "id": "question 5",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -82,8 +70,6 @@
         },
         {
             "num": "6",
-            "id": "question 6",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -96,8 +82,6 @@
         },
         {
             "num": "7",
-            "id": "question 7",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -110,8 +94,6 @@
         },
         {
             "num": "8",
-            "id": "question 8",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -124,8 +106,6 @@
         },
         {
             "num": "9",
-            "id": "question 9",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
@@ -138,8 +118,6 @@
         },
         {
             "num": "10",
-            "id": "question 10",
-            "layout": "start_page.njk",
             "ca": "False",
             "content": {
                 "statement": "True or false?",
