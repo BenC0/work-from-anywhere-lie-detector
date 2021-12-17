@@ -4,7 +4,6 @@
     display: flex;
     list-style: none;
     align-items: center;
-    height: var(--progress-height);
     padding: 0 var(--outer-padding);
 
     & .indicator {
@@ -25,15 +24,6 @@
         &:not(:last-child) {
             margin-right: 4.8px;
         }
-    }
-    
-    /* mobile positioning */
-    @media screen and (max-width: 768px) {
-        margin: 0;
-        right: 20px;
-        position: fixed;
-        transform: translateY(-50%);
-        top: calc(var(--header-height) / 2);
     }
 }
 

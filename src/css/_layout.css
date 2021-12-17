@@ -8,6 +8,10 @@ main {
     grid-template-columns: repeat(2, 50vw); 
     grid-template-rows: var(--header-height) var(--progress-height) auto;
 
+    @media screen and (max-width: 767px) {
+        grid-template-rows: var(--header-height) var(--animation-height) auto;
+    }
+
     /* article padding */
     & article {
         padding-right: 39px;
@@ -46,6 +50,11 @@ main {
     & .animations {
         grid-column: 2;
         grid-row: 1 / span 3;
+        
+        @media screen and (max-width: 767px) {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+        }
 
         & lottie-player {
             min-height: var(--animation-height);
@@ -78,11 +87,20 @@ main {
         display: flex;
         grid-row: 3;
         grid-column: 1;
+        
+        @media screen and (max-width: 767px) {
+            grid-column: 1 / span 2;
+        }
     }
 
     & .progress_bar {
         grid-row: 2;
         grid-column: 1;
+        
+        @media screen and (max-width: 767px) {
+            grid-row: 1;
+            grid-column: 2;
+        }
     }
 
     & header {
