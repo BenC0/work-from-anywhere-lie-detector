@@ -232,15 +232,15 @@ section[page] {
         }
         
         & picture {
-            margin-top: var(--header-height);
             background: #002858;
-
+            
             @media screen and (max-width: 768px) {
                 grid-row: 1;
                 width: 100vw;
                 height: 160px;
                 overflow: hidden;
                 position: relative;
+                margin-top: var(--header-height);
 
                 & img {
                     top: 50%;
