@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
       )
     })
     eleventyConfig.addWatchTarget("src/**/*.css");
+    eleventyConfig.addWatchTarget("src/**/*.js");
     return {
       passthroughFileCopy: true,
       markdownTemplateEngine: "njk",

@@ -16,7 +16,7 @@
       {% include "../css/index.css" %}
     {% endset %}
     <style>
-      {{css | postcss | safe}}
+      {{ css | postcss | safe}}
     </style>
   </head>
   <body>
@@ -24,5 +24,11 @@
       {{ content | safe }}
     </main>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    {% set js %}
+      {% include "../js/script.js" %}
+    {% endset %}
+    <script>
+      {{ js | safe }}
+    </script>
   </body>
 </html>
