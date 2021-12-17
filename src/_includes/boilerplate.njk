@@ -1,14 +1,18 @@
+{# page meta info #}
 ---
-title: The TRUTH About IT Right Now - Take the Quiz | Teneo 
+title: The TRUTH About IT Right Now - Take the Quiz | Teneo
+description: What are the secret stressors and misconceptions affecting IT teams? Take our interactive quiz and separate the IT truths from the IT falsehoods.
+typekit_link: https://use.typekit.net/dyv1pfw.css
 ---
 
+{# Basic HTML Boilerplate code to contain content #}
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="What are the secret stressors and misconceptions affecting IT teams? Take our interactive quiz and separate the IT truths from the IT falsehoods.">
-    <link rel="stylesheet" href="https://use.typekit.net/dyv1pfw.css">
+    <meta name="description" content="{{ description }}">
+    <link rel="stylesheet" href="{{ typekit_link }}">
     <title>{{ title }}</title>
     {% set css %}
       {% include "../css/index.css" %}
@@ -16,11 +20,11 @@ title: The TRUTH About IT Right Now - Take the Quiz | Teneo
     <style>
       {{css | postcss | safe}}
     </style>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
   <body>
     <main>
       {{ content | safe }}
     </main>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </body>
 </html>
