@@ -30,12 +30,11 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-1. Templates Hygiene - Decouple start page from question templates
-2. Remove duplicate progress bars
-3. Investigate possibility of removing duplicate lie detector images
-4. Fix desktop question card logo visibility
-5. Implement lie detector
-6. Results Page
+1. Remove duplicate progress bars
+2. Investigate possibility of removing duplicate lie detector images
+3. Fix desktop question card logo visibility
+4. Implement lie detector
+5. Results Page
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
