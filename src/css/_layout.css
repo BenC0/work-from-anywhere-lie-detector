@@ -3,6 +3,7 @@
     - This file focuses on the overarching layout of the cards/pages
 */
 section[page] {
+    /* positioning and dimensions */
     top: 0;
     left: 0;
     right: 0;
@@ -13,6 +14,7 @@ section[page] {
     display: flex;
     min-height: 100vh;
 
+    /* positioning and dimensions for child elements */
     & article,
     & picture {
         margin: 0;
@@ -32,11 +34,13 @@ section[page] {
         }
     }
 
+    /* alignment for children of picture elements */
     & picture {
         align-items: center;
         justify-content: center;
     }
 
+    /* article padding */
     & article {
         padding-right: 39px;
         padding-bottom: 65px;
@@ -48,6 +52,7 @@ section[page] {
         }
     }
 
+    /* answer specific dimensions/z-index */
     &[id^="answer-"] {
         z-index: 1;
         
@@ -56,6 +61,7 @@ section[page] {
         }
     }
 
+    /* Results specific styling, on hold pending sign off, will change so not commenting now. */
     &#results {
         display: flex;
         position: absolute;
