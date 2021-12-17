@@ -32,9 +32,8 @@ While form progression could normally be handled through dynamically hiding/show
 ## TODO
 1. Remove duplicate progress bars
 2. Investigate possibility of removing duplicate lie detector images
-3. Fix desktop question card logo visibility
-4. Implement lie detector
-5. Results Page
+3. Implement lie detector
+4. Results Page
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.

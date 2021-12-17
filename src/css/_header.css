@@ -51,16 +51,16 @@ header {
 
 /* This handles the logo fill color on mobile to ensure it's correct on
     the answer pages */
-[name="question-1"]:checked ~ [card="a1"],
-[name="question-2"]:checked ~ [card="a2"],
-[name="question-3"]:checked ~ [card="a3"],
-[name="question-4"]:checked ~ [card="a4"],
-[name="question-5"]:checked ~ [card="a5"],
-[name="question-6"]:checked ~ [card="a6"],
-[name="question-7"]:checked ~ [card="a7"],
-[name="question-8"]:checked ~ [card="a8"],
-[name="question-9"]:checked ~ [card="a9"],
-[name="question-10"]:checked ~ [card="a10"],
+[name="answer-1"]:not(:checked) ~ [name="question-1"]:checked,
+[name="answer-2"]:not(:checked) ~ [name="question-2"]:checked,
+[name="answer-3"]:not(:checked) ~ [name="question-3"]:checked,
+[name="answer-4"]:not(:checked) ~ [name="question-4"]:checked,
+[name="answer-5"]:not(:checked) ~ [name="question-5"]:checked,
+[name="answer-6"]:not(:checked) ~ [name="question-6"]:checked,
+[name="answer-7"]:not(:checked) ~ [name="question-7"]:checked,
+[name="answer-8"]:not(:checked) ~ [name="question-8"]:checked,
+[name="answer-9"]:not(:checked) ~ [name="question-9"]:checked,
+[name="answer-10"]:not(:checked) ~ [name="question-10"]:checked,
 [name="answer-0"]:not(:checked) {
     & ~ header #logo svg path {
         @media screen and (min-width: 768px) {
