@@ -1,0 +1,49 @@
+.progress_bar {
+    /* Positioning */
+    display: flex;
+    padding: 0;
+    margin: 5.18vh 0 6.94vh;
+
+    & .indicator {
+        /* Indicator dimensions */
+        width: 8px;
+        height: 8px;
+        
+        /* Forcing font to be completely hidden */
+        font-size: 0;
+        color: transparent;
+        
+        /* background & border styling - makes them circles */
+        border-radius: 6px;
+        background: var(--blue);
+        border: 1px solid var(--blue);
+        
+        /* spacing between indicators */
+        &:not(:last-child) {
+            margin-right: 4.8px;
+        }
+    }
+    
+    /* mobile positioning */
+    @media screen and (max-width: 768px) {
+        margin: 0;
+        right: 20px;
+        position: fixed;
+        transform: translateY(-50%);
+        top: calc(var(--header-height) / 2);
+    }
+
+    /* Sets inactive style for questions not yet seen  */
+    &[current="1"] .indicator-1 ~ .indicator,
+    &[current="2"] .indicator-2 ~ .indicator,
+    &[current="3"] .indicator-3 ~ .indicator,
+    &[current="4"] .indicator-4 ~ .indicator,
+    &[current="5"] .indicator-5 ~ .indicator,
+    &[current="6"] .indicator-6 ~ .indicator,
+    &[current="7"] .indicator-7 ~ .indicator,
+    &[current="8"] .indicator-8 ~ .indicator,
+    &[current="9"] .indicator-9 ~ .indicator,
+    &[current="10"] .indicator-10 ~ .indicator {
+        background: white;
+    }
+}

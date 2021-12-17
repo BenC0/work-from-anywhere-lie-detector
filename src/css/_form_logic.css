@@ -1,3 +1,4 @@
+/* Set counter, this keeps track of correct answers */
 body {
     counter-reset: inputs;
 }
@@ -6,10 +7,43 @@ body {
     counter-increment: inputs;
 }
 
+/* Display final count in resultsNum element */
 .resultNum::before {
 	content: counter(inputs);
 }
 
+/*
+- If set to display none, checked inputs don't register and
+page hiding/showing logic breaks. This is forces inputs to
+be completely invisible but not "hidden".
+*/
+.input-answer,
+#toggle_form {
+    width: 0;
+    margin: 0;
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    font-size: 0;
+    appearance: none;
+    pointer-events: none;
+    display: inline-block;
+}
+
+/*
+        \****__              ____                                              
+         |    *****\_      --/ *\-__                                          
+         /_          (_    ./ ,/----'                                         
+Here be     \__         (_./  /                                                
+ Dragons...    \__           \___----^__                                       
+               _/   _                  \                                      
+        |    _/  __/ )\"\ _____         *\                                    
+        |\__/   /    ^ ^       \____      )                                   
+         \___--"                    \_____ )                                  
+                                          "
+*/
+
+/* This monster ensures the correct cards/pages are shown */
 [name="answer-0"]:not(:checked) ~ [page="q0"],
 [name="answer-0"]:checked ~ [page="q1"],
 [name="answer-1"]:checked ~ [page="q2"],
@@ -33,30 +67,15 @@ body {
 [name="question-9"]:checked ~ [page="a9"],
 [name="question-10"]:checked ~ [page="a10"],
 [name="answer-10"]:checked ~ header nav {
+    /* makes card/page visible so users can see the card/page */
     opacity: 1;
+    /* resets overflow so users can see entire card/page */
     overflow: auto;
+    /* resets pointer events so users can interact with card/page */
     pointer-events: auto;
 }
 
-[name="question-1"]:checked ~ [page="a1"],
-[name="question-2"]:checked ~ [page="a2"],
-[name="question-3"]:checked ~ [page="a3"],
-[name="question-4"]:checked ~ [page="a4"],
-[name="question-5"]:checked ~ [page="a5"],
-[name="question-6"]:checked ~ [page="a6"],
-[name="question-7"]:checked ~ [page="a7"],
-[name="question-8"]:checked ~ [page="a8"],
-[name="question-9"]:checked ~ [page="a9"],
-[name="question-10"]:checked ~ [page="a10"],
-[name="answer-0"]:not(:checked) {
-    & ~ header #logo svg path {
-        @media screen and (min-width: 768px) {
-            fill: white;
-        }
-    }
-}
-
-
+/* This abomination ensures the correct cards/pages are hidden */
 section[page],
 [name="question-0"]:checked ~ [page="q0"],
 [name="question-1"]:checked ~ [page="q1"],
@@ -81,66 +100,11 @@ section[page],
 [name="answer-9"]:checked ~ [page="a9"],
 [name="answer-10"]:checked ~ [page="a10"],
 [name="answer-10"]:not(:checked) ~ header nav {
+    /* makes card/page invisible so users can't see the card/page */
     opacity: 0;
+    /* Sets overflow so card/page doesn't intefere with page scroll */
     overflow: hidden;
+    /* Removes pointer events so users can't interact with card/page even
+        if overlayed on top of current card/page */
     pointer-events: none;
-}
-
-.input-answer,
-#toggle_form {
-    width: 0;
-    margin: 0;
-    height: 0;
-    padding: 0;
-    opacity: 0;
-    font-size: 0;
-    appearance: none;
-    pointer-events: none;
-    display: inline-block;
-}
-
-[name="answer-10"]:checked ~ header {
-    background:  rgba(60, 100, 177, .2);
-}
-
-.progress_bar {
-    display: flex;
-    padding: 0;
-    margin: 5.18vh 0 6.94vh;
-
-    & .indicator {
-        width: 8px;
-        height: 8px;
-        border-radius: 6px;
-        
-        font-size: 0;
-        color: transparent;
-        background: var(--blue);
-        border: 1px solid var(--blue);
-
-        &:not(:last-child) {
-            margin-right: 4.8px;
-        }
-    }
-
-    @media screen and (max-width: 768px) {
-        margin: 0;
-        right: 20px;
-        position: fixed;
-        transform: translateY(-50%);
-        top: calc(var(--header-height) / 2);
-    }
-
-    &[current="1"] .indicator-1 ~ .indicator,
-    &[current="2"] .indicator-2 ~ .indicator,
-    &[current="3"] .indicator-3 ~ .indicator,
-    &[current="4"] .indicator-4 ~ .indicator,
-    &[current="5"] .indicator-5 ~ .indicator,
-    &[current="6"] .indicator-6 ~ .indicator,
-    &[current="7"] .indicator-7 ~ .indicator,
-    &[current="8"] .indicator-8 ~ .indicator,
-    &[current="9"] .indicator-9 ~ .indicator,
-    &[current="10"] .indicator-10 ~ .indicator {
-        background: white;
-    }
 }
