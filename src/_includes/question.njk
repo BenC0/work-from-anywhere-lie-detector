@@ -1,81 +1,19 @@
-{% extends "card.njk" %}
-{#
-    Set the item_num to the question details.
-    This ensures the cards/pages are shown/hidden in the correct order.
-#}
-{% set item_num = question.num %}
-{% set section_class = "question" %}
-{#
-    Question radio inputs:
-    - This is checked when a user selects an asnwer.
-    - .correct-answer is counted using a CSS counter
-    - .counter_ignore is not counted.
-    - These are mapped to the relevant CTA in the #question section below
-#}
-{% block additional_inputs %}
-    <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-correct" class="correct-answer input-answer" />
-    <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
-{% endblock %}
-
-{% block content %}
-    <article>
-        {# Progress bar, the current attribute is used by the CSS to highlight completed steps. #}
-        <ul class="progress_bar" current="{{ item_num }}">
-            <li class="indicator indicator-1">1</li>
-            <li class="indicator indicator-2">2</li>
-            <li class="indicator indicator-3">3</li>
-            <li class="indicator indicator-4">4</li>
-            <li class="indicator indicator-5">5</li>
-            <li class="indicator indicator-6">6</li>
-            <li class="indicator indicator-7">7</li>
-            <li class="indicator indicator-8">8</li>
-            <li class="indicator indicator-9">9</li>
-            <li class="indicator indicator-10">10</li>
-        </ul>
-        {# Misc. content #}
-        <p class="statement">{{ question.content.statement | safe }}</p>
-        <h2 class="question">{{ question.content.question | safe }}</h2>
-        {#
-            CTA container:
-            - Sets up the question inputs depending on the value of question.ca ("True"/"False")
-            - String value, not Boolean.
-        #}
-        <div class="cta_container">
-            {% if question.ca == "False" %}
-                <label for="question-{{ item_num }}-incorrect" class="cta primary"><span class="text">True</span></label>
-                <label for="question-{{ item_num }}-correct" class="cta secondary"><span class="text">False</span></label>
-            {% else %}
-                <label for="question-{{ item_num }}-correct" class="cta primary"><span class="text">True</span></label>
-                <label for="question-{{ item_num }}-incorrect" class="cta secondary"><span class="text">False</span></label>
-            {% endif %}
-        </div>
-    </article>
-    <picture>
-        {# Contains mobile & desktop placeholder images. Lottie files pending. #}
-        {# <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_jqtrvhhf.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay> #}
-        <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_2v019dqo.json" background="transparent" speed="1" loop autoplay class="placeholder desktop"></lottie-player>
-        <lottie-player src="https://assets6.lottiefiles.com/private_files/lf30_zsfwaun0.json" background="transparent" speed="1" loop autoplay class="placeholder mobile"></lottie-player>
-    </picture>
-{% endblock %}
-{#
-    Answer section:
-    - This contains the content for each answer.
-    - When clicked, the primary "Next" CTA checks the Answer radio input shown above.
-#}
-{% block additional_content %}
-<section id="answer-{{ item_num }}" card="a{{ item_num }}" ca="{{ question.ca }}">
-    <article>
-        <h3 class="answer">{{ question.answer.header | safe }}</h3>
-        <p class="explanation">{{ question.answer.copy | safe }}</p>
-        <div class="cta_container">
-            <label for="input-answer-{{ item_num }}" class="cta primary"><span class="text">Next</span></label>
-            <a href="#" target="_blank" class="cta tertiary">
-                <span class="text">Learn more</span>
-                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.550253 1.05021H10.4497M10.4497 1.05021V10.9497M10.4497 1.05021L0.550253 10.9497" stroke="white"/>
-                </svg>
-            </a>
-        </div>
-    </article>
-</section>
-{% endblock %}
+<article question="{{ question.num }}">
+    {# Misc. content #}
+    <p class="statement">{{ question.content.statement | safe }}</p>
+    <h2 class="question">{{ question.content.question | safe }}</h2>
+    {#
+        CTA container:
+        - Sets up the question inputs depending on the value of question.ca ("True"/"False")
+        - String value, not Boolean.
+    #}
+    <div class="cta_container">
+        {% if question.ca == "False" %}
+            <label for="question-{{ question.num }}-incorrect" class="cta primary"><span class="text">True</span></label>
+            <label for="question-{{ question.num }}-correct" class="cta secondary"><span class="text">False</span></label>
+        {% else %}
+            <label for="question-{{ question.num }}-correct" class="cta primary"><span class="text">True</span></label>
+            <label for="question-{{ question.num }}-incorrect" class="cta secondary"><span class="text">False</span></label>
+        {% endif %}
+    </div>
+</article>

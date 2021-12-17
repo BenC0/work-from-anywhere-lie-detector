@@ -3,14 +3,6 @@
     - The main layout, this is responsible for the start page, questions and answers.
     - The structure of the HTML is key to ensuring the CSS hides/shows the correct page.
 #}
-
-{#
-    Answer radio input:
-    - This is checked when the user clicks the primary "Next" CTA in the answer card
-    - When checked the next card is displayed.
-#}
-<input type="radio" name="answer-{{ item_num }}" id="input-answer-{{ item_num }}" class="counter_ignore input-answer" />
-{% block additional_inputs %}{% endblock %}
 {#
     Content section:
     - This contains the content for each card.
