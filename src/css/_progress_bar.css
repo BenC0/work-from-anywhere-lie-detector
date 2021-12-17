@@ -1,8 +1,11 @@
 .progress_bar {
     /* Positioning */
+    margin: 0;
     display: flex;
-    padding: 0;
-    margin: 5.18vh 0 6.94vh;
+    list-style: none;
+    align-items: center;
+    height: var(--progress-height);
+    padding: 0 var(--outer-padding);
 
     & .indicator {
         /* Indicator dimensions */
@@ -15,7 +18,7 @@
         
         /* background & border styling - makes them circles */
         border-radius: 6px;
-        background: var(--blue);
+        background: white;
         border: 1px solid var(--blue);
         
         /* spacing between indicators */
@@ -32,18 +35,18 @@
         transform: translateY(-50%);
         top: calc(var(--header-height) / 2);
     }
+}
 
-    /* Sets inactive style for questions not yet seen  */
-    &[current="1"] .indicator-1 ~ .indicator,
-    &[current="2"] .indicator-2 ~ .indicator,
-    &[current="3"] .indicator-3 ~ .indicator,
-    &[current="4"] .indicator-4 ~ .indicator,
-    &[current="5"] .indicator-5 ~ .indicator,
-    &[current="6"] .indicator-6 ~ .indicator,
-    &[current="7"] .indicator-7 ~ .indicator,
-    &[current="8"] .indicator-8 ~ .indicator,
-    &[current="9"] .indicator-9 ~ .indicator,
-    &[current="10"] .indicator-10 ~ .indicator {
-        background: white;
-    }
+/* Sets active style for questions seen  */
+[name="answer-0"]:checked ~ .progress_bar .indicator-1,
+[name="answer-1"]:checked ~ .progress_bar .indicator-2,
+[name="answer-2"]:checked ~ .progress_bar .indicator-3,
+[name="answer-3"]:checked ~ .progress_bar .indicator-4,
+[name="answer-4"]:checked ~ .progress_bar .indicator-5,
+[name="answer-5"]:checked ~ .progress_bar .indicator-6,
+[name="answer-6"]:checked ~ .progress_bar .indicator-7,
+[name="answer-7"]:checked ~ .progress_bar .indicator-8,
+[name="answer-8"]:checked ~ .progress_bar .indicator-9,
+[name="answer-9"]:checked ~ .progress_bar .indicator-10 {
+    background: var(--blue);
 }

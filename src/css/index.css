@@ -1,8 +1,11 @@
 @import "./src/css/_normalise.css";
-@import "./src/css/_form_logic.css";
-@import "./src/css/_progress_bar.css";
 @import "./src/css/_global.css";
-@import "./src/css/_header.css";
-@import "./src/css/_cta.css";
+
+@import "./src/css/_form_logic.css";
 @import "./src/css/_layout.css";
+
+@import "./src/css/_progress_bar.css";
+@import "./src/css/_header.css";
+
+@import "./src/css/_cta.css";
 @import "./src/css/_pages.css";

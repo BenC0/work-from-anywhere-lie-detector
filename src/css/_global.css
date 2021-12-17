@@ -24,8 +24,12 @@
     --cta-height: 38px;
     --outer-padding: 5.9vw;
     --header-height: 18.75vh;
+    --progress-height: calc(12.12vh + 8px);
+    --animation-height: 100vh;
+
     @media screen and (max-width: 767px) {
         --header-height: 11.61vh;
+        --animation-height: 150px;
     }
 }
 
@@ -44,8 +48,8 @@ h1, h2, h3, h4, h5, h6, p, body {
     font-family: var(--ff-1);
 }
 
-/* Only set color on body to prevent specificity conflicts further on down the road */
 body {
+    /* Only set color on body to prevent specificity conflicts further on down the road */
     color: var(--fc);
 }
 

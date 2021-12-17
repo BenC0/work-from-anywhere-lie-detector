@@ -1,12 +1,9 @@
-{% extends "card.njk" %}
 {#
     Set the item_id and item_num to the question details.
     This ensures the cards/pages are shown/hidden in the correct order.
 #}
-{% set item_num = "0" %}
-{% set section_class = "start" %}
 
-{% block content %}
+<section class="start">
     <article>
         {# Misc. content #}
         <h1 class="hero_title">{{ content.startPage.content.hero_title | safe }}</h1>
@@ -17,4 +14,4 @@
             <label for="input-answer-0" class="cta primary"><span class="text">{{ content.startPage.content.hero_CTA | safe }}</span></label>
         </div>
     </article>
-{% endblock %}
+</section>

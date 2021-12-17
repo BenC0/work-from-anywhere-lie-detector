@@ -1,54 +1,61 @@
+.animations {
+    background: var(--blue);
+}
+
+.start {
+    /* Start page background styling */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--blue);
+    background-position: center;
+    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/start-hero%20(2).png");
+
+    @media screen and (max-width: 768px) {
+        background-size: contain;
+        background-position: bottom center;
+        background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/stv.png");
+    }
+    
+    & article {
+        /* content font styling */
+        color: white;
+        
+        & .hero_title {
+            margin: 0;
+            font-weight: 400;
+            font-size: 3.75rem;
+            font-family: var(--ff-2);
+            
+            @media screen and (max-width: 768px) {
+                line-height: 1.22;
+                font-size: 2.1875rem;
+            }
+        }
+
+        & .hero_body,
+        & .hero_subheading {
+            font-weight: 300;
+        }
+
+        & .hero_subheading {
+            margin: 1.875rem 0;
+            font-size: 1.5rem;
+            line-height: 1.58;
+
+            @media screen and (max-width: 768px) {
+                margin: 1em 0;
+                font-size: 1.25rem;
+            }
+        }
+
+        & .hero_body {
+            font-size: 1rem;
+        }
+    }
+}
+
 section[card] {
     &.start {
-        /* Start page background styling */
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-color: var(--blue);
-        background-position: center;
-        background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/start-hero%20(2).png");
-
-        @media screen and (max-width: 768px) {
-            background-size: contain;
-            background-position: bottom center;
-            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/stv.png");
-        }
-
-        & article {
-            /* content font styling */
-            color: white;
-            
-            & .hero_title {
-                margin: 0;
-                font-weight: 400;
-                font-size: 3.75rem;
-                font-family: var(--ff-2);
-                
-                @media screen and (max-width: 768px) {
-                    line-height: 1.22;
-                    font-size: 2.1875rem;
-                }
-            }
-
-            & .hero_body,
-            & .hero_subheading {
-                font-weight: 300;
-            }
-
-            & .hero_subheading {
-                margin: 1.875rem 0;
-                font-size: 1.5rem;
-                line-height: 1.58;
-    
-                @media screen and (max-width: 768px) {
-                    margin: 1em 0;
-                    font-size: 1.25rem;
-                }
-            }
-
-            & .hero_body {
-                font-size: 1rem;
-            }
-        }
     }
 
     /* General content font styling */

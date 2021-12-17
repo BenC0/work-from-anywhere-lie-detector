@@ -30,10 +30,9 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-1. Remove duplicate progress bars
-2. Investigate possibility of removing duplicate lie detector images
-3. Implement lie detector
-4. Results Page
+1. Complete restructure
+2. Properly Implement lie detector
+3. Results Page
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.

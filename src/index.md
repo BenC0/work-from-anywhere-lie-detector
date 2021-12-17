@@ -4,6 +4,7 @@ layout: 'boilerplate.njk'
 templateEngineOverride: njk
 ---
 {# Loop through questions and create question inputs #}
+<input type="radio" name="answer-0" id="input-answer-0" class="counter_ignore input-answer" />
 {%- for question in content.questions -%}
     {#
         Question radio inputs:
@@ -23,8 +24,6 @@ templateEngineOverride: njk
 {%- endfor -%}
 
 {% include "lottie_animations.njk" %}
-{# Call in content in order of appearance #}
-{% include "start_page.njk" %}
 {# Loop through questions and create question content #}
 <section class="questions">
     {%- for question in content.questions -%}
@@ -37,6 +36,7 @@ templateEngineOverride: njk
         {% include "answer.njk" %}
     {%- endfor -%}
 </section>
+{% include "start_page.njk" %}
 
 <!-- {% include "results_page.njk" %} -->
 

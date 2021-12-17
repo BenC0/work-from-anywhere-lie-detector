@@ -2,6 +2,97 @@
     Layout CSS
     - This file focuses on the overarching layout of the cards/pages
 */
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 50vw); 
+    grid-template-rows: var(--header-height) var(--progress-height) auto;
+
+    /* article padding */
+    & article {
+        padding-right: 39px;
+        padding-bottom: 65px;
+        padding-left: var(--outer-padding);
+            
+        @media screen and (max-width: 768px) {
+            padding: 0 var(--outer-padding) 0;
+        }
+
+        /* child spacing */
+        & .explanation {
+            margin: 1.875rem 0;
+
+            @media screen and (max-width: 768px) {
+                margin: 1em 0;
+            }
+        }
+        
+        & .answer,
+        & .question {
+            margin: 0;
+        }
+
+        & .statement {
+            position: relative;
+            margin-bottom: 1.08em;
+            place-self: flex-start;
+
+            @media screen and (max-width: 768px) {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    & .animations {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+
+        & lottie-player {
+            min-height: var(--animation-height);
+        }
+    }
+
+    & .start {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        position: absolute;
+        padding-top: var(--header-height);
+
+        & article {
+            @media screen and (min-width: 768px) {
+                width: 52vw;
+            }
+        }
+    }
+
+    & .questions {
+        grid-row: 3;
+        grid-column: 1;
+    }
+
+    & .progress_bar {
+        grid-row: 2;
+        grid-column: 1;
+    }
+
+    & header {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+
+    & .answers {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+
 section[card] {
     /* positioning and dimensions */
     top: 0;
@@ -42,42 +133,6 @@ section[card] {
 
         & .placeholder {
             width: 100%;
-        }
-    }
-
-    /* article padding */
-    & article {
-        padding-right: 39px;
-        padding-bottom: 65px;
-        padding-top: var(--header-height);
-        padding-left: var(--outer-padding);
-            
-        @media screen and (max-width: 768px) {
-            padding: var(--header-height) var(--outer-padding) 0;
-        }
-
-        /* child spacing */
-        & .explanation {
-            margin: 1.875rem 0;
-
-            @media screen and (max-width: 768px) {
-                margin: 1em 0;
-            }
-        }
-        
-        & .answer,
-        & .question {
-            margin: 0;
-        }
-
-        & .statement {
-            position: relative;
-            margin-bottom: 1.08em;
-            place-self: flex-start;
-
-            @media screen and (max-width: 768px) {
-                margin: 20px 0;
-            }
         }
     }
 

@@ -1,11 +1,5 @@
 header {
     /* positioning & size */
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    position: absolute;
-    height: var(--header-height);
     padding: 0 var(--outer-padding);
     
     /* Flex styles */
@@ -49,6 +43,10 @@ header {
     background:  rgba(60, 100, 177, .2);
 }
 
+[name="answer-0"]:not(:checked) ~ header {
+    z-index: 2;
+    position: relative;
+}
 /* This handles the logo fill color on mobile to ensure it's correct on
     the answer pages */
 [name="answer-1"]:not(:checked) ~ [name="question-1"]:checked,
