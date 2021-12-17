@@ -1,9 +1,7 @@
 {# page meta info #}
----
-title: The TRUTH About IT Right Now - Take the Quiz | Teneo
-description: What are the secret stressors and misconceptions affecting IT teams? Take our interactive quiz and separate the IT truths from the IT falsehoods.
-typekit_link: https://use.typekit.net/dyv1pfw.css
----
+{% set page_title = "The TRUTH About IT Right Now - Take the Quiz | Teneo" %}
+{% set page_description = "What are the secret stressors and misconceptions affecting IT teams? Take our interactive quiz and separate the IT truths from the IT falsehoods." %}
+{% set typekit_link = "https://use.typekit.net/dyv1pfw.css" %}
 
 {# Basic HTML Boilerplate code to contain content #}
 <!doctype html>
@@ -11,9 +9,9 @@ typekit_link: https://use.typekit.net/dyv1pfw.css
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ description }}">
+    <meta name="description" content="{{ page_description }}">
     <link rel="stylesheet" href="{{ typekit_link }}">
-    <title>{{ title }}</title>
+    <title>{{ page_title }}</title>
     {% set css %}
       {% include "../css/index.css" %}
     {% endset %}
