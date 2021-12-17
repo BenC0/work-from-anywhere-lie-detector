@@ -93,4 +93,12 @@ The structure is summarised below.
         // Form content
         "form_heading": "Get instant access to our insider content"
     },
+    // Navigation links
+    // Array of object with `copy` and `url` props
+    "navigation_links": [
+        {
+            "copy": "2021 Work From Anywhere: IT Impact Report",
+            "url": "https://www.teneo.net/blog/work-from-anywhere-it-impact-report/"
+        },
+    ]
 ```
