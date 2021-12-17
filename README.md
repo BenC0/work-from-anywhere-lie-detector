@@ -34,4 +34,7 @@ While form progression could normally be handled through dynamically hiding/show
 1. Document content.json within README
 2. CSS Hygiene
 3. Templates Hygiene - Decouple start page from question templates
-4. Fix desktop question card logo visibility
+4. Remove duplicate progress bars
+5. Investigate possibility of removing duplicate lie detector images
+6. Fix desktop question card logo visibility
+7. Implement lie detector
