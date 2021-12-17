@@ -1,3 +1,7 @@
+/*
+    Layout CSS
+    - This file focuses on the overarching layout of the cards/pages
+*/
 section[page] {
     top: 0;
     left: 0;
