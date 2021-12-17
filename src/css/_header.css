@@ -41,17 +41,6 @@ header {
                 text-decoration: none;
             }
         }
-
-        /* Nav cta style */
-        & .cta {
-            color: white;
-            margin-right: 0;
-            background: var(--blue);
-            &:hover {
-                color: var(--blue);
-                background: var(--lightblue);
-            }
-        }
     }
 }
 
