@@ -1,16 +1,19 @@
 header {
+    /* positioning & size */
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     position: absolute;
     height: var(--header-height);
-
-    display: flex;
     padding: 0 var(--outer-padding);
+    
+    /* Flex styles */
+    display: flex;
     align-items: center;
     justify-content: space-between;
 
+    /* Logo dimensions */
     & #logo svg {
         width: 130px;
         @media screen and (max-width: 767px) {
@@ -19,16 +22,19 @@ header {
     }
 
     & nav {
+        /* Nav/child positioning & placement */
         flex-grow: 1;
         display: flex;
         text-align: center;
         align-items: center;
         justify-items: space-between;
         
+        /* Nav font styles */
         font-size: 1rem;
         font-weight: 600;
         line-height: 1.2rem;
         
+        /* Nav item spacing */
         & a {
             padding: 0 1ch;
             &:not(:hover) {
@@ -36,6 +42,7 @@ header {
             }
         }
 
+        /* Nav cta style */
         & .cta {
             color: white;
             margin-right: 0;
