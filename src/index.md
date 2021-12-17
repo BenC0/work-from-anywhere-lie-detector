@@ -11,7 +11,7 @@ templateEngineOverride: njk
     {% include "question.njk" %}
 {%- endfor -%}
 
-{% include "results_page.njk" %}
+<!-- {% include "results_page.njk" %} -->
 
 {# Header called last to enable dynamic hide/show nav based on user current page #}
 {% include "header.njk" %}

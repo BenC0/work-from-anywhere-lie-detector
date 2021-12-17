@@ -1,5 +1,5 @@
-section[page] {
-    &#question-0 {
+section[card] {
+    &.start {
         /* Start page background styling */
         background-size: cover;
         background-repeat: no-repeat;
@@ -140,7 +140,7 @@ section[page] {
 
     /* Question & Answer styles */
     &[id^="answer-"],
-    &[id^="question-"]:not([id="question-0"]) {
+    &.question {
         /* CTA design */
         @media screen and (max-width: 768px) {
             & .cta_container {

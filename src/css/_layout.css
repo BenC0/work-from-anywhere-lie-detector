@@ -2,7 +2,7 @@
     Layout CSS
     - This file focuses on the overarching layout of the cards/pages
 */
-section[page] {
+section[card] {
     /* positioning and dimensions */
     top: 0;
     left: 0;
@@ -202,7 +202,7 @@ section[page] {
         }
     }
     /* Start page placement/positioning */
-    &#question-0 {
+    &.start {
         /* content placement/positioning */
         & article {
             z-index: 2;

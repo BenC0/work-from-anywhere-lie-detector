@@ -10,45 +10,14 @@
     - When checked the next card is displayed.
 #}
 <input type="radio" name="answer-{{ item_num }}" id="input-answer-{{ item_num }}" class="counter_ignore input-answer" />
+{% block additional_inputs %}{% endblock %}
 {#
-    Question radio inputs:
-    - This is checked when a user selects an asnwer.
-    - .correct-answer is counted using a CSS counter
-    - .counter_ignore is not counted.
-    - These are mapped to the relevant CTA in the #question section below
+    Content section:
+    - This contains the content for each card.
+    - The card attribute is used in the CSS to hide/show the relevant page.
 #}
-{% if item_num != "0" %}
-<input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-correct" class="correct-answer input-answer" />
-<input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
-{% endif %}
-{#
-    Question section:
-    - This contains the content for each question.
-    - The page attribute is used in the CSS to hide/show the relevant page.
-#}
-<section id="question-{{ item_num }}" page="q{{ item_num }}" {% if question.answer %} class="question" {% endif %} >
-    {% block content %}
-    {% endblock %}
+<section card="q{{ item_num }}" {% if section_class %} class="{{ section_class }}" {% endif %} >
+    {% block content %}{% endblock %}
 </section>
-{#
-    Answer section:
-    - This contains the content for each answer.
-    - When clicked, the primary "Next" CTA checks the Answer radio input shown above.
-#}
-{% if question.answer %}
-<section id="answer-{{ item_num }}" page="a{{ item_num }}" ca="{{ question.ca }}">
-    <article>
-        <h3 class="answer">{{ question.answer.header | safe }}</h3>
-        <p class="explanation">{{ question.answer.copy | safe }}</p>
-        <div class="cta_container">
-            <label for="input-answer-{{ item_num }}" class="cta primary"><span class="text">Next</span></label>
-            <a href="#" target="_blank" class="cta tertiary">
-                <span class="text">Learn more</span>
-                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.550253 1.05021H10.4497M10.4497 1.05021V10.9497M10.4497 1.05021L0.550253 10.9497" stroke="white"/>
-                </svg>
-            </a>
-        </div>
-    </article>
-</section>
-{% endif %}
+{% block additional_content %}
+{% endblock %}

@@ -4,6 +4,18 @@
     This ensures the cards/pages are shown/hidden in the correct order.
 #}
 {% set item_num = question.num %}
+{% set section_class = "question" %}
+{#
+    Question radio inputs:
+    - This is checked when a user selects an asnwer.
+    - .correct-answer is counted using a CSS counter
+    - .counter_ignore is not counted.
+    - These are mapped to the relevant CTA in the #question section below
+#}
+{% block additional_inputs %}
+    <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-correct" class="correct-answer input-answer" />
+    <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
+{% endblock %}
 
 {% block content %}
     <article>
@@ -44,4 +56,26 @@
         <img src="https://s3-alpha-sig.figma.com/img/4994/68c5/0fa2dc62069056406e9fb0e54a6628ef?Expires=1640563200&Signature=Of459oV6Cttr3ISqui~qLRXdveZedmj-PUBN0K1OgpvOM0ktTVDTqdc4yUpGvxUXUoK~zX4UyDFeTpk6SBkLp~xWIESb~DkgpEC9ZOhTo-0IZUDAQr3janQEa0jLmgaGGZKcA~WgYbS5EnPkja0uplzTr5640FP7WJnKpxCzwajwQZauwK38DJEzUhQRdJ9ACin6koLwke0udowXgTY7MxG4w5p5817d8jv0fdXBwuPBBvbLKy3ErzYiOa-fntjVTMMnOfOkcXLGM6mqnBrnRc--5E5W3LCAxJgYLcS0DlJGguf9D2Bd46RGg8km6fEvXpyvfNtKCAm2F2aTN7vd9w__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA" class="placeholder desktop" />
         <img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mld.png" class="placeholder mobile">
     </picture>
+{% endblock %}
+{#
+    Answer section:
+    - This contains the content for each answer.
+    - When clicked, the primary "Next" CTA checks the Answer radio input shown above.
+#}
+{% block additional_content %}
+<section id="answer-{{ item_num }}" card="a{{ item_num }}" ca="{{ question.ca }}">
+    <article>
+        <h3 class="answer">{{ question.answer.header | safe }}</h3>
+        <p class="explanation">{{ question.answer.copy | safe }}</p>
+        <div class="cta_container">
+            <label for="input-answer-{{ item_num }}" class="cta primary"><span class="text">Next</span></label>
+            <a href="#" target="_blank" class="cta tertiary">
+                <span class="text">Learn more</span>
+                <svg width="11" height="12" viewBox="0 0 11 12" fill="none" style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.550253 1.05021H10.4497M10.4497 1.05021V10.9497M10.4497 1.05021L0.550253 10.9497" stroke="white"/>
+                </svg>
+            </a>
+        </div>
+    </article>
+</section>
 {% endblock %}
