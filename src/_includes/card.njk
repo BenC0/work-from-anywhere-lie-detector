@@ -1,12 +1,40 @@
+{#
+    Card Layout:
+    - The main layout, this is responsible for the start page, questions and answers.
+    - The structure of the HTML is key to ensuring the CSS hides/shows the correct page.
+#}
+
+{#
+    Answer radio input:
+    - This is checked when the user clicks the primary "Next" CTA in the answer card
+    - When checked the next card is displayed.
+#}
 <input type="radio" name="answer-{{ item_num }}" id="input-answer-{{ item_num }}" class="counter_ignore input-answer" />
+{#
+    Question radio inputs:
+    - This is checked when a user selects an asnwer.
+    - .correct-answer is counted using a CSS counter
+    - .counter_ignore is not counted.
+    - These are mapped to the relevant CTA in the #question section below
+#}
 {% if item_num != "0" %}
 <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-correct" class="correct-answer input-answer" />
 <input type="radio" name="question-{{ item_num }}" id="question-{{ item_num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
 {% endif %}
+{#
+    Question section:
+    - This contains the content for each question.
+    - The page attribute is used in the CSS to hide/show the relevant page.
+#}
 <section id="question-{{ item_num }}" page="q{{ item_num }}" {% if question.answer %} class="question" {% endif %} >
     {% block content %}
     {% endblock %}
 </section>
+{#
+    Answer section:
+    - This contains the content for each answer.
+    - When clicked, the primary "Next" CTA checks the Answer radio input shown above.
+#}
 {% if question.answer %}
 <section id="answer-{{ item_num }}" page="a{{ item_num }}" ca="{{ question.ca }}">
     <article>
