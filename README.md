@@ -36,6 +36,7 @@ While form progression could normally be handled through dynamically hiding/show
 4. Investigate possibility of removing duplicate lie detector images
 5. Fix desktop question card logo visibility
 6. Implement lie detector
+7. Results Page
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
