@@ -49,13 +49,14 @@ Here be     \__         (_./  /
 [name="question-9"]:checked ~ .answers [answer="9"],
 [name="question-10"]:checked ~ .answers [answer="10"],
 [name="answer-10"]:checked ~ header nav {
-    display: block;
     /* makes card/page visible so users can see the card/page */
-    /* opacity: 1; */
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
     /* resets overflow so users can see entire card/page */
-    /* overflow: auto; */
+    overflow: auto;
     /* resets pointer events so users can interact with card/page */
-    /* pointer-events: auto; */
+    pointer-events: auto;
 }
 
 /* This abomination ensures the correct cards/pages are hidden */
@@ -87,14 +88,14 @@ Here be     \__         (_./  /
 [name="answer-9"]:checked ~ .answers [answer="9"],
 [name="answer-10"]:checked ~ .answers [answer="10"],
 [name="answer-10"]:not(:checked) ~ header nav {
-    display: none;
     /* makes card/page invisible so users can't see the card/page */
-    /* opacity: 0; */
+    opacity: 0;
+    display: none;
     /* Sets overflow so card/page doesn't intefere with page scroll */
-    /* overflow: hidden; */
+    overflow: hidden;
     /* Removes pointer events so users can't interact with card/page even
         if overlayed on top of current card/page */
-    /* pointer-events: none; */
+    pointer-events: none;
 }
 
 /*

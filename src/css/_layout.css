@@ -62,8 +62,14 @@ main {
         padding-top: var(--header-height);
 
         & article {
+            justify-content: center;
             @media screen and (min-width: 768px) {
                 width: 52vw;
+            }
+
+            @media screen and (max-width: 767px) {
+                margin: 0;
+                justify-content: flex-start;
             }
         }
     }
@@ -142,36 +148,6 @@ main {
             width: 100vw;
             & .explanation {
                 padding-bottom: 60px;
-            }
-        }
-    }
-}
-
-section[card] {
-    /* Start page placement/positioning */
-    &.start {
-        /* content placement/positioning */
-        & article {
-            z-index: 2;
-            position: relative;
-            justify-content: center;
-
-            @media screen and (max-width: 768px) {
-                justify-content: flex-start;
-            }
-
-            & .hero_body {
-                @media screen and (max-width: 768px) {
-                    margin: 0;
-                }
-            }
-
-            & .cta_container {
-                flex-grow: 0;
-                margin-top: 120px;
-                @media screen and (max-width: 768px) {
-                    margin-top: 33px;
-                }
             }
         }
     }
