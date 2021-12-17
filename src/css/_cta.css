@@ -36,7 +36,7 @@
     transition: all .1s ease-in;
     
     /* dimesension properties */
-    width: 163px;
+    width: var(--cta-width);
     margin-right: 40px;
     height: var(--cta-height);
     line-height: var(--cta-height);

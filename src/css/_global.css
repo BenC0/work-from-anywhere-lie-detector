@@ -20,6 +20,7 @@
     --ff-2: neue-haas-grotesk-display, sans-serif;
     
     /* Misc. element dimension/spacing variables */
+    --cta-width: 163px;
     --cta-height: 38px;
     --outer-padding: 5.9vw;
     --header-height: 18.75vh;

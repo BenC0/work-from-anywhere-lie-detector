@@ -36,8 +36,13 @@ section[page] {
 
     /* alignment for children of picture elements */
     & picture {
+        position: relative;
         align-items: center;
         justify-content: center;
+
+        & .placeholder {
+            width: 100%;
+        }
     }
 
     /* article padding */
@@ -50,17 +55,179 @@ section[page] {
         @media screen and (max-width: 768px) {
             padding: var(--header-height) var(--outer-padding) 0;
         }
+
+        /* child spacing */
+        & .explanation {
+            margin: 1.875rem 0;
+
+            @media screen and (max-width: 768px) {
+                margin: 1em 0;
+            }
+        }
+        
+        & .answer,
+        & .question {
+            margin: 0;
+        }
+
+        & .statement {
+            position: relative;
+            margin-bottom: 1.08em;
+            place-self: flex-start;
+
+            @media screen and (max-width: 768px) {
+                margin: 20px 0;
+            }
+        }
+    }
+
+    
+    &.question, 
+    &[id^="answer-"] {
+        @media screen and (max-width: 768px) {
+            & .cta_container {
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: fixed;
+                
+                & .cta {
+                    margin: 0;
+                    width: 50vw;
+                    height: 50px;
+                }
+            }
+        }
+    }
+
+    /* Question grid styling */
+    &.question {
+        @media screen and (max-width: 768px) {
+            display: grid;
+            grid-template-rows: auto;
+            align-content: flex-start;
+            grid-template-columns: 1fr;
+        }
+        
+        /* Image positioning */
+        & picture {
+            @media screen and (max-width: 768px) {
+                grid-row: 1;
+                width: 100vw;
+                height: 160px;
+                overflow: hidden;
+                position: relative;
+                margin-top: var(--header-height);
+
+                & img {
+                    top: 50%;
+                    left: 50%;
+                    width: 100vw;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+        /* CTA size & placement */
+        & .cta_container .cta {
+            @media screen and (min-width: 769px) {
+                --size: 84px;
+                width: var(--size);
+                height: var(--size);
+            }
+        }
+
+        /* Content positioning */
+        & article {
+            @media screen and (max-width: 768px) {
+                grid-row: 2;
+                padding-top: 0;
+            }
+        }
     }
 
     /* answer specific dimensions/z-index */
     &[id^="answer-"] {
         z-index: 1;
+        /* background image placement */
+        &::before {
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            position: absolute;
+        }
+
+        /* answer decorative line placement */
+        & .answer {
+            position: relative;
+
+            &::before {
+                bottom: 0;
+                z-index: -1;
+                content: "";
+                right: calc(100% + 8px);
+                width: 72px;
+                position: absolute;
+            }
+        }
+
+        &[ca="True"] {
+            & .answer {
+                &::before {
+                    bottom: 7px;
+                    height: 7.23px;
+                }
+            }
+        }
+        
+        &[ca="False"] {
+            & .answer {
+                &::before {
+                    height: 35.17px;
+                }
+            }
+        }
         
         & article {
-            width: 100vw;
+            width: 64vw;
+            /* content spacing */
+            @media screen and (max-width: 768px) {
+                width: 100vw;
+                & .explanation {
+                    padding-bottom: 60px;
+                }
+            }
         }
     }
+    /* Start page placement/positioning */
+    &#question-0 {
+        /* content placement/positioning */
+        & article {
+            z-index: 2;
+            position: relative;
+            justify-content: center;
 
+            @media screen and (max-width: 768px) {
+                justify-content: flex-start;
+            }
+
+            & .hero_body {
+                @media screen and (max-width: 768px) {
+                    margin: 0;
+                }
+            }
+
+            & .cta_container {
+                flex-grow: 0;
+                margin-top: 120px;
+                @media screen and (max-width: 768px) {
+                    margin-top: 33px;
+                }
+            }
+        }
+    }
     /* Results specific styling, on hold pending sign off, will change so not commenting now. */
     &#results {
         display: flex;

@@ -1,6 +1,6 @@
 section[page] {
     &#question-0 {
-        color: white;
+        /* Start page background styling */
         background-size: cover;
         background-repeat: no-repeat;
         background-color: var(--blue);
@@ -14,69 +14,53 @@ section[page] {
         }
 
         & article {
-            z-index: 2;
-            position: relative;
-            justify-content: center;
-
-            @media screen and (max-width: 768px) {
-                justify-content: flex-start;
-            }
-
-            & .cta_container {
-                flex-grow: 0;
-                margin-top: 120px;
+            /* content font styling */
+            color: white;
+            
+            & .hero_title {
+                margin: 0;
+                font-weight: 400;
+                font-size: 3.75rem;
+                font-family: var(--ff-2);
+                
                 @media screen and (max-width: 768px) {
-                    margin-top: 33px;
+                    line-height: 1.22;
+                    font-size: 2.1875rem;
                 }
             }
-        }
 
-        & picture img {
-            z-index: 0;
-            height: 100vh;
-            position: relative;
-            @media screen and (max-width: 768px) {
-                display: none;
+            & .hero_body,
+            & .hero_subheading {
+                font-weight: 300;
+            }
+
+            & .hero_subheading {
+                margin: 1.875rem 0;
+                font-size: 1.5rem;
+                line-height: 1.58;
+    
+                @media screen and (max-width: 768px) {
+                    margin: 1em 0;
+                    font-size: 1.25rem;
+                }
+            }
+
+            & .hero_body {
+                font-size: 1rem;
             }
         }
     }
 
-    & picture {
-        position: relative;
-        & .placeholder {
-            width: 100%;
-        }
-    }
-
+    /* General content font styling */
     & article {
-        & .hero_title {
-            margin: 0;
-            font-weight: 400;
-            font-size: 3.75rem;
-            font-family: var(--ff-2);
-            
-            @media screen and (max-width: 768px) {
-                line-height: 1.22;
-                font-size: 2.1875rem;
-            }
-        }
-        
         & .answer,
-        & .explanation,
-        & .hero_subheading {
-            margin: 1.875rem 0;
+        & .explanation {
             font-size: 1.5rem;
             line-height: 1.58;
 
             @media screen and (max-width: 768px) {
-                margin: 1em 0;
                 font-size: 1.25rem;
             }
-        }
-
-        & .hero_body,
-        & .hero_subheading {
-            font-weight: 300;
         }
         
         & .answer {
@@ -86,20 +70,8 @@ section[page] {
             font-size: 2.5rem;
             font-family: var(--ff-2);
         }
-        
-        & .explanation {
-        }
-
-        & .hero_body {
-            font-size: 1rem;
-
-            @media screen and (max-width: 768px) {
-                margin: 0;
-            }
-        }
 
         & .question {
-            margin: 0;
             font-weight: 400;
             font-size: 2.5rem;
             line-height: 3rem;
@@ -115,16 +87,13 @@ section[page] {
             font-weight: 400;
             font-size: 1.5rem;
             line-height: 1.58;
-            position: relative;
-            margin-bottom: 1.08em;
-            place-self: flex-start;
 
             @media screen and (max-width: 768px) {
-                margin: 20px 0;
                 line-height: 1.4;
                 font-size: 1.25rem;
             }
-
+            
+            /* Handles text underline */
             &::after {
                 left: 0;
                 right: 0;
@@ -137,6 +106,140 @@ section[page] {
         }
     }
 
+    &.question {
+        /* Lie detector background */
+        & picture {
+            background: #002858;
+        }
+
+        /* Question specific cta styling */
+        & .cta_container {
+            & .cta {
+                line-height: var(--size);
+
+                background: white;
+                border-radius: 100%;
+                border: 1.5px solid var(--orange);
+                
+                &::before {
+                    border-radius: 100%;
+                }
+
+                &.secondary {
+                    border-color: var(--blue);
+                }
+
+                &:hover,
+                &.secondary:hover {
+                    color: white;
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    /* Question & Answer styles */
+    &[id^="answer-"],
+    &[id^="question-"]:not([id="question-0"]) {
+        /* CTA design */
+        @media screen and (max-width: 768px) {
+            & .cta_container {
+                & .cta {
+                    border: 0;
+                    border-radius: 0;
+                    background: var(--orange);
+                    
+                    &.tertiary,
+                    &.secondary {
+                        color: white;
+                        background: var(--blue);
+                    }
+                    
+                    &::before {
+                        border-radius: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Answer styles */
+    &[id^="answer-"] {
+        /* background image as psuedo element */
+        &::before {
+            content: "";
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center right;
+        }
+
+        & .answer {
+            position: relative;
+
+            /* answer decorative line styling */
+            &::before {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center right;
+            }
+        }
+
+        /* Alternate designs for True/False answer */
+        &[ca="True"] {
+            color: var(--blue);
+            background-color: var(--orange);
+
+            & .primary.cta {
+                color: white;
+                background: var(--blue);
+            
+                &::before {
+                    background: var(--blue-gradient);
+                }
+            }
+
+            & .tertiary.cta {
+                color: var(--blue);
+                border-color: var(--blue);
+
+                /* Learn more CTA icon color */
+                svg path {
+                    stroke: var(--blue);
+                }
+            }
+
+            &::before {
+                /* Card background */
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbg.png");
+            }
+
+            & .answer {
+                &::before {
+                    /* Answer decorative line  */
+                    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbeat.png");
+                }
+            }
+        }
+
+        &[ca="False"] {
+            color: white;
+            background-color: var(--blue);
+
+            &::before {
+                /* Card background */
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbg.png");
+            }
+
+            & .answer {
+                &::before {
+                    /* Answer decorative line  */
+                    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbeat.png");
+                }
+            }
+        }
+    }
+
+    /* Results page specific styling, due for renewal post design sign off */
     &#results {
         & .cta {
             color: white;
@@ -219,195 +322,6 @@ section[page] {
                 max-width: 956px;
                 font-size: 1.125rem;
                 line-height: 1.875rem;
-            }
-        }
-    }
-
-    &.question {
-        @media screen and (max-width: 768px) {
-            display: grid;
-            grid-template-rows: auto;
-            align-content: flex-start;
-            grid-template-columns: 1fr;
-        }
-        
-        & picture {
-            background: #002858;
-            
-            @media screen and (max-width: 768px) {
-                grid-row: 1;
-                width: 100vw;
-                height: 160px;
-                overflow: hidden;
-                position: relative;
-                margin-top: var(--header-height);
-
-                & img {
-                    top: 50%;
-                    left: 50%;
-                    width: 100vw;
-                    position: absolute;
-                    transform: translate(-50%, -50%);
-                }
-            }
-        }
-
-        & article {
-            @media screen and (max-width: 768px) {
-                grid-row: 2;
-                padding-top: 0;
-            }
-        }
-
-        & .cta_container {
-            & .cta {
-                --size: 84px;
-                width: var(--size);
-                height: var(--size);
-                line-height: var(--size);
-
-                background: white;
-                border: 1.5px solid var(--orange);
-                border-radius: 100%;
-                
-                &::before {
-                    border-radius: 100%;
-                }
-
-                &.secondary {
-                    border-color: var(--blue);
-                }
-
-                &:hover,
-                &.secondary:hover {
-                    color: white;
-                    border-color: transparent;
-                }
-            }
-        }
-    }
-
-    &[id^="answer-"],
-    &[id^="question-"]:not([id="question-0"]) {
-        @media screen and (max-width: 768px) {
-            & .explanation {
-                padding-bottom: 60px;
-            }
-
-            & .cta_container {
-                left: 0;
-                right: 0;
-                bottom: 0;
-                position: fixed;
-                
-                & .cta {
-                    border: 0;
-                    margin: 0;
-                    width: 50vw;
-                    height: 50px;
-                    border-radius: 0;
-                    background: var(--orange);
-                    
-                    &.tertiary,
-                    &.secondary {
-                        color: white;
-                        background: var(--blue);
-                    }
-                    
-                    &::before {
-                        border-radius: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    &[id^="answer-"] {
-        & article {
-            width: 64%;
-            
-            @media screen and (max-width: 768px) {
-                width: 100%;
-            }
-        }
-
-        &::before {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: -1;
-            content: "";
-            position: absolute;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center right;
-        }
-
-        & .answer {
-            position: relative;
-
-            &::before {
-                bottom: 0;
-                z-index: -1;
-                content: "";
-                right: calc(100% + 8px);
-                width: 72px;
-                position: absolute;
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center right;
-            }
-        }
-
-        &[ca="True"] {
-            color: var(--blue);
-            background-color: var(--orange);
-
-            & .primary.cta {
-                color: white;
-                background: var(--blue);
-            
-                &::before {
-                    background: var(--blue-gradient);
-                }
-            }
-
-            & .tertiary.cta {
-                color: var(--blue);
-                border-color: var(--blue);
-
-                svg path {
-                    stroke: var(--blue);
-                }
-            }
-
-            &::before {
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbg.png");
-            }
-
-            & .answer {
-                &::before {
-                    bottom: 7px;
-                    height: 7.23px;
-                    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbeat.png");
-                }
-            }
-        }
-
-        &[ca="False"] {
-            color: white;
-            background-color: var(--blue);
-
-            &::before {
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbg.png");
-            }
-
-            & .answer {
-                &::before {
-                    height: 35.17px;
-                    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbeat.png");
-                }
             }
         }
     }
