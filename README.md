@@ -31,10 +31,7 @@ While form progression could normally be handled through dynamically hiding/show
 
 ## TODO
 
-1. Update page to mirror new designs
-2. Animation needs updating
-3. Form needs building & integrating with Hubspot
-4. Mobile design
-5. Page tranisiton needs improving to more closely mirror design
-6. Update copy and links
-7. Get fonts
+1. Document content.json within README
+2. CSS Hygiene
+3. Templates Hygiene - Decouple start page from question templates
+4. Fix desktop question card logo visibility
