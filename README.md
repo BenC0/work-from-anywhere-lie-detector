@@ -33,6 +33,7 @@ While form progression could normally be handled through dynamically hiding/show
 1. Properly Implement lie detector & JS powered page switching 
 2. Results Page
 3. Form
+4. Finesse page transitions
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
