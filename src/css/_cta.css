@@ -19,6 +19,7 @@
     & .text {
         /* Positioning */
         z-index: 2;
+        bottom: 1px;
         position: relative;
         
         /* Font styling */
@@ -37,9 +38,12 @@
     
     /* dimesension properties */
     width: var(--cta-width);
-    margin-right: 40px;
     height: var(--cta-height);
     line-height: var(--cta-height);
+
+    &:not(:last-child) {
+        margin-right: 40px;
+    }
     
     /* positioning properties */
     position: relative;
@@ -93,6 +97,18 @@
 
         & .text {
             margin-right: 1ch;
+        }
+    }
+
+    &.link {
+        width: auto;
+        color: var(--blue);
+        display: inline-block;
+        background: transparent;
+        text-decoration: underline;
+
+        &::before {
+            display: none;
         }
     }
 }
@@ -172,4 +188,14 @@
     @media screen and (max-width: 768px) {
         margin-top: 33px;
     }
+}
+
+.results .cta_container {
+    flex-grow: 0;
+    margin-top: 50px;
+}
+
+.results .banner .cta_container {
+    flex-grow: 0;
+    margin-top: 35px;
 }

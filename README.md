@@ -30,7 +30,7 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-1. Results Page
+1. Results Page - mobile
 2. Form
 3. Finesse page & lie detector transitions
 4. QA

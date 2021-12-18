@@ -130,15 +130,15 @@
         }
     ],
     "resultsPage": {
-        "hero": "Thanks for taking the quiz!<br /> You scored <span class=\"resultNum\"></span> out of 10.",
-        "subheading": " We've got a few more unspoken IT truths you may be interested in.",
-        "component_two_leading_copy": "Continue reading...",
-        "component_two_heading": "The 8 Biggest Challenges Facing Your IT Team Right Now",
+        "hero": "You scored <span class=\"resultNum\"></span> out of 10.",
+        "subheading": "We've got a few more unspoken IT truths you may be interested in.",
+        "component_two_leading_copy": "CONTINUE READING...",
+        "component_two_heading": "The 8 Biggest Challenges<br class=\"desktop\" /><span class=\"mobile\"> </span>Facing Your IT Team Right Now",
         "component_two_subheading": "Read our exclusive insights – free",
         "component_two_body": "We've spoken with hundreds of IT professionals to identify the key stressors currently affecting their teams. During our research, these eight specific challenges arose again and again.<br/><br/>How many of them ring true for you and your team?",
         "component_two_cta_one": "Read now",
-        "component_two_cta_two": "Read later – send link to email",
-        "component_three_heading": "Embrace Transformation and 'Work From Anywhere'",
+        "component_two_cta_two": "Read later – Send link to email",
+        "component_three_heading": "Embrace Transformation<br class=\"desktop\" /><span class=\"mobile\"> </span>and 'Work From Anywhere'",
         "component_three_body": "Post-pandemic, IT teams worldwide are struggling with productivity blockers within their businesses. Issues range from incompatible devices to unreliable connectivity; from unsecure environments, to overreliance on VPNs.<br/><br/>The daily firefighting of these issues gobbles up time and resources. The result? It's near impossible to plan the transformational change needed to deal with these issues permanently. It's a frustrating, catch-22 situation.<br/><br/>If you're looking to transform your organization's infrastructure to allow for a true 'work from anywhere' approach, Teneo can help. Let's break that endless cycle of firefighting and make real change happen – together.",
         "component_three_cta_one": "Learn more",
         "form_heading": "Get instant access to our insider content"

@@ -41,8 +41,9 @@ header {
 }
 
 .results.active_page ~ header nav {
-    display: flex;
+    /* display: flex; */
 }
+
 /* This handles the logo fill color on mobile to ensure it's correct on
     the answer pages */
 [name="answer-1"]:not(:checked) ~ [name="question-1"]:checked,
@@ -55,7 +56,8 @@ header {
 [name="answer-8"]:not(:checked) ~ [name="question-8"]:checked,
 [name="answer-9"]:not(:checked) ~ [name="question-9"]:checked,
 [name="answer-10"]:not(:checked) ~ [name="question-10"]:checked,
-[name="answer-0"]:not(:checked) {
+[name="answer-0"]:not(:checked)
+.results:not(.active) {
     & ~ header #logo svg path {
         @media screen and (min-width: 768px) {
             fill: white;

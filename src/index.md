@@ -23,6 +23,8 @@ templateEngineOverride: njk
     <input type="radio" name="answer-{{ question.num }}" id="input-answer-{{ question.num }}" class="counter_ignore input-answer" />
 {%- endfor -%}
 
+{% include "results_page.njk" %}
+
 {% include "lottie_animations.njk" %}
 {# Loop through questions and create question content #}
 <section class="questions">
@@ -37,8 +39,6 @@ templateEngineOverride: njk
     {%- endfor -%}
 </section>
 {% include "start_page.njk" %}
-
-<!-- {% include "results_page.njk" %} -->
 
 {# Header called last to enable dynamic hide/show nav based on user current page #}
 {% include "header.njk" %}

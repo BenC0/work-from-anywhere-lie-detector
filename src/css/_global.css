@@ -11,6 +11,7 @@
     --orange: rgba(246, 158, 15, 1);
     --lightblue: rgba(148, 179, 239, 0.28);
     --mango-gradient: linear-gradient(to right, #F69E0F, #E9CB53);
+    --mango-gradient-v: linear-gradient(to bottom, #F69E0F, #E9CB53);
     --blue-gradient: linear-gradient(to right, #002858, #5CA39A);
     
     /* Font variables */

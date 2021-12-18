@@ -5,11 +5,16 @@
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 50vw); 
+    grid-template-columns: repeat(2, 1fr); 
     grid-template-rows: var(--header-height) var(--progress-height) auto;
 
     @media screen and (max-width: 767px) {
         grid-template-rows: var(--header-height) var(--animation-height) auto;
+    }
+
+    & .vert-container {
+        display: flex;
+        flex-direction: column;
     }
 
     /* article padding */
@@ -43,6 +48,60 @@ main {
 
             @media screen and (max-width: 768px) {
                 margin: 20px 0;
+            }
+        }
+    }
+
+    & .results {
+        display: flex;
+        grid-row: 2 / span 2;
+        flex-direction: column;
+        grid-column: 1 / span 2;
+
+        & .hero {
+            display: flex;
+            min-height: 432px;
+            flex-direction: column;
+            padding: 100px var(--outer-padding);
+
+            & .heading {
+                display: flex;
+                align-items: center;
+
+                & svg {
+                    margin-top: -1rem;
+                    margin-right: 1.75rem;
+                }
+            }
+        }
+
+        & .blog_post {
+            display: flex;
+            padding: 11.11vh 0;
+            padding-right: var(--outer-padding);
+
+            & article {
+                width: 51%;
+            }
+
+            & picture {
+                flex-grow: 1;
+                align-self: center;
+                text-align: center;
+            }
+        }
+
+        & .banner {
+            display: flex;
+            padding: 15.9vh 0;
+            place-content: center;
+            
+            & .vert-container {
+                place-items: center;
+            }
+
+            & .heading {
+                margin: 0;
             }
         }
     }
@@ -106,6 +165,21 @@ main {
     & header {
         grid-row: 1;
         grid-column: 1 / span 2;
+    }
+
+    & footer {
+        padding: 13.19vh var(--outer-padding);
+
+        & nav {
+            display: flex;
+            text-align: center;
+            place-items: center;
+
+            & a {
+                color: var(--blue);
+                text-decoration: none;
+            }
+        }
     }
 }
 

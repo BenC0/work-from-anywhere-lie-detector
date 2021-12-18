@@ -58,6 +58,18 @@ Here be     \__         (_./  /
         pointer-events: none;
     }
 }
+
+.results {
+    &.active_page {
+        & ~ .answers,
+        & ~ .questions,
+        & ~ .animations,
+        & ~ .progress_bar {
+            display: none;
+        }
+    }
+}
+
 /*
 - If set to display none, checked inputs don't register and
 page hiding/showing logic breaks. This is forces inputs to
