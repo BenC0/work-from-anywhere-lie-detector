@@ -30,10 +30,10 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-1. Properly Implement lie detector & JS powered page switching 
-2. Results Page
-3. Form
-4. Finesse page transitions
+1. Results Page
+2. Form
+3. Finesse page & lie detector transitions
+4. QA
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
