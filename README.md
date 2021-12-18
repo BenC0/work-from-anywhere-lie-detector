@@ -30,7 +30,7 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-1. Properly Implement lie detector
+1. Properly Implement lie detector & JS powered page switching 
 2. Results Page
 3. Form
 

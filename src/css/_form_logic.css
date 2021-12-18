@@ -26,78 +26,38 @@ Here be     \__         (_./  /
 */
 
 /* This monster ensures the correct cards/pages are shown */
-[name="answer-0"]:not(:checked) ~ .start,
-[name="answer-0"]:checked ~ .questions [question="1"],
-[name="answer-1"]:checked ~ .questions [question="2"],
-[name="answer-2"]:checked ~ .questions [question="3"],
-[name="answer-3"]:checked ~ .questions [question="4"],
-[name="answer-4"]:checked ~ .questions [question="5"],
-[name="answer-5"]:checked ~ .questions [question="6"],
-[name="answer-6"]:checked ~ .questions [question="7"],
-[name="answer-7"]:checked ~ .questions [question="8"],
-[name="answer-8"]:checked ~ .questions [question="9"],
-[name="answer-9"]:checked ~ .questions [question="10"],
-[name="answer-10"]:checked ~ [card="results"],
-[name="question-1"]:checked ~ .answers [answer="1"],
-[name="question-2"]:checked ~ .answers [answer="2"],
-[name="question-3"]:checked ~ .answers [answer="3"],
-[name="question-4"]:checked ~ .answers [answer="4"],
-[name="question-5"]:checked ~ .answers [answer="5"],
-[name="question-6"]:checked ~ .answers [answer="6"],
-[name="question-7"]:checked ~ .answers [answer="7"],
-[name="question-8"]:checked ~ .answers [answer="8"],
-[name="question-9"]:checked ~ .answers [answer="9"],
-[name="question-10"]:checked ~ .answers [answer="10"],
-[name="answer-10"]:checked ~ header nav {
-    /* makes card/page visible so users can see the card/page */
-    opacity: 1;
-    display: flex;
-    flex-direction: column;
-    /* resets overflow so users can see entire card/page */
-    overflow: auto;
-    /* resets pointer events so users can interact with card/page */
-    pointer-events: auto;
+.start,
+.results,
+[answer],
+[question] {
+    &.active_page {
+        /* makes card/page visible so users can see the card/page */
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        /* resets overflow so users can see entire card/page */
+        overflow: auto;
+        /* resets pointer events so users can interact with card/page */
+        pointer-events: auto;
+    }
 }
 
 /* This abomination ensures the correct cards/pages are hidden */
 .start,
 .results,
 [answer],
-[question],
-[name="answer-0"]:not(:checked) ~ .progress_bar,
-[name="answer-0"]:not(:checked) ~ .animations,
-[name="question-1"]:checked ~ .questions [question="1"],
-[name="question-2"]:checked ~ .questions [question="2"],
-[name="question-3"]:checked ~ .questions [question="3"],
-[name="question-4"]:checked ~ .questions [question="4"],
-[name="question-5"]:checked ~ .questions [question="5"],
-[name="question-6"]:checked ~ .questions [question="6"],
-[name="question-7"]:checked ~ .questions [question="7"],
-[name="question-8"]:checked ~ .questions [question="8"],
-[name="question-9"]:checked ~ .questions [question="9"],
-[name="question-10"]:checked ~ .questions [question="10"],
-[name="answer-0"]:checked ~ .answers [answer="0"],
-[name="answer-1"]:checked ~ .answers [answer="1"],
-[name="answer-2"]:checked ~ .answers [answer="2"],
-[name="answer-3"]:checked ~ .answers [answer="3"],
-[name="answer-4"]:checked ~ .answers [answer="4"],
-[name="answer-5"]:checked ~ .answers [answer="5"],
-[name="answer-6"]:checked ~ .answers [answer="6"],
-[name="answer-7"]:checked ~ .answers [answer="7"],
-[name="answer-8"]:checked ~ .answers [answer="8"],
-[name="answer-9"]:checked ~ .answers [answer="9"],
-[name="answer-10"]:checked ~ .answers [answer="10"],
-[name="answer-10"]:not(:checked) ~ header nav {
-    /* makes card/page invisible so users can't see the card/page */
-    opacity: 0;
-    display: none;
-    /* Sets overflow so card/page doesn't intefere with page scroll */
-    overflow: hidden;
-    /* Removes pointer events so users can't interact with card/page even
-        if overlayed on top of current card/page */
-    pointer-events: none;
+[question] {
+    &:not(.active_page) {
+        /* makes card/page invisible so users can't see the card/page */
+        opacity: 0;
+        display: none;
+        /* Sets overflow so card/page doesn't intefere with page scroll */
+        overflow: hidden;
+        /* Removes pointer events so users can't interact with card/page even
+            if overlayed on top of current card/page */
+        pointer-events: none;
+    }
 }
-
 /*
 - If set to display none, checked inputs don't register and
 page hiding/showing logic breaks. This is forces inputs to

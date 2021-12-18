@@ -18,9 +18,9 @@ header {
     }
 
     & nav {
+        display: none;
         /* Nav/child positioning & placement */
         flex-grow: 1;
-        display: flex;
         text-align: center;
         align-items: center;
         justify-items: space-between;
@@ -40,12 +40,8 @@ header {
     }
 }
 
-/* Changes header background on results page. */
-[name="answer-10"]:checked ~ header {
-    background:  rgba(60, 100, 177, .2);
-}
-
-[name="answer-0"]:not(:checked) ~ header {
+.results.active_page ~ header nav {
+    display: flex;
 }
 /* This handles the logo fill color on mobile to ensure it's correct on
     the answer pages */
