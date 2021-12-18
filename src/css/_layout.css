@@ -58,36 +58,81 @@ main {
         flex-direction: column;
         grid-column: 1 / span 2;
 
+        & .leading_copy {
+            margin: 0;
+        }
+
         & .hero {
             display: flex;
-            min-height: 432px;
             flex-direction: column;
-            padding: 100px var(--outer-padding);
+            padding: 1.875rem var(--outer-padding);
+            
+            @media screen and (min-width: 768px) {
+                min-height: 432px;
+                padding: 100px var(--outer-padding);
+            }
 
             & .heading {
                 display: flex;
                 align-items: center;
+                margin: 0.66em 0;
+                
+                @media screen and (max-width: 768px) {
+                    margin: .57em 0;
+
+                    & .text {
+                        order: 1;
+                    }
+                }
 
                 & svg {
+                    width: 106px;
+                    height: 101px;
                     margin-top: -1rem;
                     margin-right: 1.75rem;
+            
+                    @media screen and (max-width: 767px) {
+                        order: 2;
+                        width: 70px;
+                        height: 65px;
+                        margin-right: 0;
+                        margin-left: 1.75rem;
+                    }
                 }
+            }
+
+            & .subheading {
+                margin: 0;
             }
         }
 
         & .blog_post {
             display: flex;
-            padding: 11.11vh 0;
-            padding-right: var(--outer-padding);
+            
+            @media screen and (min-width: 768px) {
+                padding: 11.11vh 0;
+                padding-right: var(--outer-padding);
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
 
             & article {
-                width: 51%;
+                @media screen and (min-width: 768px) {
+                    width: 51%;
+                }
+                @media screen and (max-width: 768px) {
+                    padding: 1.875rem 1.25rem;
+                }
             }
 
             & picture {
-                flex-grow: 1;
                 align-self: center;
                 text-align: center;
+                @media screen and (min-width: 768px) {
+                    flex-grow: 1;
+                }
             }
         }
 
@@ -174,6 +219,10 @@ main {
             display: flex;
             text-align: center;
             place-items: center;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+            }
 
             & a {
                 color: var(--blue);

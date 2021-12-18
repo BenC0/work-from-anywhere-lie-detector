@@ -130,7 +130,7 @@
         }
     ],
     "resultsPage": {
-        "hero": "You scored <span class=\"resultNum\"></span> out of 10.",
+        "hero": "You scored<br class=\"mobile\" /><span class=\"desktop\"> </span><span class=\"resultNum\"></span> out of 10.",
         "subheading": "We've got a few more unspoken IT truths you may be interested in.",
         "component_two_leading_copy": "CONTINUE READING...",
         "component_two_heading": "The 8 Biggest Challenges<br class=\"desktop\" /><span class=\"mobile\"> </span>Facing Your IT Team Right Now",
