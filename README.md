@@ -31,9 +31,10 @@ While form progression could normally be handled through dynamically hiding/show
 
 ## TODO
 1. Results Page - mobile
-2. Form
-3. Finesse page & lie detector transitions
-4. QA
+2. Nav
+3. Form
+4. Finesse page & lie detector transitions
+5. QA
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
