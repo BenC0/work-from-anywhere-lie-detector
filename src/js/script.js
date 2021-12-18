@@ -28,7 +28,8 @@ const cards = {
     transition_timing: _ => {
         let current = cards.get_current_page()
         if(!!current.getAttribute('question')) {
-            return 1000
+            // return 1000
+            return 0
         } else if(!!current.getAttribute('answer')) {
             return 0
         } else {
@@ -53,7 +54,10 @@ const cards = {
         }
     },
     reset_pages: _ => {
+        document.body.classList.add("resetting")
+        document.querySelectorAll('[name^="question-"], [name^="answer-"]').forEach(el => el.checked = false)
         cards.go_to(cards.start_page)
+        document.body.classList.remove("resetting")
     },
     go_to: sel => {
         console.log({"function": "go_to", sel})
@@ -79,23 +83,36 @@ const cards = {
     }
 }
 
-
 let q_inputs = document.querySelectorAll('[name^="question-"]')
 q_inputs.forEach(q => {
     q.addEventListener('change', e => {
-        if(q.classList.contains('correct-answer')) {
-            animations.set_state('true')
-        } else {
-            animations.set_state('false')
+        if(!document.body.classList.contains("resetting")) {
+            if(q.classList.contains('correct-answer')) {
+                animations.set_state('true')
+            } else {
+                animations.set_state('false')
+            }
+            window.setTimeout(cards.next_card, cards.transition_timing())
         }
-        window.setTimeout(cards.next_card, cards.transition_timing())
     })
 })
 
 let a_inputs = document.querySelectorAll('[name^="answer-"]')
 a_inputs.forEach(a => {
     a.addEventListener('change', _ => {
-        animations.reset_state()
-        window.setTimeout(cards.next_card, cards.transition_timing())
+        if(!document.body.classList.contains("resetting")) {
+            animations.reset_state()
+            window.setTimeout(cards.next_card, cards.transition_timing())
+        }
     })
 })
+
+let reset_cta = document.querySelector('[href="#reset-quiz"]')
+if(!!reset_cta) {
+    reset_cta.addEventListener('click', e => {
+        e.preventDefault();
+        cards.reset_pages()
+    })
+}
+
+cards.reset_pages()
