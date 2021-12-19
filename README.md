@@ -30,10 +30,9 @@ While form progression could normally be handled through dynamically hiding/show
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
 ## TODO
-1. Form - Style
-2. Form - Hubspot Integration
-3. Refactor
-4. QA
+1. Form - Hubspot Integration
+2. Refactor
+3. QA
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.

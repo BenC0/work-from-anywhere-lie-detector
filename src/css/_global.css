@@ -43,7 +43,7 @@
 }
 
 /* Generic font styling */
-h1, h2, h3, h4, h5, h6, p, body {
+h1, h2, h3, h4, h5, h6, p, body, input, select, option {
     color: inherit;
     font-weight: 300;
     font-style: normal;
@@ -51,6 +51,33 @@ h1, h2, h3, h4, h5, h6, p, body {
     font-size: var(--fs);
     letter-spacing: 0.02ch;
     font-family: var(--ff-1);
+}
+
+input,
+select,
+option {
+    color: black;
+    font-size: 1rem;
+    padding: 1rem .875rem;
+    border: 1px solid #dddedd;
+
+    margin: 0;
+    
+    &::placeholder {
+        color: rgba(189, 193, 195, 1);
+    }
+}
+
+input {
+    margin-top: 2px;
+}
+
+label {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+        margin-bottom: 25px;
+    }
 }
 
 body {

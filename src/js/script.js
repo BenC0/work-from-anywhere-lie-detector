@@ -123,4 +123,11 @@ dropdown_parents.forEach(dropdown_parent => {
     })
 })
 
+let toggle_forms = document.querySelectorAll('.toggle_form')
+toggle_forms.forEach(toggle_form => {
+    toggle_form.addEventListener('click', e => {
+        e.preventDefault();
+        document.body.classList.toggle('show_form')
+    })
+})
 // cards.reset_pages()
