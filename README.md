@@ -33,7 +33,8 @@ While form progression could normally be handled through dynamically hiding/show
 1. Nav
 2. Form
 3. Finesse page & lie detector transitions
-4. QA
+4. Refactor
+5. QA
 
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
