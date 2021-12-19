@@ -43,7 +43,7 @@
 }
 
 /* Generic font styling */
-h1, h2, h3, h4, h5, h6, p, body, input, select, option {
+h1, h2, h3, h4, h5, h6, p, body, form input, form select, form option {
     color: inherit;
     font-weight: 300;
     font-style: normal;
@@ -53,9 +53,9 @@ h1, h2, h3, h4, h5, h6, p, body, input, select, option {
     font-family: var(--ff-1);
 }
 
-input,
-select,
-option {
+form input,
+form select,
+form option {
     color: black;
     font-size: 1rem;
     padding: 1rem .875rem;
@@ -68,11 +68,11 @@ option {
     }
 }
 
-input {
+form input {
     margin-top: 2px;
 }
 
-label {
+form label {
     margin-bottom: 10px;
 
     &:last-of-type {

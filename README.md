@@ -29,11 +29,6 @@ While form progression could normally be handled through dynamically hiding/show
 * Needs to function perfectly within Hubspot
 * Form should be compatible with Hubspot - _Can we set this up as a module?_
 
-## TODO
-1. Form - Hubspot Integration
-2. Refactor
-3. QA
-
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
 The structure is summarised below.
@@ -99,3 +94,8 @@ The structure is summarised below.
         },
     ]
 ```
+
+## TODO
+1. Form - Hubspot Integration
+2. Refactor
+3. QA

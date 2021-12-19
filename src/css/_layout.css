@@ -4,8 +4,9 @@
 */
 
 main {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 50%); 
     grid-template-rows: var(--header-height) var(--progress-height) auto;
 
     @media screen and (max-width: 767px) {
@@ -161,6 +162,8 @@ main {
         }
 
         & lottie-player {
+            width: 99%;
+            margin: 0 auto;
             min-height: var(--animation-height);
         }
     }

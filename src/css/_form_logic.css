@@ -35,8 +35,6 @@ Here be     \__         (_./  /
         opacity: 1;
         display: flex;
         flex-direction: column;
-        /* resets overflow so users can see entire card/page */
-        overflow: auto;
         /* resets pointer events so users can interact with card/page */
         pointer-events: auto;
     }
