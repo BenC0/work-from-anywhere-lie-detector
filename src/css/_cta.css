@@ -19,7 +19,7 @@
     & .text {
         /* Positioning */
         z-index: 2;
-        bottom: 1px;
+        bottom: 2px;
         position: relative;
         
         /* Font styling */
@@ -27,6 +27,10 @@
         font-weight: 500;
         text-align: center;
         font-family: var(--ff-1);
+
+        &:not(:last-child) {
+            margin-right: 1ch;
+        }
     }
     
     /* General styling */
@@ -42,7 +46,7 @@
     line-height: var(--cta-height);
 
     &:not(:last-child) {
-        margin-right: 40px;
+        margin-right: var(--cta-spacing);
     }
     
     /* positioning properties */
@@ -97,6 +101,16 @@
 
         & .text {
             margin-right: 1ch;
+        }
+    }
+
+    &.ghost {
+        color: var(--blue);
+        background: transparent;
+        border: 1px solid var(--blue);
+    
+        &::before {
+            background: transparent;
         }
     }
 

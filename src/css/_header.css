@@ -41,7 +41,24 @@ header {
 }
 
 .results.active_page ~ header nav {
-    /* display: flex; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+#resources {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: left;
+    background: white;
+    padding: 1.8125rem 2rem;
+    width: var(--menu-width);
+
+    & a {
+        color: var(--blue);
+        &:not(:last-child) {
+            margin-bottom: 1.625rem;
+        }
+    }
 }
 
 /* This handles the logo fill color on mobile to ensure it's correct on

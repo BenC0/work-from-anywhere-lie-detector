@@ -20,13 +20,17 @@
     --ff-1: sofia-pro, sans-serif;
     --ff-2: neue-haas-grotesk-display, sans-serif;
     
-    /* Misc. element dimension/spacing variables */
+    /* CTA dimension/spacing variables */
     --cta-width: 163px;
     --cta-height: 38px;
+    --cta-spacing: 40px;
+    
+    /* Misc. element dimension/spacing variables */
     --outer-padding: 5.9vw;
     --header-height: 18.75vh;
-    --progress-height: calc(12.12vh + 8px);
     --animation-height: 100vh;
+    --progress-height: calc(12.12vh + 8px);
+    --menu-width: calc((var(--cta-width) * 2) + var(--cta-spacing) + (var(--outer-padding) * .9) );
 
     @media screen and (max-width: 767px) {
         --header-height: 11.61vh;
@@ -62,14 +66,37 @@ label {
     display: none;
 }
 
+.dropdown-container {
+    position: relative;
+
+    & .dropdown-children {
+        left: 0;
+        right: 0;
+        top: 100%;
+        display: none;
+        position: absolute;
+        flex-direction: column;
+    }
+
+    &.active {
+        & .dropdown-children {
+            display: flex;
+        }
+
+        & .icon {
+            transform: rotate(180deg);
+        }
+    }
+}
+
 /* Quick and easy responsive classes  */
 @media screen and (min-width: 768px) {
     .mobile {
-        display: none;
+        display: none !important;
     }   
 }
 @media screen and (max-width: 767px) {
     .desktop {
-        display: none;
+        display: none !important;
     }   
 }
