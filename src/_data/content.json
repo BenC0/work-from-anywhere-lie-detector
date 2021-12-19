@@ -160,5 +160,43 @@
             "copy": "6 Considerations When Planning an SD-WAN or SASE Project",
             "url": "https://www.teneo.net/blog/sd-wan-and-sase-design/ "
         }
-    ]
+    ],
+    "form": {
+        "title": "Get instant access to our insider content",
+        "fields": [
+            {
+                "label": "First Name",
+                "type": "text"
+            },
+            {
+                "label": "Last Name",
+                "type": "text"
+            },
+            {
+                "label": "Email",
+                "type": "email"
+            },
+            {
+                "label": "Industry",
+                "type": "select",
+                "placeholder": "Select your industry",
+                "options": [
+                    "Option 1", "Option 2", "Option 3"
+                ]
+            },
+            {
+                "label": "Company Name",
+                "type": "text"
+            },
+            {
+                "label": "Job Title",
+                "type": "text"
+            },
+            {
+                "label": "Country",
+                "type": "text"
+            }
+        ],
+        "cta": "Submit"
+    }
 }

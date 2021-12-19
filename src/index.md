@@ -43,16 +43,6 @@ templateEngineOverride: njk
 {# Header called last to enable dynamic hide/show nav based on user current page #}
 {% include "header.njk" %}
 
-{# Progress bar, the current attribute is used by the CSS to highlight completed steps. #}
-<ul class="progress_bar">
-    <li class="indicator indicator-1">1</li>
-    <li class="indicator indicator-2">2</li>
-    <li class="indicator indicator-3">3</li>
-    <li class="indicator indicator-4">4</li>
-    <li class="indicator indicator-5">5</li>
-    <li class="indicator indicator-6">6</li>
-    <li class="indicator indicator-7">7</li>
-    <li class="indicator indicator-8">8</li>
-    <li class="indicator indicator-9">9</li>
-    <li class="indicator indicator-10">10</li>
-</ul>
+{% include "progress_bar.njk" %}
+
+{% include "form.njk" %}
