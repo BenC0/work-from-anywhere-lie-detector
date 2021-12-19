@@ -119,7 +119,7 @@ let dropdown_parents = document.querySelectorAll('.dropdown-parent[href]')
 dropdown_parents.forEach(dropdown_parent => {
     dropdown_parent.addEventListener('click', e => {
         e.preventDefault();
-        dropdown_parent.parentNode.classList.toggle('active')
+        dropdown_parent.closest(".dropdown-container").classList.toggle('active')
     })
 })
 

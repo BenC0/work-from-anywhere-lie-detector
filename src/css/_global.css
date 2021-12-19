@@ -62,8 +62,21 @@ label {
     cursor: pointer;
 }
 
+picture, img {
+    width: 100%;
+    max-width: 100%;
+}
+
 .hide {
     display: none;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.no-decoration {
+    text-decoration: none !important;
 }
 
 .dropdown-container {
@@ -78,6 +91,12 @@ label {
         flex-direction: column;
     }
 
+    & .icon {
+        @media screen and (max-width: 767px) {
+            transform: translateY(-2px);
+        }
+    }
+
     &.active {
         & .dropdown-children {
             display: flex;
@@ -85,6 +104,10 @@ label {
 
         & .icon {
             transform: rotate(180deg);
+            
+            @media screen and (max-width: 767px) {
+                transform: translateY(-2px) rotate(180deg);
+            }
         }
     }
 }
