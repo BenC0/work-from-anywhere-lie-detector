@@ -2,7 +2,7 @@ header {
     /* positioning & size */
     z-index: 2;
     position: relative;
-    header: var(--header-height);
+    height: var(--header-height);
     padding: 0 var(--outer-padding);
     
     /* Flex styles */

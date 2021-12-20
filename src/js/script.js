@@ -29,7 +29,7 @@ const cards = {
         let current = cards.get_current_page()
         if(!!current.getAttribute('question')) {
             // return 1000
-            return 0
+            return 500
         } else if(!!current.getAttribute('answer')) {
             return 0
         } else {

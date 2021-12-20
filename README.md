@@ -97,5 +97,14 @@ The structure is summarised below.
 
 ## TODO
 1. Form - Hubspot Integration
-2. Refactor
-3. QA
+2. Results Page - Blog element styles
+3. Results Page - Blog element links
+4. Results Page - Footer link styles
+5. Answers - Learn more links
+6. Results page - Read later link opens form
+7. Scroll issue on answer card - padding bottom for ctas
+8. Form - mobile breathing room
+9. JS & CSS - External files (Hubspot can't handle 1609 lines of HTML, CSS & JS in 1 file)
+10. Hubspot Integration - Need the head & footer variables
+11. Refactor
+12. QA

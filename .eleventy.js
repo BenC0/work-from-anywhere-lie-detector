@@ -14,9 +14,9 @@ module.exports = function(eleventyConfig) {
           name: "extend",
           onFunctionalSelector: 'remove'
         }),
-        cssnano({
-          preset
-        }),
+        // cssnano({
+        //   preset
+        // }),
       ])
       .process(cssCode)
       .then(
