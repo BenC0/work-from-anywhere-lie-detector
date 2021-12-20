@@ -103,8 +103,8 @@ The structure is summarised below.
 5. Results page - Read later link opens form
 6. Scroll issue on answer card - padding bottom for ctas
 7. Form - mobile breathing room
-8.  Hubspot Integration - Need the head & footer variables
-9.  True Answer Card - Logo fill
+8. Hubspot Integration - Need the head & footer variables
+9. True Answer Card - Logo fill
 10. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
 11. Content - Ensure it's correct.
 12. Refactor
