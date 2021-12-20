@@ -96,15 +96,17 @@ The structure is summarised below.
 ```
 
 ## TODO
-1. Form - Hubspot Integration
-2. Results Page - Blog element styles
-3. Results Page - Blog element links
-4. Results Page - Footer link styles
-5. Answers - Learn more links
-6. Results page - Read later link opens form
-7. Scroll issue on answer card - padding bottom for ctas
-8. Form - mobile breathing room
-9. JS & CSS - External files (Hubspot can't handle 1609 lines of HTML, CSS & JS in 1 file)
-10. Hubspot Integration - Need the head & footer variables
-11. Refactor
-12. QA
+1. Results Page - Blog element styles
+2. Results Page - Blog element links
+3. Results Page - Footer link styles
+4. Answers - Learn more links
+5. Results page - Read later link opens form
+6. Scroll issue on answer card - padding bottom for ctas
+7. Form - mobile breathing room
+8. JS & CSS - External files (Hubspot can't handle 1609 lines of HTML, CSS & JS in 1 file)
+9.  Hubspot Integration - Need the head & footer variables
+10. True Answer Card - Logo fill
+11. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
+12. Content - Ensure it's correct.
+13. Refactor
+14. QA
