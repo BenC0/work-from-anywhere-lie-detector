@@ -100,12 +100,11 @@ The structure is summarised below.
 2. Results Page - Blog element links
 3. Results Page - Footer link styles
 4. Answers - Learn more links
-5. Results page - Read later link opens form
-6. Scroll issue on answer card - padding bottom for ctas
-7. Form - mobile breathing room
-8. Hubspot Integration - Need the head & footer variables
-9. True Answer Card - Logo fill
-10. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
-11. Content - Ensure it's correct.
-12. Refactor
-13. QA
+5. Scroll issue on answer card - padding bottom for ctas
+6. Form - mobile breathing room
+7. Hubspot Integration - Need the head & footer variables
+8. True Answer Card - Logo fill
+9. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
+10. Content - Ensure it's correct.
+11. Refactor
+12. QA

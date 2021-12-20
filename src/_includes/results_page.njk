@@ -1,6 +1,5 @@
 {# Page design pending approval, development halted for now. #}
 <section class="results active_page">
-    <input type="checkbox" id="toggle_form" name="toggle_form" />
     <div class="hero">
         <p class="leading_copy">Thanks for taking the quiz!</p>
         <h2 class="heading">
@@ -20,7 +19,7 @@
             <p class="body">{{ content.resultsPage.component_two_body | safe }}</p>
             <div class="cta_container">
                 <a href="#" class="cta primary"><span class="text">{{ content.resultsPage.component_two_cta_one | safe }}</span></a>
-                <label for="toggle_form" class="cta link">{{ content.resultsPage.component_two_cta_two | safe }}</label>
+                <a class="toggle_form cta link">{{ content.resultsPage.component_two_cta_two | safe }}</a>
             </div>
         </article>
     </div>
