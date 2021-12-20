@@ -12,35 +12,45 @@ function mk(f) {
   })
 }
 
+async function processJS() {
+  fs.readFile('src/js/script.js', (err, js) => {
+    fs.writeFile('dist/js/script.js', js, () => true)
+  })
+}
+
+async function processCSS() {
+  fs.readFile('src/css/index.css', (err, css) => {
+    postCss([
+      require('postcss-nested'),
+      require('postcss-import'),
+      postcssExtendRule({
+        name: "extend",
+        onFunctionalSelector: 'remove'
+      }),
+      cssnano({
+        preset
+      }),
+    ])
+    .process(css, { from: 'src/css/index.css', to: 'dist/css/index.css' })
+    .then(result => {
+      fs.writeFile('dist/css/index.css', result.css, () => true)
+      if ( result.map ) {
+        fs.writeFile('dist/css/index.css.map', result.map.toString(), () => true)
+      }
+    })
+  })
+}
+
 module.exports = function(eleventyConfig) {
     // Return your Object options:
     mk('./dist/js/')
     mk('./dist/css/')
 
-    fs.readFile('src/js/script.js', (err, js) => {
-      fs.writeFile('dist/js/script.js', js, () => true)
-    })
+    eleventyConfig.on('afterBuild', () => {
+      processJS()
+      processCSS()
+    });
 
-    fs.readFile('src/css/index.css', (err, css) => {
-      postCss([
-        require('postcss-nested'),
-        require('postcss-import'),
-        postcssExtendRule({
-          name: "extend",
-          onFunctionalSelector: 'remove'
-        }),
-        cssnano({
-          preset
-        }),
-      ])
-      .process(css, { from: 'src/css/index.css', to: 'dist/css/index.css' })
-      .then(result => {
-        fs.writeFile('dist/css/index.css', result.css, () => true)
-        if ( result.map ) {
-          fs.writeFile('dist/css/index.css.map', result.map.toString(), () => true)
-        }
-      })
-    })
     eleventyConfig.addWatchTarget("src/**/*.css");
     eleventyConfig.addWatchTarget("src/**/*.js");
     return {
