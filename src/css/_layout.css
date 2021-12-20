@@ -119,9 +119,15 @@ main {
                 flex-direction: column;
             }
 
+            & article,
+            & picture {
+                flex-grow: 1;
+            }
+
             & article {
                 @media screen and (min-width: 768px) {
-                    width: 51%;
+                    min-width: 51%;
+                    max-width: 900px;
                 }
                 @media screen and (max-width: 768px) {
                     padding: 1.875rem 1.25rem;
@@ -131,9 +137,6 @@ main {
             & picture {
                 align-self: center;
                 text-align: center;
-                @media screen and (min-width: 768px) {
-                    flex-grow: 1;
-                }
             }
         }
 
@@ -222,6 +225,7 @@ main {
             display: flex;
             text-align: center;
             place-items: center;
+            justify-content: space-between;
 
             @media screen and (max-width: 768px) {
                 flex-direction: column;

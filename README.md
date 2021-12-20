@@ -96,9 +96,9 @@ The structure is summarised below.
 ```
 
 ## TODO
-1. Results Page - Blog element styles
-2. Results Page - Blog element links
-3. Results Page - Footer link styles
+1. Results Page - Blog element links
+2. Results Page - Footer link styles
+3. Results Page - Take the test again styling
 4. Answers - Learn more links
 5. Scroll issue on answer card - padding bottom for ctas
 6. Form - mobile breathing room
