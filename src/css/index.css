@@ -1,12 +1,12 @@
-@import "./src/css/_normalise.css";
-@import "./src/css/_global.css";
+@import "./_normalise.css";
+@import "./_global.css";
 
-@import "./src/css/_form_logic.css";
-@import "./src/css/_layout.css";
+@import "./_form_logic.css";
+@import "./_layout.css";
 
-@import "./src/css/_progress_bar.css";
-@import "./src/css/_header.css";
+@import "./_progress_bar.css";
+@import "./_header.css";
 
-@import "./src/css/_cta.css";
-@import "./src/css/_pages.css";
-@import "./src/css/_form.css";
+@import "./_cta.css";
+@import "./_pages.css";
+@import "./_form.css";

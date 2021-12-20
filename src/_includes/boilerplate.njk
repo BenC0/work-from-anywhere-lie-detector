@@ -19,23 +19,13 @@
 
     <link rel="stylesheet" href="{{ typekit_link }}">
     <title>{{ page_title }}</title>
-    {% set css %}
-      {% include "../css/index.css" %}
-    {% endset %}
-    <style>
-      {{ css | postcss | safe}}
-    </style>
+    <link rel="stylesheet" href="./css/index.css">
   </head>
   <body>
     <main>
       {{ content | safe }}
     </main>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    {% set js %}
-      {% include "../js/script.js" %}
-    {% endset %}
-    <script>
-      {{ js | safe }}
-    </script>
+    <script src="./js/script.js"> </script>
   </body>
 </html>

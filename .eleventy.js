@@ -3,10 +3,25 @@ const postcssExtendRule = require('postcss-extend-rule');
 const cssnano = require('cssnano');
 const litePreset = require('cssnano-preset-lite');
 const preset = litePreset({ discardComments: true });
+const fs = require('fs')
+const path = require('path')
+
+function mk(f) {
+  fs.mkdir(path.join(__dirname, f), {recursive: true}, e => {
+    if (e) throw e
+  })
+}
 
 module.exports = function(eleventyConfig) {
     // Return your Object options:
-    eleventyConfig.addNunjucksAsyncFilter('postcss', (cssCode, done) => {
+    mk('./dist/js/')
+    mk('./dist/css/')
+
+    fs.readFile('src/js/script.js', (err, js) => {
+      fs.writeFile('dist/js/script.js', js, () => true)
+    })
+
+    fs.readFile('src/css/index.css', (err, css) => {
       postCss([
         require('postcss-nested'),
         require('postcss-import'),
@@ -14,15 +29,17 @@ module.exports = function(eleventyConfig) {
           name: "extend",
           onFunctionalSelector: 'remove'
         }),
-        // cssnano({
-        //   preset
-        // }),
+        cssnano({
+          preset
+        }),
       ])
-      .process(cssCode)
-      .then(
-        r => done(null, r.css),
-        e => done(e, null)
-      )
+      .process(css, { from: 'src/css/index.css', to: 'dist/css/index.css' })
+      .then(result => {
+        fs.writeFile('dist/css/index.css', result.css, () => true)
+        if ( result.map ) {
+          fs.writeFile('dist/css/index.css.map', result.map.toString(), () => true)
+        }
+      })
     })
     eleventyConfig.addWatchTarget("src/**/*.css");
     eleventyConfig.addWatchTarget("src/**/*.js");

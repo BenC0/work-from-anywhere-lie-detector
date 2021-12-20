@@ -103,10 +103,9 @@ The structure is summarised below.
 5. Results page - Read later link opens form
 6. Scroll issue on answer card - padding bottom for ctas
 7. Form - mobile breathing room
-8. JS & CSS - External files (Hubspot can't handle 1609 lines of HTML, CSS & JS in 1 file)
-9.  Hubspot Integration - Need the head & footer variables
-10. True Answer Card - Logo fill
-11. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
-12. Content - Ensure it's correct.
-13. Refactor
-14. QA
+8.  Hubspot Integration - Need the head & footer variables
+9.  True Answer Card - Logo fill
+10. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
+11. Content - Ensure it's correct.
+12. Refactor
+13. QA
