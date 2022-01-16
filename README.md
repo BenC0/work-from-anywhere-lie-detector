@@ -98,15 +98,13 @@ The structure is summarised below.
 ## TODO
 1. QA
    1. Mobile
-      1. Start Page
-         1. Logo overlayed onto content, should sit above.
-      2. Question
+      1. Question
          1. Animation
             1. Badly spaced/positioned
-      3. Answer
+      2. Answer
          1. Answer image is blurry
          2. No learn more links
-      4. Results
+      3. Results
          1. Banner
             1. Image not full width
 2. Summarise handover details in README
