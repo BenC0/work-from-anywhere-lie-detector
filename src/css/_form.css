@@ -84,6 +84,12 @@
             }
         }
 
+        & article {
+            --form-heading-padding: calc(var(--outer-padding) * .75);
+            padding-left: var(--form-heading-padding);
+            padding-right: var(--form-heading-padding);
+        }
+
         & .heading {
             color: black;
             line-height: 1.2;
