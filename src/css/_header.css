@@ -3,11 +3,11 @@ header {
     z-index: 2;
     position: relative;
     height: var(--header-height);
-    padding: 0 var(--outer-padding);
+    padding: 0 var(--outer-padding) 4px;
     
     /* Flex styles */
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
     /* Logo dimensions */
@@ -18,7 +18,7 @@ header {
         & svg {
             width: 130px;
             @media screen and (max-width: 767px) {
-                width: 106px;
+                width: 72px;
             }
         }
     }
@@ -141,5 +141,14 @@ header {
 
 .answers.active ~ header,
 .start.active_page ~ header {
-    display: none;
+    & #logo svg path {
+        fill: white;
+    }
+    
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+.start.active_page ~ header #logo svg path {
+    fill: white;
 }

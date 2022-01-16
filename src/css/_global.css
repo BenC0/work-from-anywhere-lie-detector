@@ -31,7 +31,7 @@
 
     @media screen and (max-width: 767px) {
         --header-height: 11.61vh;
-        --animation-height: 150px;
+        --animation-height: 160px;
     }
 }
 

@@ -120,7 +120,7 @@
 }
 
 /* Answer styles */
-[answer] {
+.answers [answer] {
     /* background image as psuedo element */
     &::before {
         content: "";
@@ -128,13 +128,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center right;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
     }
 
     /* Alternate designs for True/False answer */
     &[ca="True"] {
         color: white;
         background-color: var(--aegean);
-
 
         &::before {
             /* Card background */
@@ -152,14 +154,11 @@
         }
     }
 
-    & .answer {
-        position: relative;
-
-        /* answer decorative line styling */
-        &::before {
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center right;
+    & .explanation {
+        @media screen and (max-width: 768px)  {
+            line-height: 1.71;
+            font-size: .875rem;
+            padding: 18px 20px 0;
         }
     }
 }

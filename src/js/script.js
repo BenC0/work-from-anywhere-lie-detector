@@ -134,4 +134,4 @@ toggle_forms.forEach(toggle_form => {
         document.body.classList.toggle('show_form')
     })
 })
-// cards.reset_pages()
+cards.reset_pages()

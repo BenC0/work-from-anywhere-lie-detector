@@ -169,6 +169,7 @@ main {
     & .animations {
         grid-column: 2;
         grid-row: 1 / span 3;
+        overflow: hidden;
         
         @media screen and (max-width: 767px) {
             grid-row: 2;
@@ -176,9 +177,14 @@ main {
         }
 
         & lottie-player {
-            width: 99%;
+            width: 100%;
             margin: 0 auto;
             min-height: var(--animation-height);
+
+            @media screen and (max-width: 767px) {
+                margin: -17% auto;
+                min-height: calc(var(--animation-height) * 1.7);
+            }
         }
     }
 
@@ -199,9 +205,25 @@ main {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            
+
+            @media screen and (max-width: 767px) {
+                flex-grow: 1;
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+
             & .hero_body {
                 max-width: 500px;
+
+                @media screen and (max-width: 767px) {
+                    font-size: .875rem;
+                }
+            }
+
+            & .hero_subheading {
+                width: 100%;
+                margin-top: 0;
+                text-align: left;
             }
 
             & .hero_body,
@@ -229,6 +251,10 @@ main {
             grid-row: 2;
             max-width: 1064px;
             padding-bottom: 54px;
+
+            @media screen and (max-width: 767px) {
+                padding-bottom: 20px;
+            }
         }
     }
 
@@ -287,6 +313,10 @@ main {
     z-index: 1;
     padding: 0;
     position: absolute;
+    
+    @media screen and (max-width: 768px) {
+        padding-top: 15.84vh;
+    }
 
     /* background image placement */
     &::before {
@@ -308,12 +338,19 @@ main {
     & > *:last-child {
         padding-bottom: 72px;
     }
+            
+    @media screen and (max-width: 768px) {
+        & .cta_container {
+            padding: 0;
+        }
+    }
     
     & article {
         width: 64vw;
         /* content spacing */
         @media screen and (max-width: 768px) {
             width: 100vw;
+            
             & .explanation {
                 padding-bottom: 60px;
             }

@@ -239,11 +239,25 @@
         & .text {
             line-height: 1.42;
             font-size: 1.75rem;
+
+            @media screen and (max-width: 767px) {
+                font-size: 1rem;
+            }
         }
 
         &::before {
             background: var(--mango-gradient);
         }
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            border-radius: 0;
+            color: var(--blue);
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        width: 100%;
     }
 }
 

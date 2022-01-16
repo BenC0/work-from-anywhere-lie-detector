@@ -37,6 +37,10 @@
     color: var(--grey);
     line-height: 1.625;
     font-family: var(--ff-1);
+
+    @media screen and (max-width: 767px) {
+        opacity: 0;
+    }
 }
 
 /* Sets active style for questions seen  */
