@@ -316,11 +316,13 @@
                 left: 0;
                 right: 0;
                 top: 37.5px;
+                bottom: 0;
                 content: "";
-                height: 35.16px;
                 position: absolute;
+                background-position: top center;
+                background-size: 100% auto;
                 background-repeat: no-repeat;
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mobile-banner-beat.png");
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mobile-banner-beat-1.png");
             }
         }
             
