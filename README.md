@@ -98,8 +98,6 @@ The structure is summarised below.
 ## TODO
 1. QA
    1. Mobile
-      2. Answer
-         1. Answer image is blurry
       3. Results
          1. Banner
             1. Image not full width
