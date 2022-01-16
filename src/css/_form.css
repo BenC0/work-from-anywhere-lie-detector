@@ -10,18 +10,21 @@
 
     & .form_bg {
         top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
         position: absolute;
         background: rgba(0,0,0,.35);
     }
 
     & .form-content {
-        --close-icon-size: 110px;
         width: 100%;
         display: flex;
         max-width: 1280px;
         position: relative;
-        margin: var(--close-icon-size) auto 1rem;
-        padding: calc((var(--close-icon-size) / 2) + 40px) var(--outer-padding) 6.96% 0;
+        margin: 3rem auto 1rem;
+        padding: 6.96% var(--outer-padding) 6.96% 0;
 
         background: var(--mango-gradient-v);
 
@@ -29,33 +32,42 @@
             padding-left: var(--outer-padding);
             flex-direction: column;
         }
-
-        & .toggle_form {
-            top: 0;
-            left: 50%;
-            position: absolute;
-            transform: translate(-50%, -50%);
-
-            & svg {
-                width: var(--close-icon-size);
-                height: var(--close-icon-size);
-            }
-        }
         
-        & form {
+        & .hbspt-form {
             width: 100%;
+            display: flex;
             max-width: 622px;
             padding: 42px 28px;
+            flex-direction: column;
             background: rgba(255, 255, 255, 0.8);
 
-            &,
-            & label {
+            & .hs-form-field {
                 display: flex;
                 flex-direction: column;
+
+                & label,
+                & select,
+                & input {
+                    width: 100%;
+                    font-size: 13px;
+                }
+
+                & label {
+                    font-weight: 500;
+                    margin-bottom: 0;
+                    text-transform: capitalize;
+                }
+
+                & select,
+                & input {
+                    background: #fff;
+                    margin-bottom: 10px;
+                }
             }
 
-            & .cta {
-                place-self: flex-end;
+            & .hs-button.primary.large {
+                color: #fff;
+                background: var(--blue);
             }
         }
 

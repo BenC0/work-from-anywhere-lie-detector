@@ -15,6 +15,7 @@
     }
 }
 
+.hs-button,
 .cta {
     & .text {
         /* Positioning */
@@ -149,6 +150,14 @@
             width: var(--size);
             height: var(--size);
         }
+    }
+}
+
+.hs_submit .actions  {
+    text-align: right;
+
+    & .hs-button {
+        line-height: 0;
     }
 }
 
