@@ -4,24 +4,16 @@
         <article>
             <h2 class="heading">{{ content.form.title }}</h2>
         </article>
-        <form action="">
-            {% for field in content.form.fields %}
-                <label for="{{ field.label | lower | replace('','') }}" class="row">
-                    <span class="field_title">{{ field.label }}</span>
-                    {% if field.type == "select" %}
-                        <select name="{{ field.label | lower }}" id="{{ field.label | lower | replace('','') }}">
-                            {% for option in field.options %}
-                                <option value="{{ option }}">{{ option }}</option>
-                            {% endfor %}
-                        </select>
-                    {% else %}
-                        <input type="{{ field.type }}" placeholder="{% if field.placeholder %}{{ field.placeholder }}{% else %}Your {{ field.label | lower }}{% endif %}" id="{{ field.label | lower | replace('','') }}">
-                    {% endif %}
-                </label>
-            {% endfor %}
-            <button type="submit" class="cta secondary">
-                <span class="text">{{content.form.cta}}</span>
-            </button>
-        </form>
+        <!--[if lte IE 8]>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+        <![endif]-->
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+        <script>
+            hbspt.forms.create({
+                region: "na1",
+                portalId: "2661559",
+                formId: "922d9e4d-58a8-409c-a39a-4c66192e0e01"
+            });
+        </script>
     </div>
 </section>
