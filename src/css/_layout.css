@@ -215,7 +215,7 @@ main {
             min-height: var(--animation-height);
 
             @media screen and (max-width: 767px) {
-                margin: -17% auto;
+                margin: -15% auto;
                 min-height: calc(var(--animation-height) * 1.7);
             }
         }

@@ -98,9 +98,6 @@ The structure is summarised below.
 ## TODO
 1. QA
    1. Mobile
-      1. Question
-         1. Animation
-            1. Badly spaced/positioned
       2. Answer
          1. Answer image is blurry
          2. No learn more links
