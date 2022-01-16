@@ -164,6 +164,8 @@
 [answer],
 [question] {
     @media screen and (max-width: 768px) {
+        padding-bottom: var(--cta-height);
+        
         & .cta_container {
             left: 0;
             right: 0;

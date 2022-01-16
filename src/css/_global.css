@@ -115,12 +115,6 @@ picture, img {
         flex-direction: column;
     }
 
-    & .icon {
-        @media screen and (max-width: 767px) {
-            transform: translateY(-2px);
-        }
-    }
-
     &.active {
         & .dropdown-children {
             display: flex;

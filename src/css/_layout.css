@@ -59,18 +59,38 @@ main {
             flex-direction: column;
             
             @media screen and (min-width: 768px) {
+                padding: 1.9rem 0;
                 min-height: 432px;
-                padding: 72px 0 ;
+            }
+
+            & .leading_copy {
+                @media screen and (max-width: 767px) {
+                    margin: 0px auto 32px;
+                }
             }
 
             & .heading {
                 display: flex;
                 margin: 35px 0;
                 align-items: center;
+
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    text-align: center;
+                    margin: .5rem 0 .25rem;
+
+                    & .text {
+                        flex-grow: 1;
+                    }
+                }
             }
 
             & .subheading {
                 margin: 0;
+                @media screen and (max-width: 767px) {
+                    width: 69%;
+                    text-align: center;
+                }
             }
         }
 
@@ -98,6 +118,13 @@ main {
                 }
                 & picture {
                     margin-bottom: -6px;
+                }
+
+                & article {
+                    @media screen and (max-width: 768px) {
+                        padding-top: 1.875rem;
+                        padding-bottom: 1.875rem;
+                    }
                 }
             }
 
@@ -135,7 +162,9 @@ main {
 
                 & .body {
                     margin: 0 auto;
-                    column-count: 2;
+                    @media screen and (min-width: 768px) {
+                        column-count: 2;
+                    }
 
                     & span {
                         display: block;
@@ -155,6 +184,10 @@ main {
             display: flex;
             padding: 15.9vh 0;
             place-content: center;
+
+            @media screen and (max-width: 767px) {
+                padding: 15.9vh 0 10vh;
+            }
             
             & .vert-container {
                 place-items: center;
@@ -286,6 +319,10 @@ main {
     & footer {
         padding: 13.19vh var(--outer-padding);
 
+        @media screen and (max-width: 767px) {
+            padding: 8vh var(--outer-padding);
+        }
+
         & nav {
             display: flex;
             text-align: center;
@@ -299,6 +336,10 @@ main {
             & a {
                 color: var(--blue);
                 text-decoration: none;
+
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 1rem;
+                }
             }
         }
     }

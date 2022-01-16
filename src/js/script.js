@@ -124,6 +124,7 @@ dropdown_parents.forEach(dropdown_parent => {
     dropdown_parent.addEventListener('click', e => {
         e.preventDefault();
         dropdown_parent.closest(".dropdown-container").classList.toggle('active')
+        document.body.classList.toggle(`${dropdown_parent.getAttribute('href').replace("#","active_")}`)
     })
 })
 

@@ -130,7 +130,7 @@
         }
     ],
     "resultsPage": {
-        "hero": "You scored <br class=\"mobile\" /><span class=\"desktop\"> </span><span class=\"resultNum\"></span> out of 10.",
+        "hero": "You scored <span class=\"resultNum\"></span> out of 10.",
         "subheading": "We've got a few more unspoken IT truths you may be interested in.",
         "component_two_leading_copy": "CONTINUE READING...",
         "component_two_heading": "The 8 Biggest Challenges<br class=\"desktop\" /><span class=\"mobile\"> </span>Facing Your IT Team Right Now",
@@ -160,43 +160,5 @@
             "copy": "6 Considerations When Planning an SD-WAN or SASE Project",
             "url": "https://www.teneo.net/blog/sd-wan-and-sase-design/"
         }
-    ],
-    "form": {
-        "title": "Get instant access to our insider content",
-        "fields": [
-            {
-                "label": "First Name",
-                "type": "text"
-            },
-            {
-                "label": "Last Name",
-                "type": "text"
-            },
-            {
-                "label": "Email",
-                "type": "email"
-            },
-            {
-                "label": "Industry",
-                "type": "select",
-                "placeholder": "Select your industry",
-                "options": [
-                    "Option 1", "Option 2", "Option 3"
-                ]
-            },
-            {
-                "label": "Company Name",
-                "type": "text"
-            },
-            {
-                "label": "Job Title",
-                "type": "text"
-            },
-            {
-                "label": "Country",
-                "type": "text"
-            }
-        ],
-        "cta": "Submit"
-    }
+    ]
 }

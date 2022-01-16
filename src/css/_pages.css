@@ -231,7 +231,7 @@
             letter-spacing: 0.02ch;
             
             @media screen and (max-width: 768px) {
-                font-size: 2.1875rem;
+                font-size: 1.625rem;
             }
         }
             
@@ -239,6 +239,7 @@
             font-size: 1.125rem;
             @media screen and (max-width: 768px) {
                 width: 78%;
+                font-size: .875rem;
             }
         }
     }
@@ -266,6 +267,19 @@
             }
         }
 
+        & .leading_copy {
+            @media screen and (max-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        & .heading,
+        & .subheading {
+            @media screen and (max-width: 768px) {
+                margin: 20px auto;
+            }
+        }
+
         &.alt {
             color: white;
             &::before {
@@ -276,7 +290,10 @@
                 background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-2-bg-3.png");
             
                 @media screen and (max-width: 768px) {
-                    background-image: none;
+                background-size: 160px 468px;
+                background-repeat: repeat-x;
+                background-position: right bottom;
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-2-bg-mobile-1.png");
                 }
             }
         }
@@ -284,11 +301,28 @@
         & .body {
             line-height: 1.55;
             font-size: 1.125rem;
+            @media screen and (max-width: 768px) {
+                font-size: .875rem;
+            }
         }
     }
 
     & .banner {
         background: var(--mango-gradient-v);
+        
+        @media screen and (max-width: 767px) {
+            position: relative;
+            &::before {
+                left: 0;
+                right: 0;
+                top: 37.5px;
+                content: "";
+                height: 35.16px;
+                position: absolute;
+                background-repeat: no-repeat;
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mobile-banner-beat.png");
+            }
+        }
             
         & .heading {
             position: relative;
@@ -302,6 +336,9 @@
                 position: absolute;
                 background-size: contain;
                 background-repeat: repeat-x;
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
             }
 
             &::before {

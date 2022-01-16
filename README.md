@@ -96,15 +96,17 @@ The structure is summarised below.
 ```
 
 ## TODO
-1. Results Page - Blog element links
-2. Results Page - Footer link styles
-3. Results Page - Take the test again styling
-4. Answers - Learn more links
-5. Scroll issue on answer card - padding bottom for ctas
-6. Form - mobile breathing room
-7. Hubspot Integration - Need the head & footer variables
-8. True Answer Card - Logo fill
-9. Form - Hubspot Integration - going to be a link so need to generalise this a bit maybe?
-10. Content - Ensure it's correct.
-11. Refactor
-12. QA
+1. QA
+   1. Mobile
+      1. Start Page
+         1. Logo overlayed onto content, should sit above.
+      2. Question
+         1. Animation
+            1. Badly spaced/positioned
+      3. Answer
+         1. Answer image is blurry
+         2. No learn more links
+      4. Results
+         1. Banner
+            1. Image not full width
+2. Summarise handover details in README
