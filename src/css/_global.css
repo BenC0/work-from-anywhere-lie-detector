@@ -1,6 +1,10 @@
 :root {
     /* Color variables */
+    --white: #fff;
+    --red: #DA4F41;
     --blue: #002858;
+    --grey: #474747;
+    --aegean: #468192;
     --orange: rgba(246, 158, 15, 1);
     --lightblue: rgba(148, 179, 239, 0.28);
     --mango-gradient: linear-gradient(to right, #F69E0F, #E9CB53);
@@ -15,14 +19,14 @@
     
     /* CTA dimension/spacing variables */
     --cta-width: 163px;
-    --cta-height: 38px;
-    --cta-spacing: 40px;
+    --cta-height: 50px;
+    --cta-spacing: 35px;
     
     /* Misc. element dimension/spacing variables */
     --outer-padding: 5.9vw;
     --header-height: 18.75vh;
     --animation-height: 100vh;
-    --progress-height: calc(12.12vh + 8px);
+    --progress-height: calc(6vh + 8px);
     --menu-width: calc((var(--cta-width) * 2) + var(--cta-spacing) + (var(--outer-padding) * .9) );
 
     @media screen and (max-width: 767px) {

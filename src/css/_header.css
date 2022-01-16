@@ -138,3 +138,8 @@ header {
         }
     }
 }
+
+.answers.active ~ header,
+.start.active_page ~ header {
+    display: none;
+}

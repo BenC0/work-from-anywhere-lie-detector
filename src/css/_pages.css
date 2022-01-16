@@ -3,22 +3,22 @@
 }
 
 .start {
-    /* Start page background styling */
-    background-size: cover;
-    background-repeat: no-repeat;
     background-color: var(--blue);
-    background-position: center;
-    background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/start-hero%20(2).png");
 
-    @media screen and (max-width: 768px) {
-        background-size: contain;
-        background-position: bottom center;
-        background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/stv.png");
+    & .machine {
+        & p {
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1.58;
+            letter-spacing: 0.02ch;
+            font-family: var(--ff-2);
+        }
     }
 
     & article {
         /* content font styling */
         color: white;
+        padding-bottom: 0;
         
         & .hero_title {
             margin: 0;
@@ -49,7 +49,14 @@
         }
 
         & .hero_body {
-            font-size: 1rem;
+            line-height: 1.55;
+            font-size: 1.125rem;
+        }
+
+        & .cta_container {
+            & .cta {
+                color: white;
+            }
         }
     }
 }
@@ -117,6 +124,7 @@
     /* background image as psuedo element */
     &::before {
         content: "";
+        left: 15.85%;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center right;
@@ -124,55 +132,23 @@
 
     /* Alternate designs for True/False answer */
     &[ca="True"] {
-        color: var(--blue);
-        background-color: var(--orange);
+        color: white;
+        background-color: var(--aegean);
 
-        & .primary.cta {
-            color: white;
-            background: var(--blue);
-        
-            &::before {
-                background: var(--blue-gradient);
-            }
-        }
-
-        & .tertiary.cta {
-            color: var(--blue);
-            border-color: var(--blue);
-
-            /* Learn more CTA icon color */
-            svg path {
-                stroke: var(--blue);
-            }
-        }
 
         &::before {
             /* Card background */
-            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbg.png");
-        }
-
-        & .answer {
-            &::before {
-                /* Answer decorative line  */
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/tbeat.png");
-            }
+            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/true-bg.png");
         }
     }
 
     &[ca="False"] {
         color: white;
-        background-color: var(--blue);
+        background-color: var(--red);
 
         &::before {
             /* Card background */
-            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbg.png");
-        }
-
-        & .answer {
-            &::before {
-                /* Answer decorative line  */
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/fbeat.png");
-            }
+            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/false-bg.png");
         }
     }
 
@@ -229,12 +205,12 @@
     }
 
     & .hero {
-        color: var(--blue);
+        color: var(--white);
         background-size: contain;
         background-repeat: no-repeat;
-        background-color: var(--orange);
+        background-color: var(--blue);
         background-position: center right;
-        background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/results-hero.png");
+        background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/results-hero-1.png");
             
         @media screen and (max-width: 768px) {
             text-align: left;
@@ -252,6 +228,8 @@
         & .heading {
             line-height: 1.13;
             font-size: 3.75rem;
+            color: var(--orange);
+            letter-spacing: 0.02ch;
             
             @media screen and (max-width: 768px) {
                 font-size: 2.1875rem;
@@ -259,9 +237,9 @@
         }
             
         & .subheading {
+            font-size: 1.125rem;
             @media screen and (max-width: 768px) {
                 width: 78%;
-                font-size: .875rem;
             }
         }
     }
@@ -292,13 +270,21 @@
         &.alt {
             color: white;
             &::before {
+                background-size: 555px 530px;
+                background-repeat: repeat-y;
                 background-color: var(--blue);
-                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-2-bg.png");
+                background-position: right top;
+                background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-2-bg-3.png");
             
                 @media screen and (max-width: 768px) {
                     background-image: none;
                 }
             }
+        }
+
+        & .body {
+            line-height: 1.55;
+            font-size: 1.125rem;
         }
     }
 

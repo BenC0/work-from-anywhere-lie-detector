@@ -1,6 +1,11 @@
 /* Set counter, this keeps track of correct answers */
 body {
     counter-reset: inputs;
+    counter-reset: questions_answered;
+}
+
+.input_progress:checked {
+    counter-increment: questions_answered;
 }
 
 .correct-answer:checked {
@@ -10,6 +15,11 @@ body {
 /* Display final count in resultsNum element */
 .resultNum::before {
 	content: counter(inputs);
+}
+
+/* Display final count in progress element */
+.progress_num::before {
+	content: counter(questions_answered);
 }
 
 /*
@@ -25,14 +35,13 @@ Here be     \__         (_./  /
                                           "
 */
 
-/* This monster ensures the correct cards/pages are shown */
+/* This ensures the correct cards/pages are shown */
 .start,
 .results,
 [answer],
 [question] {
     &.active_page {
         /* makes card/page visible so users can see the card/page */
-        opacity: 1;
         display: flex;
         flex-direction: column;
         /* resets pointer events so users can interact with card/page */
@@ -40,15 +49,29 @@ Here be     \__         (_./  /
     }
 }
 
-/* This abomination ensures the correct cards/pages are hidden */
+/* This ensures the correct cards/pages are hidden */
 .start,
 .results,
-[answer],
 [question] {
     &:not(.active_page) {
         /* makes card/page invisible so users can't see the card/page */
-        opacity: 0;
         display: none;
+        /* Sets overflow so card/page doesn't intefere with page scroll */
+        overflow: hidden;
+        /* Removes pointer events so users can't interact with card/page even
+            if overlayed on top of current card/page */
+        pointer-events: none;
+    }
+}
+
+[answer] {
+    &.active_page {
+        opacity: 1;
+        transition: all 300ms ease-in;
+    }
+    &:not(.active_page) {
+        /* makes card/page invisible so users can't see the card/page */
+        opacity: 0;
         /* Sets overflow so card/page doesn't intefere with page scroll */
         overflow: hidden;
         /* Removes pointer events so users can't interact with card/page even
@@ -62,7 +85,7 @@ Here be     \__         (_./  /
         & ~ .answers,
         & ~ .questions,
         & ~ .animations,
-        & ~ .progress_bar {
+        & ~ .progress {
             display: none;
         }
     }

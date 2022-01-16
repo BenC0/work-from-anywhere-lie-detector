@@ -4,7 +4,7 @@ layout: 'boilerplate.njk'
 templateEngineOverride: njk
 ---
 {# Loop through questions and create question inputs #}
-<input type="radio" name="answer-0" id="input-answer-0" class="counter_ignore input-answer" />
+<input type="radio" name="answer-0" id="input-answer-0" class="counter_ignore input-answer input_progress" />
 {%- for question in content.questions -%}
     {#
         Question radio inputs:
@@ -20,7 +20,7 @@ templateEngineOverride: njk
         - This is checked when the user clicks the primary "Next" CTA in the answer card
         - When checked the next card is displayed.
     #}
-    <input type="radio" name="answer-{{ question.num }}" id="input-answer-{{ question.num }}" class="counter_ignore input-answer" />
+    <input type="radio" name="answer-{{ question.num }}" id="input-answer-{{ question.num }}" class="counter_ignore input-answer input_progress" />
 {%- endfor -%}
 
 {% include "results_page.njk" %}

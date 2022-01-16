@@ -19,7 +19,6 @@
     & .text {
         /* Positioning */
         z-index: 2;
-        bottom: 2px;
         position: relative;
         
         /* Font styling */
@@ -38,7 +37,6 @@
     cursor: pointer;
     appearance: none;
     color: var(--blue);
-    border-radius: 20px;
     text-decoration: none;
     background: var(--orange);
     transition: all .1s ease-in;
@@ -68,7 +66,6 @@
         z-index: 1;
         content: "";
         position: absolute;
-        border-radius: 20px;
         transition: opacity .1s ease-in;
         background: var(--mango-gradient);
     }
@@ -117,6 +114,16 @@
         }
     }
 
+    &.og-ghost {
+        color: var(--orange);
+        background: transparent;
+        border: 1px solid var(--orange);
+    
+        &::before {
+            background: transparent;
+        }
+    }
+
     &.link {
         width: auto;
         color: var(--blue);
@@ -126,6 +133,21 @@
 
         &::before {
             display: none;
+        }
+    }
+
+    &.circle {
+        border-radius: 100%;
+        border: 1.5px solid var(--orange);
+        
+        &::before {
+            border-radius: 100%;
+        }
+    
+        @media screen and (min-width: 769px) {
+            --size: 84px;
+            width: var(--size);
+            height: var(--size);
         }
     }
 }
@@ -201,9 +223,18 @@
 
 .start .cta_container {
     flex-grow: 0;
-    margin-top: 120px;
-    @media screen and (max-width: 768px) {
-        margin-top: 33px;
+
+    & .cta {
+        --size: 132px;
+
+        & .text {
+            line-height: 1.42;
+            font-size: 1.75rem;
+        }
+
+        &::before {
+            background: var(--mango-gradient);
+        }
     }
 }
 
@@ -214,10 +245,6 @@
     @media screen and (max-width: 768px) {
         flex-direction: column;
         align-items: flex-start;
-
-        & .cta:not(:last-child) {
-            margin-bottom: 30px;
-        }
     }
 }
 

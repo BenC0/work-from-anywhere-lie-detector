@@ -4,7 +4,12 @@
     - When clicked, the primary "Next" CTA checks the Answer radio input shown above.
 #}
 <article answer="{{ question.num }}" ca="{{ question.ca }}">
-    <h3 class="answer">{{ question.answer.header | safe }}</h3>
+    {% if question.ca == "False" %}
+        <img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/false-header.png" alt="False!">
+    {% endif %}
+    {% if question.ca == "True" %}
+        <img src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/true-header.png" alt="False!">
+    {% endif %}
     <p class="explanation">{{ question.answer.copy | safe }}</p>
     <div class="cta_container">
         <label for="input-answer-{{ question.num }}" class="cta primary"><span class="text">Next</span></label>

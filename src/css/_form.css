@@ -6,8 +6,13 @@
     z-index: 9;
     overflow: auto;
     position: fixed;
-    background: rgba(0,0,0,.35);
     padding: 0 var(--outer-padding);
+
+    & .form_bg {
+        top: 0;
+        position: absolute;
+        background: rgba(0,0,0,.35);
+    }
 
     & .form-content {
         --close-icon-size: 110px;
@@ -18,10 +23,7 @@
         margin: var(--close-icon-size) auto 1rem;
         padding: calc((var(--close-icon-size) / 2) + 40px) var(--outer-padding) 6.96% 0;
 
-        background-size: cover;
-        background-position: center center;
-        background-color: var(--mango-gradient-v);
-        background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/Group%204-1.png");
+        background: var(--mango-gradient-v);
 
         @media screen and (max-width: 767px) {
             padding-left: var(--outer-padding);
