@@ -15,7 +15,7 @@
     <p class="explanation">{{ question.answer.copy | safe }}</p>
     <div class="cta_container">
         <label for="input-answer-{{ question.num }}" class="cta primary"><span class="text">Next</span></label>
-        <a href="#" target="_blank" class="cta tertiary">
+        <a href="{{ question.answer.link }}" target="_blank" class="cta tertiary">
             <span class="text">Learn more</span>
             <svg width="11" height="12" viewBox="0 0 11 12" fill="none" style="margin-top: 4px;" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.550253 1.05021H10.4497M10.4497 1.05021V10.9497M10.4497 1.05021L0.550253 10.9497" stroke="white"/>

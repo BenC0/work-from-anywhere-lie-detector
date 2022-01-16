@@ -100,8 +100,10 @@ The structure is summarised below.
    1. Mobile
       2. Answer
          1. Answer image is blurry
-         2. No learn more links
       3. Results
          1. Banner
             1. Image not full width
 2. Summarise handover details in README
+   1. Things I need
+      1. Learn more links
+   2. 
