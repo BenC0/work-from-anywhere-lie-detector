@@ -98,9 +98,6 @@ The structure is summarised below.
 ## TODO
 1. QA 
    1. Desktop
-      2. Results
-         1. Blog #1
-            1. Image is blurry
    2. Mobile
       1. Answers
          1. Text is cut off and user can't scroll - more of a problem on smaller phones
