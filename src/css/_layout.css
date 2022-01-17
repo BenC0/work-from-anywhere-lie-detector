@@ -7,7 +7,7 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 50%); 
-    grid-template-rows: var(--header-height) var(--progress-height) auto;
+    grid-template-rows: var(--header-height) var(--progress-height) calc(100vh - (var(--header-height) + var(--progress-height)));
 
     @media screen and (max-width: 767px) {
         grid-template-rows: var(--header-height) var(--animation-height) auto;

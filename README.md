@@ -96,12 +96,17 @@ The structure is summarised below.
 ```
 
 ## TODO
-1. QA
-   1. Mobile
+1. QA 
+   1. Desktop
+      2. Results
+         1. Blog #1
+            1. Image is blurry
+   2. Mobile
       1. Answers
          1. Text is cut off and user can't scroll - more of a problem on smaller phones
 2. Summarise handover details in README
    1. Things I need
       1. Learn more links
+      2. 
    2. Questions
       1. Animation timing is 3.5s as per Figma, is that a little long?

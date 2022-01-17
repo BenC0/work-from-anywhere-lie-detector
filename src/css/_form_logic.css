@@ -1,7 +1,6 @@
 /* Set counter, this keeps track of correct answers */
 body {
-    counter-reset: inputs;
-    counter-reset: questions_answered;
+    counter-reset: inputs questions_answered;
 }
 
 .input_progress:checked {

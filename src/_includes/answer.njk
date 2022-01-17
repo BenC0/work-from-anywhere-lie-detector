@@ -5,11 +5,11 @@
 #}
 <article answer="{{ question.num }}" ca="{{ question.ca }}">
     {% if question.ca == "False" %}
-        <img class="desktop" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/false-header.png" alt="False!">
+        <img class="desktop" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/false-header-big.png" alt="False!">
         <img class="mobile" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mobile-false-header-big.png" alt="False!">
     {% endif %}
     {% if question.ca == "True" %}
-        <img class="desktop" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/true-header.png" alt="True!">
+        <img class="desktop" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/true-header-big.png" alt="True!">
         <img class="mobile" src="https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mobile-true-header-big.png" alt="True!">
     {% endif %}
     <p class="explanation">{{ question.answer.copy | safe }}</p>
