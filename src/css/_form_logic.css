@@ -42,6 +42,7 @@ Here be     \__         (_./  /
     &.active_page {
         /* makes card/page visible so users can see the card/page */
         display: flex;
+        overflow: auto;
         flex-direction: column;
         /* resets pointer events so users can interact with card/page */
         pointer-events: auto;

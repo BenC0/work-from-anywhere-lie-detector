@@ -1,5 +1,10 @@
 .progress {
     padding: 0 var(--outer-padding);
+
+    @media screen and (max-width: 767px) {
+        display: flex;
+        align-items: center;
+    }
 }
 .progress_bar {
     /* Positioning */
@@ -8,6 +13,10 @@
     margin: 10px 0 0;
     list-style: none;
     align-items: center;
+
+    @media screen and (max-width: 767px) {
+        margin: 0 0 10px;
+    }
 
     & .indicator {
         /* Indicator dimensions */
@@ -39,7 +48,7 @@
     font-family: var(--ff-1);
 
     @media screen and (max-width: 767px) {
-        opacity: 0;
+        display: none;
     }
 }
 

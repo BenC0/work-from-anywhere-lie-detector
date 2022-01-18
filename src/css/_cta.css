@@ -27,6 +27,7 @@
         font-weight: 500;
         text-align: center;
         font-family: var(--ff-1);
+        pointer-events: none;
 
         &:not(:last-child) {
             margin-right: 1ch;
@@ -164,7 +165,7 @@
 [answer],
 [question] {
     @media screen and (max-width: 768px) {
-        padding-bottom: var(--cta-height);
+        padding-bottom: calc(var(--cta-height) * 1.5);
         
         & .cta_container {
             left: 0;

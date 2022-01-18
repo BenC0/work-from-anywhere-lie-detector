@@ -69,6 +69,7 @@
         & .explanation {
             font-size: 1.5rem;
             line-height: 1.58;
+            padding-bottom: 2rem;
 
             @media screen and (max-width: 768px) {
                 font-size: 1.25rem;
@@ -142,6 +143,10 @@
             /* Card background */
             background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/true-bg.png");
         }
+
+        & .tertiary {
+            background: var(--aegean);
+        }
     }
 
     &[ca="False"] {
@@ -151,6 +156,10 @@
         &::before {
             /* Card background */
             background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/false-bg.png");
+        }
+
+        & .tertiary {
+            background: var(--red);
         }
     }
 
@@ -213,6 +222,7 @@
             
         @media screen and (max-width: 768px) {
             text-align: left;
+            background-image: none;
         }
 
         & .leading_copy {
@@ -290,7 +300,7 @@
                 background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-2-bg-3.png");
             
                 @media screen and (max-width: 768px) {
-                background-size: 160px 468px;
+                background-size: 480px 703px;
                 background-repeat: repeat-x;
                 background-position: right bottom;
                 background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-2-bg-mobile-1.png");

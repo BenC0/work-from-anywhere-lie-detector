@@ -1,3 +1,18 @@
+function debounce(func, wait, immediate) {
+	var timeout;
+	return function() {
+		var context = this, args = arguments;
+		var later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		var callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
 const animations = {
     is_mobile: _ => window.innerWidth < 767,
     sources: {
@@ -110,6 +125,10 @@ a_inputs.forEach(a => {
         }
     })
 })
+
+window.addEventListener('resize', debounce(_ => {
+    animations.reset_state()
+}, 250))
 
 let reset_cta = document.querySelector('[href="#reset-quiz"]')
 if(!!reset_cta) {
