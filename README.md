@@ -74,7 +74,5 @@ The structure is summarised below.
 
 ## TODO
 1. Summarise handover details in README
-   1. Things I need
-      1. Learn more links
-   2. Make a note of all the URLs so they can easily update
-   3. Github
+   1. Make a note of all the URLs so they can easily update
+   2. Github
