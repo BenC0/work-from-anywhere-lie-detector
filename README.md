@@ -9,7 +9,7 @@
 ## Content.json
 The `src/_data/content.json` file contains all the content for the website.
 The structure is summarised below.
-```json
+```js
     // Start page content
     // Content is used in the "src/_includes/start_page.njk" template
     "startPage": {
