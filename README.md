@@ -124,3 +124,5 @@ Each reference to these files is detailed below:
    4. Line 136 - low-mobile-results-detector.png (URL generated dynamically in script based on user score)
    5. Line 136 - mid-mobile-results-detector.png (URL generated dynamically in script based on user score)
    6. Line 136 - high-mobile-results-detector.png (URL generated dynamically in script based on user score)
+4. Hubspot Form
+   1. The script can be found on lines 689 - 699
