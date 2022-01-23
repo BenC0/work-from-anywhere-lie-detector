@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "eleventy",
-    "start": "eleventy",
-    "serve": "eleventy --serve"
+    "build": "cross-env ELEVENTY_ENV='prod' eleventy",
+    "start": "cross-env ELEVENTY_ENV='prod' eleventy",
+    "serve": "cross-env ELEVENTY_ENV='local' eleventy --serve"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "postcss-nested": "^5.0.6"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cssnano": "^5.0.12",
     "cssnano-preset-lite": "^2.0.1",
     "postcss-extend": "^1.0.5",

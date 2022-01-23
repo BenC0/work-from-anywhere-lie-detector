@@ -1,19 +1,10 @@
 /* Set counter, this keeps track of correct answers */
 body {
-    counter-reset: inputs questions_answered;
+    counter-reset: questions_answered;
 }
 
 .input_progress:checked {
     counter-increment: questions_answered;
-}
-
-.correct-answer:checked {
-    counter-increment: inputs;
-}
-
-/* Display final count in resultsNum element */
-.resultNum::before {
-	content: counter(inputs);
 }
 
 /* Display final count in progress element */

@@ -267,14 +267,6 @@
             content: "";
             position: absolute;
             background-color: white;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: right bottom;
-            background-image: url("https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/post-1-bg-1.png");
-            
-            @media screen and (max-width: 768px) {
-                background-image: none;
-            }
         }
 
         & .leading_copy {

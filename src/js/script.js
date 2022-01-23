@@ -30,7 +30,7 @@ const animations = {
     player: document.querySelector("lottie-player"),
     set_state: s => {
         let device = animations.is_mobile() ? "mobile" : "desktop"
-        source = animations.sources[device][s]
+        let source = animations.sources[device][s]
         console.log(`Setting animation state to ${s} (device: ${device}) (source: ${source})`)
         animations.player.load(source)
     },
@@ -43,7 +43,8 @@ const cards = {
     transition_timing: _ => {
         let current = cards.get_current_page()
         if(!!current.getAttribute('question')) {
-            return 3500
+            // return 3500
+            return 0
         } else if(!!current.getAttribute('answer')) {
             return 0
         } else {
@@ -81,6 +82,15 @@ const cards = {
         } else {
             document.querySelector('.answers').classList.remove('active')
         }
+
+        if (!!el.classList.contains('results')) {
+            if (history.pushState) {
+                var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?results=viewed';
+                window.history.pushState({path:newurl},'',newurl);
+            }
+            results.set_hero()
+        }
+
         cards.hide_current()
         cards.activate(el)
     },
@@ -102,11 +112,42 @@ const cards = {
     }
 }
 
+const results = {
+    is_mobile: _ => window.innerWidth < 767,
+    correct: 0,
+    ranges: {
+        "low": [0,3],
+        "mid": [4,7],
+        "high": [8,10]
+    },
+    get_range: r => {
+        let range = "low"
+        if (r >= 8 && r <= 10) {
+            range = "high"
+        } else if (r >= 4 && r <= 7) {
+            range = "mid"
+        }
+        return range 
+        
+    },
+    set_hero: _ => {
+        let range = results.get_range(results.correct)
+        document.querySelector('.results .hero img.desktop').setAttribute("src", `https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/${range}-results-detector.png`)
+        document.querySelector('.results .hero img.mobile').setAttribute("src", `https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/${range}-mobile-results-detector.png`)
+        let resultNum = document.querySelector('.results .hero .resultNum')
+        if(!!resultNum) {
+            resultNum.textContent = results.correct
+        }
+    }
+}
+
 let q_inputs = document.querySelectorAll('[name^="question-"]')
 q_inputs.forEach(q => {
     q.addEventListener('change', e => {
         if(!document.body.classList.contains("resetting")) {
+            console.log(q.textContent.toLowerCase().replace(/ /g, ""))
             if(q.classList.contains('correct-answer')) {
+                results.correct++
                 animations.set_state('true')
             } else {
                 animations.set_state('false')
