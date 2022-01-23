@@ -43,8 +43,7 @@ const cards = {
     transition_timing: _ => {
         let current = cards.get_current_page()
         if(!!current.getAttribute('question')) {
-            // return 3500
-            return 0
+            return 3500
         } else if(!!current.getAttribute('answer')) {
             return 0
         } else {

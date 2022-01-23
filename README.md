@@ -75,46 +75,52 @@ The structure is summarised below.
 ## Hubspot Hosted Files
 Various files are currently being served from the sandbox Hubspot account.
 Each reference to these files is detailed below:
-1. index--backup.html
-   1. Line 10 - apple-touch-icon.png
-   2. Line 11 - favicon-32x32.png
-   3. Line 12 - favicon-16x16.png
-   4. Line 14 - Typkit font link
-   5. Line 16 - index.css
-   6. Line 65 - results-detector.png
-   7. Line 66 - results-detector-mobile.png
-   8. Line 74 - priscilla-du-preez-OEdkPaxYMXU-unsplash%201.png
-   9. Line 87 - priscilla-du-preez-OEdkPaxYMXU-unsplash%201-1.png"
-   10. Line 248 - false-header-big.png
-   11. Line 249 - mobile-false-header-big.png
-   12. Line 266 - true-header-big.png
-   13. Line 267 - mobile-true-header-big.png
-   14. Line 283 - true-header-big.png
-   15. Line 284 - mobile-true-header-big.png
-   16. Line 300 - true-header-big.png
-   17. Line 301 - mobile-true-header-big.png
-   18. Line 316 - false-header-big.png
-   19. Line 317 - mobile-false-header-big.png
-   20. Line 334 - true-header-big.png
-   21. Line 335 - mobile-true-header-big.png
-   22. Line 350 - false-header-big.png
-   23. Line 351 - mobile-false-header-big.png
-   24. Line 367 - false-header-big.png
-   25. Line 368 - mobile-false-header-big.png
-   26. Line 384 - true-header-big.png
-   27. Line 386 - mobile-true-header-big.png
-   28. Line 401 - false-header-big.png
-   29. Line 402 - mobile-false-header-big.png
-   30. Line 578 - mobile-start.png
-   31. Line 695 - lottie-player.js
-   32. Line 696 - script.js
-2. index--backup.css
+1. index.html
+   1. Line 16 - apple-touch-icon.png
+   2. Line 17 - favicon-32x32.png
+   3. Line 18 - favicon-16x16.png
+   4. Line 20 - Typkit font link
+   5. Line 22 - index.css
+   6. Line 73 - results-detector.png
+   7. Line 74 - results-detector-mobile.png
+   8. Line 82 - priscilla-du-preez-OEdkPaxYMXU-unsplash%201.png
+   9. Line 95 - priscilla-du-preez-OEdkPaxYMXU-unsplash%201-1.png
+   10. Line 256 - false-header-big.png
+   11. Line 257 - mobile-false-header-big.png
+   12. Line 274 - true-header-big.png
+   13. Line 275 - mobile-true-header-big.png
+   14. Line 291 - true-header-big.png
+   15. Line 292 - mobile-true-header-big.png
+   16. Line 308 - true-header-big.png
+   17. Line 309 - mobile-true-header-big.png
+   18. Line 324 - false-header-big.png
+   19. Line 325 - mobile-false-header-big.png
+   20. Line 342 - true-header-big.png
+   21. Line 343 - mobile-true-header-big.png
+   22. Line 358 - false-header-big.png
+   23. Line 359 - mobile-false-header-big.png
+   24. Line 375 - false-header-big.png
+   25. Line 376 - mobile-false-header-big.png
+   26. Line 393 - true-header-big.png
+   27. Line 394 - mobile-true-header-big.png
+   28. Line 409 - false-header-big.png
+   29. Line 410 - mobile-false-header-big.png
+   30. Line 586 - mobile-start.png
+   31. Line 703 - lottie-player.js
+   32. Line 704 - script.js
+2. index.css
    1. Line 41 - true-bg.png
    2. Line 41 - false-bg.png
    3. Line 41 - results-hero-1.png
-   4. Line 41 - post-1-bg-1.png
-   5. Line 41 - post-2-bg-3.png
-   6. Line 41 - post-2-bg-mobile-1.png
-   7. Line 41 - mobile-banner-beat-1.png
-   8. Line 41 - banner-left.png
-   9. Line 41 - banner-right.png
+   4. Line 42 - post-2-bg-3.png
+   5. Line 42 - post-2-bg-mobile-1.png
+   6. Line 42 - mobile-banner-beat-1.png
+   7. Line 42 - banner-left.png
+   8. Line 42 - banner-right.png
+3. script.js
+   1. Line 135 - low-results-detector.png (URL generated dynamically in script based on user score)
+   2. Line 135 - mid-results-detector.png (URL generated dynamically in script based on user score)
+   3. Line 135 - high-results-detector.png (URL generated dynamically in script based on user score)
+   4. Line 136 - low-mobile-results-detector.png (URL generated dynamically in script based on user score)
+   5. Line 136 - mid-mobile-results-detector.png (URL generated dynamically in script based on user score)
+   6. Line 136 - high-mobile-results-detector.png (URL generated dynamically in script based on user score)
