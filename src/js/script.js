@@ -144,13 +144,14 @@ let q_inputs = document.querySelectorAll('[name^="question-"]')
 q_inputs.forEach(q => {
     q.addEventListener('change', e => {
         if(!document.body.classList.contains("resetting")) {
-            console.log(q.textContent.toLowerCase().replace(/ /g, ""))
+            let answer = q.getAttribute('animation').toLowerCase()
+            console.log({ answer })
+
+            animations.set_state(answer)
             if(q.classList.contains('correct-answer')) {
                 results.correct++
-                animations.set_state('true')
-            } else {
-                animations.set_state('false')
             }
+            
             window.setTimeout(cards.next_card, cards.transition_timing())
         }
     })
@@ -175,6 +176,7 @@ if(!!reset_cta) {
     reset_cta.addEventListener('click', e => {
         e.preventDefault();
         cards.reset_pages()
+        results.correct = 0
     })
 }
 
