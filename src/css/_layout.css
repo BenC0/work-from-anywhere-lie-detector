@@ -122,7 +122,7 @@ main {
                         height: 100%;
                         max-height: 800px;
                         object-fit: cover;
-                        object-position: top;
+                        object-position: center;
                         display: block;
                     }
                 }

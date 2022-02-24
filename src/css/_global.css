@@ -21,6 +21,11 @@
     --cta-width: 163px;
     --cta-height: 50px;
     --cta-spacing: 35px;
+
+    @media screen and (min-width: 1500px) {
+        --cta-width: 190px;
+        --cta-height: 60px;
+    }
     
     /* Misc. element dimension/spacing variables */
     --outer-padding: 5.9vw;
