@@ -190,12 +190,14 @@
     }
 
     & .subheading {
-        line-height: 1.58;
-        font-size: 1.5rem;
+        line-height: 1.4;
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: var(--blue);
 
-        @media screen and (max-width: 768px) {
-            line-height: 1.4;
-            font-size: 1.25rem;
+        @media screen and (min-width: 768px) {
+            line-height: 1.58;
+            font-size: 1.5rem;
         }
     }
 
@@ -303,8 +305,14 @@
         & .body {
             line-height: 1.55;
             font-size: 1.125rem;
+
             @media screen and (max-width: 768px) {
                 font-size: .875rem;
+            }
+
+            @media screen and (min-width: 1500px) {
+                line-height: 1.58;
+                font-size: 1.5rem;
             }
         }
     }
