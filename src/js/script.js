@@ -31,7 +31,6 @@ const animations = {
     set_state: s => {
         let device = animations.is_mobile() ? "mobile" : "desktop"
         let source = animations.sources[device][s]
-        console.log(`Setting animation state to ${s} (device: ${device}) (source: ${source})`)
         animations.player.load(source)
     },
     reset_state: _ => {
@@ -43,7 +42,7 @@ const cards = {
     transition_timing: _ => {
         let current = cards.get_current_page()
         if(!!current.getAttribute('question')) {
-            return 3500
+            return 1600
         } else if(!!current.getAttribute('answer')) {
             return 0
         } else {
@@ -62,7 +61,6 @@ const cards = {
     },
     hide_current: _ => {
         let current = cards.get_current_page()
-        console.log({"function": "hide_current", current})
         if(!!current) {
             cards.deactivate(current)
         }
@@ -74,7 +72,6 @@ const cards = {
         document.body.classList.remove("resetting")
     },
     go_to: sel => {
-        console.log({"function": "go_to", sel})
         let el = typeof sel === "string" ? document.querySelector(sel) : sel
         if (!!el.getAttribute('answer')) {
             document.querySelector('.answers').classList.add('active')
@@ -95,7 +92,6 @@ const cards = {
     },
     next_card: _ => {
         let current = cards.get_current_page()
-        console.log({"function": "next_card", current})
         let next = `[question="1"]`
         if(!!current.getAttribute('question')) {
             next = `[answer="${current.getAttribute('question')}"]`

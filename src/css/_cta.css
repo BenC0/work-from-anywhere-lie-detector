@@ -34,6 +34,17 @@
         &:not(:last-child) {
             margin-right: 1ch;
         }
+
+
+        @media screen and (min-width: 1500px) {
+            font-size: 1.25rem;
+        }
+    }
+
+    .cta-arrow {
+        @media screen and (min-width: 1500px) {
+            margin-top: 5px;
+        }
     }
     
     /* General styling */
@@ -153,6 +164,12 @@
             width: var(--size);
             height: var(--size);
         }
+
+        @media screen and (min-width: 1500px) {
+            --size: 94px;
+            width: var(--size);
+            height: var(--size);
+        }
     }
 }
 
@@ -213,6 +230,12 @@
     
     @media screen and (min-width: 769px) {
         --size: 84px;
+        width: var(--size);
+        height: var(--size);
+    }
+
+    @media screen and (min-width: 1500px) {
+        --size: 94px;
         width: var(--size);
         height: var(--size);
     }
