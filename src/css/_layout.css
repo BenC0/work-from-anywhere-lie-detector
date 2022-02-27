@@ -59,7 +59,7 @@ main {
             flex-direction: column;
             
             @media screen and (min-width: 768px) {
-                padding: 1.9rem 0;
+                padding: 1.9rem 0 2.5rem;
             }
 
             & .leading_copy {
@@ -173,11 +173,12 @@ main {
                 & .body {
                     margin: 0 auto;
                     @media screen and (min-width: 768px) {
-                        column-count: 2;
+                        columns: 100px 2;
                     }
 
                     & span {
                         display: block;
+                        break-inside: avoid;
                         &:not(:first-child) {
                             margin-top: 0.7rem;
                         }
@@ -343,7 +344,7 @@ main {
             place-items: center;
             justify-content: space-between;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1650px) {
                 flex-direction: column;
             }
 
@@ -351,7 +352,7 @@ main {
                 color: var(--blue);
                 text-decoration: none;
 
-                @media screen and (max-width: 767px) {
+                @media screen and (max-width: 1650px) {
                     margin-bottom: 1rem;
                 }
             }

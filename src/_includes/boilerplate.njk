@@ -1,8 +1,11 @@
+<!--
+  templateType: "page"
+  isAvailableForNewContent: true
+-->
 {# page meta info #}
 {% set page_title = "The TRUTH About IT Right Now - Take the Quiz | Teneo" %}
 {% set page_description = "What are the secret stressors and misconceptions affecting IT teams? Take our interactive quiz and separate the IT truths from the IT falsehoods." %}
 {% set typekit_link = "https://use.typekit.net/dyv1pfw.css" %}
-
 {# Basic HTML Boilerplate code to contain content #}
 <!doctype html>
 <html lang="en">
@@ -19,7 +22,7 @@
 
     <link rel="stylesheet" href="{{ typekit_link }}">
     <title>{{ page_title }}</title>
-    <link rel="stylesheet" href="{{ asset_link.css_link }}/index.css">
+    <link rel="stylesheet" href="{{ asset_link.css_link }}/index.css?v=1">
     {% if asset_link.base_link != "." %}
       {% raw %}{{ standard_header_includes }} {% endraw %}
     {% endif %}
@@ -29,7 +32,7 @@
       {{ content | safe }}
     </main>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <script src="{{ asset_link.js_link }}/script.js"> </script>
+    <script src="{{ asset_link.js_link }}/script.js?v=1"> </script>
     {% if asset_link.base_link != "." %}
       {% raw %}{{ standard_footer_includes }} {% endraw %}
     {% endif %}

@@ -13,8 +13,8 @@ templateEngineOverride: njk
         - .counter_ignore is not counted.
         - These are mapped to the relevant CTA in the #question section below
     #}
-    <input type="radio" name="question-{{ question.num }}" id="question-{{ question.num }}-correct" class="correct-answer input-answer" />
-    <input type="radio" name="question-{{ question.num }}" id="question-{{ question.num }}-incorrect" class="counter_ignore incorrect-answer input-answer" />
+    <input type="radio" name="question-{{ question.num }}" id="question-{{ question.num }}-correct" class="correct-answer input-answer" animation="{{ question.ca }}" />
+    <input type="radio" name="question-{{ question.num }}" id="question-{{ question.num }}-incorrect" class="counter_ignore incorrect-answer input-answer" animation="{{ question.ca }}" />
     {#
         Answer radio input:
         - This is checked when the user clicks the primary "Next" CTA in the answer card
