@@ -57,7 +57,7 @@
             "answer": {
                 "header": "True!",
                 "link": "https://www2.teneo.net/access-the-8-biggest-challenges-facing-your-it-team-right-now",
-                "copy": "SASE is an incredibly powerful security framework, and one that's rapidly establishing itself as the new global gold standard for the IT industry. As weightily robust as it is, however, it's not about to put an entire generation of security professionals out of a job. It does not offer, for example, endpoint protection &ndash; vital in the fight against ransomware &ndash; and organizations will still need expert personnel on hand to tackle security emergencies, before or after they take hold. "
+                "copy": "SASE, or Secure Access Service Edge, is an incredibly powerful security framework and one that's rapidly establishing itself as the new global gold standard for the IT industry. As weightily robust as it is, however, it's not about to put an entire generation of security professionals out of a job. It does not offer, for example, endpoint protection &ndash; vital in the fight against ransomware &ndash; and organizations will still need expert personnel on hand to tackle security emergencies, before or after they take hold."
             }
         },
         {
@@ -146,7 +146,7 @@
         "component_two_heading": "The 8 Biggest Challenges<br class=\"desktop\" /><span class=\"mobile\"> </span>Facing Your IT Team Right Now",
         "component_two_subheading": "Read our exclusive insights - free",
         "component_two_body": "We've spoken with hundreds of IT professionals to identify the key stressors currently affecting their teams. During our research, these eight specific challenges arose again and again.<br/><br/>How many of them ring true for you and your team?",
-        "component_two_cta_one": "Read now",
+        "component_two_cta_one": "Learn more",
         "component_two_cta_one_link": "https://www2.teneo.net/access-the-8-biggest-challenges-facing-your-it-team-right-now",
         "component_two_cta_two": "Read later - Send link to email",
         "component_three_heading": "Embrace Transformation<br class=\"desktop\" /><span class=\"mobile\"> </span>and 'Work From Anywhere'",
