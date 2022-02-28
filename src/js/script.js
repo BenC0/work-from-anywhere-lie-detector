@@ -42,7 +42,7 @@ const cards = {
     transition_timing: _ => {
         let current = cards.get_current_page()
         if(!!current.getAttribute('question')) {
-            return 1600
+            return 3000
         } else if(!!current.getAttribute('answer')) {
             return 0
         } else {
@@ -141,7 +141,6 @@ q_inputs.forEach(q => {
     q.addEventListener('change', e => {
         if(!document.body.classList.contains("resetting")) {
             let answer = q.getAttribute('animation').toLowerCase()
-            console.log({ answer })
 
             animations.set_state(answer)
             if(q.classList.contains('correct-answer')) {
