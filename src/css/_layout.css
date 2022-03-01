@@ -51,11 +51,17 @@ main {
         & .results__form {
             background: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
-            padding: 2rem 3rem;
+            padding: 1.5rem 1.5rem;
             width: calc(100% - var(--outer-padding));
             max-width: 650px;
             color: var(--blue);
             margin: 0 auto;
+            margin-top: 30px;
+
+            @media screen and (min-width: 768px) {
+                padding: 2rem 3rem;
+                margin-top: 0;
+            }
 
             h3 {
                 margin: 0 0 1.5rem 0;
@@ -69,10 +75,20 @@ main {
                     margin: 0.75rem 0 0 0;
                     width: 100%;
                     max-width: none;
-                    display: flex;
+                    display: block;
+                    
+                    @media screen and (min-width: 768px) {
+                        display: flex;
+                    }
 
                     .hs-form-field {
                         width: 100%;
+
+                        & + .hs-form-field {
+                            @media screen and (max-width: 767px) {
+                                margin-top: 0.75rem;
+                            }
+                        }
                     }
 
                     input {
@@ -96,6 +112,7 @@ main {
                     font-size: 18px;
                     line-height: 18px;
                     margin: 0;
+                    font-weight: 700;
                 }
             }
         }
