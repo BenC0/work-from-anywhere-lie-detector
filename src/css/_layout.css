@@ -182,18 +182,18 @@ main {
                 }
 
                 &.low {
-                    background-size: auto 14px;
-                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/low-graph-line.png');
+                    background-size: auto 7px;
+                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/low-graph-line.svg');
                 }
 
                 &.mid {
-                    background-size: auto 44px;
-                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mid-graph-line.png');
+                    background-size: auto 22px;
+                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mid-graph-line.svg');
                 }
 
                 &.high {
-                    background-size: auto 126px;
-                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/high-graph-line.png');
+                    background-size: auto 68px;
+                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/high-graph-line-new.svg');
                 }
             }
         }
