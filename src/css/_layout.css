@@ -48,6 +48,58 @@ main {
         flex-direction: column;
         grid-column: 1 / span 2;
 
+        & .results__form {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 2rem 3rem;
+            width: calc(100% - var(--outer-padding));
+            max-width: 650px;
+            color: var(--blue);
+            margin: 0 auto;
+
+            h3 {
+                margin: 0 0 1.5rem 0;
+                text-align: center;
+                font-size: 20px;
+                line-height: 26px;
+            }
+
+            .hbspt-form {
+                fieldset {
+                    margin: 0.75rem 0 0 0;
+                    width: 100%;
+                    max-width: none;
+                    display: flex;
+
+                    .hs-form-field {
+                        width: 100%;
+                    }
+
+                    input {
+                        width: 100%!important;
+                    }
+                }
+
+                label {
+                    color: #000; 
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+
+                .actions {
+                    text-align: center;
+                    margin-top: 2rem;
+                }
+
+                .hs-button {
+                    color: var(--blue);
+                    font-size: 18px;
+                    line-height: 18px;
+                    margin: 0;
+                }
+            }
+        }
+
         & .leading_copy {
             margin: 0 auto 47px;
         }
@@ -57,9 +109,13 @@ main {
             padding: 1.875rem 0;
             align-items: center;
             flex-direction: column;
+            background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/teno-results-bg.png');
+            background-size: cover;
+            background-position: center top;
+            background-color: var(--blue);
             
             @media screen and (min-width: 768px) {
-                padding: 1.9rem 0 2.5rem;
+                padding: 5.5rem 0 150px;
             }
 
             & .leading_copy {
@@ -70,7 +126,7 @@ main {
 
             & .heading {
                 display: flex;
-                margin: 35px 0;
+                margin: 40px 0;
                 align-items: center;
 
                 @media screen and (max-width: 767px) {
@@ -89,6 +145,100 @@ main {
                 @media screen and (max-width: 767px) {
                     width: 69%;
                     text-align: center;
+                }
+            }
+
+            & .hero__machine-image {
+                width: 100%;
+                height: 130px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-repeat: repeat-x;
+                background-position: center;
+                background-size: auto 46px;
+                background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/teneo-graph-line.png');
+
+                img {
+                    width: 260px;
+                    height: 130px;
+                }
+
+                &.low {
+                    background-size: auto 14px;
+                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/low-graph-line.png');
+                }
+
+                &.mid {
+                    background-size: auto 44px;
+                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/mid-graph-line.png');
+                }
+
+                &.high {
+                    background-size: auto 126px;
+                    background-image: url('https://fs.hubspotusercontent00.net/hubfs/2661559/Teneo/Work%20from%20Anywhere%20-%20Lie%20Detector/high-graph-line.png');
+                }
+            }
+        }
+
+        & .results__guide {
+            background: linear-gradient(90deg, #5CA39A 10.43%, #002858 100%);
+            padding: 2.5rem var(--outer-padding);
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+
+            @media screen and (max-width: 1200px) {
+                padding: 2rem var(--outer-padding);
+                flex-direction: column;
+                align-items: center;
+                background: linear-gradient(180.19deg, #5CA39A 15.03%, #002858 101.35%);
+            }
+        }
+
+        & .results__guide-title {
+            h3 {
+                font-family: var(--ff-2);
+                font-size: 2.5rem;
+                line-height: 1.2;
+                color: white;
+
+                @media screen and (max-width: 1200px) {
+                    margin-top: 0;
+                }
+            }
+
+            a {
+                color: white;
+            }
+        }
+
+        & .results__guide-image {
+            margin-left: 200px;
+            position: relative;
+            height: 1px;
+            width: 200px;
+
+            img {
+                width: 200px;
+                position: absolute;
+                top: calc(-100px - 2.5rem);
+                right: 0;
+            }
+
+            @media screen and (max-width: 1200px) {
+                margin-left: 100px;
+            }
+
+            @media screen and (max-width: 1200px) {
+                margin-left: 0;
+                width: 100%;
+                height: 278px;
+
+                img {
+                    top: 0;
+                    left: 50%;
+                    margin-left: -100px;
                 }
             }
         }
@@ -187,17 +337,24 @@ main {
 
                 & .cta_container {
                     margin-top: 42px;
+
+                    .cta {
+                        width: auto;
+                        padding-left: 25px;
+                        padding-right: 25px;
+                    }
                 }
             }
         }
 
         & .banner {
             display: flex;
-            padding: 15.9vh 0;
+            padding: 5rem 0;
             place-content: center;
 
             @media screen and (max-width: 767px) {
                 padding: 15.9vh 0 10vh;
+                padding: 7rem 0 3rem;
             }
             
             & .vert-container {
@@ -332,10 +489,11 @@ main {
     }
 
     & footer {
-        padding: 13.19vh var(--outer-padding);
+        background: white;
+        padding: 4rem var(--outer-padding);
 
         @media screen and (max-width: 767px) {
-            padding: 8vh var(--outer-padding);
+            padding: 3rem var(--outer-padding);
         }
 
         & nav {
@@ -357,6 +515,19 @@ main {
                 }
             }
         }
+    }
+}
+
+.lottie-player {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    display: none;
+
+    &.active {
+        z-index: 2;
+        display: block;
     }
 }
 

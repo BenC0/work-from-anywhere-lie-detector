@@ -3,7 +3,7 @@
         "content": {
             "hero_title": "The IT Reality Check",
             "hero_subheading": "Take the quiz, bust the myths! ",
-            "hero_body": "What's <em>really</em> stressing IT teams out at the moment? What myths and misconceptions are circulating around the industry? Take a look at the following 10 statements and see if you can separate the objective truths from the tall tales…",
+            "hero_body": "Can you determine IT truth from IT misinformation? Clicking finger at the ready – let’s go…",
             "hero_CTA": "Start"
         }
     },
@@ -13,7 +13,7 @@
             "ca": "False",
             "content": {
                 "statement": "True or false?",
-                "question": "It can take up to a month for a network security breach to be identified."
+                "question": "It usually takes less than a month for a network security breach to be identified."
             },
             "answer": {
                 "header": "False!",
@@ -149,9 +149,9 @@
         "component_two_cta_one": "Learn more",
         "component_two_cta_one_link": "https://www2.teneo.net/access-the-8-biggest-challenges-facing-your-it-team-right-now",
         "component_two_cta_two": "Read later - Send link to email",
-        "component_three_heading": "Embrace Transformation<br class=\"desktop\" /><span class=\"mobile\"> </span>and 'Work From Anywhere'",
-        "component_three_body": "<span>Post-pandemic, IT teams worldwide are struggling with productivity blockers within their businesses. Issues range from incompatible devices to unreliable connectivity; from unsecure environments, to overreliance on VPNs.</span><span>The daily firefighting of these issues gobbles up time and resources. The result? It's near impossible to plan the transformational change needed to deal with these issues permanently. It's a frustrating, catch-22 situation.</span><span>If you're looking to transform your organization's infrastructure to allow for a true 'work from anywhere' approach, Teneo can help. Let's break that endless cycle of firefighting and make real change happen - together.</span>",
-        "component_three_cta_one": "Learn more",
+        "component_three_heading": "How can Teneo’s services<br class=\"desktop\" /> make your workdays easier?",
+        "component_three_body": "<span>Looking to transform your organization’s infrastructure and introduce new technologies? Teneo can help.</span><span>When you’re constantly firefighting day-to-day issues, it’s near-impossible to find the time to properly take stock and plan ahead. And even if you do find the time, it can be hard to know where to even start.</span><span>Teneo works with you to identify your best path forwards. Our straight-talking advice is shaped by 21 years’ experience at the leading edge of IT.</span><span>You’ll get seamless access to our multi-cloud, digital experience monitoring and SASE services. Click the link below to see the full breadth of what we can offer you.</span>",
+        "component_three_cta_one": "See our services",
         "component_three_cta_one_link": "https://www.teneo.net/our-services/",
         "form_heading": "Get instant access to our insider content"
     },
