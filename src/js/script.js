@@ -138,7 +138,7 @@ const cards = {
             return 0
         }
     },
-    start_page: document.querySelector('.start'),
+    start_page: document.querySelector('article[question="1"]'),
     activate: el => el.classList.add('active_page'),
     deactivate: el => el.classList.remove('active_page'),
     get_current_page: _ => {
@@ -156,8 +156,10 @@ const cards = {
     },
     reset_pages: _ => {
         document.body.classList.add("resetting")
-        document.querySelectorAll('[name^="question-"], [name^="answer-"]').forEach(el => el.checked = false)
+        document.querySelectorAll('[name^="question-"], [name^="answer-"]:not([name="answer-0"])').forEach(el => el.checked = false)
+        document.querySelector('[name="answer-0"]').checked = true
         cards.go_to(cards.start_page)
+        animations.reset_state()
         document.body.classList.remove("resetting")
     },
     go_to: sel => {
